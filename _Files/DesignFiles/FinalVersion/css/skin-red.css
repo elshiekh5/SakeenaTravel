@@ -1,0 +1,48 @@
+
+
+.colortext {	color:#FF4746;}
+.colorbg {background:#FF4746;}
+a {	color:#FF4746;}
+::selection{background:#FF4746;}
+.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover,.navbar-nav>li.active>a:focus {background-color:#FF4746;}
+.navbar-nav>li.active>a:before,.navbar-nav>li>a:hover:before,.navbar-nav>li>a:focus:before,.extra-nav-class a.dropdown-toggle:before {border-bottom:6px solid #FF4746;}
+.navbar-nav>li>a:hover,.navbar-nav>li>a:focus {	background-color:#FF4746;}
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {background-color:#FF4746 !Important;}
+.extra-nav-class a.dropdown-toggle {	background-color:#FF4746 !Important;}
+.car-highlight1 {background-color:#FF4746;}
+.car-smallcircle {background:#FF4746;}
+.carouselText2 {	background:#FF4746;}
+.icon-box-top i:hover {background-color:#FF4746;}
+.fontawesome-icon.circle-white {	color:#FF4746;}
+.grey-box-icon:hover .fontawesome-icon.circle-white,.grey-box-icon.active .fontawesome-icon.circle-white,.active i.fontawesome-icon {background-color:#FF4746;}
+.home-features .icon {background:#FF4746;}
+.copyright {	background-color:#FF4746;}
+.panel1 {border-left:6px solid #FF4746;}
+.buttoncolor {background:#FF4746;}
+.panel,.panel2 {	border-left:8px solid #FF4746;}
+.btn-default {background-color:#FF4746;}
+.btn-minimal:hover {	color: #FF4746;}
+#accordion div h4:before {	background:#FF4746 url('../img/plus.png') center center no-repeat;}
+#accordion div.active h4:before {background:#FF4746 url('../img/minus.png') center center no-repeat;}
+.sidebar h4 {color:#FF4746;}
+.nav-tabs>.active>a,.nav-tabs>.active>a:hover {color: #FF4746 !important;}
+blockquote {border-left:5px solid #FF4746;}
+#skill i {background:#FF4746;}
+.service-fancybox:hover i {color:#FF4746;}
+.service-fancybox:hover {background:#FF4746;}
+.service-fancybox.featured {	background:#FF4746;}
+.service-fancybox.featured .circleicon i {color:#FF4746;}
+.service-fancybox.black .circleicon i {color:#FF4746;}
+.cbp_tmtimeline>li .cbp_tmicon {background:#FF4746;}
+.services i {	color:#FF4746;}
+.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus {background-color:#FF4746;	border-color:#FF4746;}
+.landingpage-button {color:#FF4746;}
+.landingpage-button {color:#FF4746;}
+.landingpage-button span {color:#FF4746;}
+.landingpage-button strong {color:#FF4746;}
+.landingpage-button i {color:#FF4746;}
+.active-header {	background:#FF4746;}
+.active-header:hover {background:#FF4746;}
+#filter ul li .selected {background: #FF4746 !Important;}
+.drop-cap, .captionicons {background:#FF4746;}
+.pageheader-default .semitransparentbg, .bgarea-semitransparent {background: rgba(245,72,40,0.80) !important;}
