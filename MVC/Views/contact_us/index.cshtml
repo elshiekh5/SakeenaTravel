@@ -1,0 +1,29 @@
+﻿@{
+}
+@section CustomeHeader{
+    <section class="pageheader-default text-center">
+        <div class="semitransparentbg">
+            <h1 class="animated fadeInLeftBig notransition">@Resources.SiteText.ContactUS</h1>
+            <p class="animated fadeInRightBig  notransition container page-description">
+                @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 8)
+            </p>
+            <br>
+            <br>
+        </div>
+    </section>
+}
+@Html.Partial("~/Views/contact_us/contact_us.cshtml")
+
+@section BottomScripts{
+<script type="text/javascript">
+    $(document).ready(function () {
+        //debugger;
+        $("#btnSendMessage").click(function (e) {
+            //debugger;
+            SendContactsMessage("#BigContactForm",e);
+        });
+
+
+    });
+</script>
+}

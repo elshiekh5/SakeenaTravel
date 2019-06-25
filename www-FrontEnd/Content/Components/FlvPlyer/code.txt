@@ -1,0 +1,18 @@
+<script type="text/javascript" src="/embed/swfobject.js"></script>
+                        <div id="player"></div>
+                        <span id="lblPlayer"><script type='text/javascript'>
+                            var so = new SWFObject('/embed/mediaplayer.swf','mpl','400','320','8');
+                            so.addParam('allowscriptaccess','always');
+                            so.addParam('allowfullscreen','true');
+                            so.addVariable('height','320');
+                            so.addVariable('width','400');
+                            so.addVariable('file','/UploadedData/videos/19.flv');
+                            so.addVariable('image','/UploadedData/videos/_19.jpg');
+                            so.addVariable('backcolor','0x3D91CA');
+                            so.addVariable('frontcolor','0xFFFFFF');
+                            so.addVariable('logo','/images/BL-Logo.png');
+                            so.addVariable('link','http://www.bluelimits.com');
+                            so.addVariable('linktarget','_blank');
+                            so.addVariable('showstop','true');
+                            so.write('player');
+                         </script></span>

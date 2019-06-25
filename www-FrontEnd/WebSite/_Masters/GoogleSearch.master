@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GoogleSearch.master.cs" Inherits="App_Design_masters_Site" %>
+<%@ Register Src="Controls/PathLinksControl.ascx" TagName="PathLinksControl" TagPrefix="uc10" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link id="cssEls" runat="server" rel="stylesheet" type="text/css" />
+    <link id="cssStyle" runat="server" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Scripts/NoIEActivate.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/highslide/highslide/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="/scripts/highslide/highslide/highslide.css" />
+    <script type="text/javascript">
+         $(document).ready(function () {
+                 hs.graphicsDir = '/scripts/highslide/highslide/graphics/';
+                 hs.align = 'center';
+                 hs.transitions = ['expand', 'crossfade'];
+                 hs.outlineType = 'rounded-white';
+                 hs.wrapperClassName = 'draggable-header';
+                 hs.fadeInOut = true;
+                 hs.enableKeyListener = false;
+                 hs.minimumWidth = 0;
+
+         });
+	   
+    </script>
+    <script type="text/javascript">
+      $("document").ready(function() {
+              var msg = "";
+              var des="";
+             $(".ourvalidation").each(function() {
+                msg=$(this).html();
+                des="<div class=\"validator\"><div class=\"validator_start\"></div><div class=\"validator_content\">"+msg+"</div><div class=\"validator_end\"></div></div>";
+                $(this).html(des);
+            });
+                  
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="wrapper">
+	<div id="MainBody">
+		<div id="content">
+			<div id="innercontents">
+                    <div id="path">
+                        <uc10:PathLinksControl ID="Pathes" runat="server" />
+                    </div>
+                    <div id="contentheader">
+                        <h1>
+                            <asp:Label ID="lblTitle" runat="server"></asp:Label></h1>
+                    </div>
+                    <div id="contentBody">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+		</div>
+		
+		<div id="nav">
+		</div>
+	</div>
+</div>
+    </form>
+    
+    
+</body>
+</html>

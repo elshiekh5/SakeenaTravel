@@ -1,0 +1,57 @@
+﻿@{
+   
+}
+
+@section CustomeHeader{
+    <section class="pageheader-default text-center">
+    <div class="semitransparentbg">
+        <h1 class="animated fadeInLeftBig notransition">@Resources.SiteText.FAQ</h1>
+        <p class="animated fadeInRightBig  notransition container page-description">
+            @*@Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 6)*@
+        </p>
+        <br>
+        <br>
+    </div>
+</section>
+}
+
+@section BottomScripts{
+<script>
+    /* ---------------------------------------------------------------------- */
+    /*	Accordion
+	/* ---------------------------------------------------------------------- */
+    var clickElem = $('#accordion div h4');
+    clickElem.on('click', function () {
+        var $this = $(this),
+			parentCheck = $this.parent('div');
+        if (!parentCheck.hasClass('active')) {
+            var accordItems = $('#accordion div');
+            accordItems.removeClass('active');
+            parentCheck.addClass('active');
+        }
+    });
+</script>
+}
+<!-- ABOUT
+================================================== -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-12 animated anim-slide notransition">
+            <div id="accordion">
+@Html.Partial("~/Views/FAQ/list.cshtml")
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+<!-- TEAM
+================================================== -->
+
+<section class="container animated fadeInDownNow notransition topspace40">
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("~/Views/PartialViews/PageHtmlBrief.cshtml", 12)
+        </div>
+    </div>
+</section>

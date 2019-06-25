@@ -1,0 +1,43 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 4;
+    int totalItemsCount = 0;
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleDataPageByPage((int)SiteModulesMap.Portfolio, "PortFolioPaging", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+}
+<div class="gallery-page">
+    <div class="row margin-bottom-20">
+
+        @foreach (FrontItemsModel item in ItemsList)
+        {
+
+            <div class="col-md-3 col-sm-6">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="@item.Title" href="@item.PhotoPathOriginal">
+                    <span class="overlay-zoom">
+                        <img alt="" src="@ThumbnailsManager.GetThumb(item.PhotoPathOriginal, 270,270,100)" class="img-responsive">
+                        <span class="zoom-icon"></span>
+                    </span>
+                    &nbsp;
+                </a>
+            </div>
+        }
+    </div>
+    <div class="text-center">
+        @Html.Partial("Pager", pager)
+    </div>
+</div>

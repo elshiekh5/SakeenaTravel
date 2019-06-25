@@ -1,0 +1,13 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData(13, "AllCategoriesTitles");
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    <li><a href="/articles/cat/@item.CategoryID/page/1/">@item.Title</a></li>
+}

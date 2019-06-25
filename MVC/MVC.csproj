@@ -1,0 +1,1684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84A37C14-B641-44F6-B27F-47AE48610FFF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVC</RootNamespace>
+    <AssemblyName>MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Admin\AdmininstrationData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmininstrationData.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\AdmininstrationData.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmininstrationData.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\AdminText.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\AdminText.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminText.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\ItemsFiles.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsFiles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\ItemsFiles.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsFiles.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\MailListAdmin.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailListAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\MailListAdmin.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailListAdmin.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\SmsAdmin.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmsAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\SmsAdmin.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmsAdmin.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\SocialLinks.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocialLinks.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\SocialLinks.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocialLinks.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\VisitorsCounter.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisitorsCounter.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\VisitorsCounter.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisitorsCounter.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\Zecurity.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zecurity.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Admin\Zecurity.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zecurity.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Advertisments\Advertisments.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Advertisments.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Advertisments\Advertisments.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Advertisments.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Calendar\Calendar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Calendar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Calendar\Calendar.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Calendar.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Calendar\CalendarText.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Calendar\CalendarText.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarText.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Cities\Cities.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cities.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Cities\Cities.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cities.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Files\GlobalTexts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalTexts.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ItemsComments\Comments.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Comments.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ItemsComments\Comments.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Comments.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ItemsOrders\ItemsOrders.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsOrders.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ItemsOrders\ItemsOrders.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsOrders.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\ar\Branches.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Branches.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\ar\Items.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Items.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\ar\Products.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\en\Branches.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Branches.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\en\Items.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Items.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Items\en\Products.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Languages\Lang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Languages\Lang.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MailList\MailList.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailList.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MailList\MailList.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailList.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Membership\MemberShip.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberShip.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Membership\MemberShip.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberShip.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\ar\Career.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Career.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\ar\Consulting_Services.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consulting_Services.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\ar\Messages.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\en\Career.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Career.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\en\Consulting_Services.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consulting_Services.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Messages\en\Messages.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SiteDepartments\SiteDepartments.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteDepartments.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SiteDepartments\SiteDepartments.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteDepartments.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Sitelanguages.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sitelanguages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SMS\SMS.ar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SMS\SMS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Special\SiteText.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Special\SiteText.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteText.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SubSites\SubSites.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubSites.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SubSites\SubSites.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubSites.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SystemCountries\SystemCountries.ar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemCountries.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SystemCountries\SystemCountries.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemCountries.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\TellAfriend\TellAfriend.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TellAfriend.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\TellAfriend\TellAfriend.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TellAfriend.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UsersData\NmakanMem.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NmakanMem.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UsersData\NmakanMem.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NmakanMem.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UsersData\Profile\UserProfile.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserProfile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UsersData\UsersData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersData.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UsersData\UsersData.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersData.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UserTexts\User.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UserTexts\User.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Voting\Vote.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vote.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Voting\Vote.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vote.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\_MasterAdmin\DefaultModules\DefaultModules.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultModules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\_MasterAdmin\DefaultModules\DefaultModules.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultModules.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\_MasterAdmin\Modules.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\_MasterAdmin\Modules.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modules.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PagerModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Design\css\bootstrap-rtl.css" />
+    <Content Include="Design\css\bootstrap-rtl.min.css" />
+    <Content Include="Design\css\bootstrap.css" />
+    <Content Include="Design\css\ie8.css" />
+    <Content Include="Design\css\layout-semiboxed.css" />
+    <Content Include="Design\css\responsive.css" />
+    <Content Include="Design\css\skin-green.css" />
+    <Content Include="Design\css\style.ar.css" />
+    <Content Include="Design\css\style.css" />
+    <Content Include="Design\demo\css\colorpicker.css" />
+    <Content Include="Design\demo\css\style-switcher.css" />
+    <Content Include="Design\demo\images\colorpicker\button-icon.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_background.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_hex.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_indic.gif" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_overlay.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_select.gif" />
+    <Content Include="Design\demo\images\colorpicker\colorpicker_submit.png" />
+    <Content Include="Design\demo\images\colorpicker\select2.png" />
+    <Content Include="Design\demo\images\logowowthemes.png" />
+    <Content Include="Design\demo\images\themestyles.png" />
+    <Content Include="Design\demo\js\colorpicker.js" />
+    <Content Include="Design\demo\js\jquery.cookie.js" />
+    <Content Include="Design\demo\js\styleswitch.js" />
+    <Content Include="Design\demo\js\switcher.js" />
+    <Content Include="Design\fonts\fonts.css" />
+    <Content Include="Design\img2\115x80\0.jpg" />
+    <Content Include="Design\img2\115x80\00.jpg" />
+    <Content Include="Design\img2\115x80\1.jpg" />
+    <Content Include="Design\img2\115x80\10.jpg" />
+    <Content Include="Design\img2\115x80\11.jpg" />
+    <Content Include="Design\img2\115x80\12.jpg" />
+    <Content Include="Design\img2\115x80\14.jpg" />
+    <Content Include="Design\img2\115x80\15.jpg" />
+    <Content Include="Design\img2\115x80\16.jpg" />
+    <Content Include="Design\img2\115x80\17.jpg" />
+    <Content Include="Design\img2\115x80\18.jpg" />
+    <Content Include="Design\img2\115x80\19.jpg" />
+    <Content Include="Design\img2\115x80\2.jpg" />
+    <Content Include="Design\img2\115x80\20.jpg" />
+    <Content Include="Design\img2\115x80\21.jpg" />
+    <Content Include="Design\img2\115x80\22.jpg" />
+    <Content Include="Design\img2\115x80\23.jpg" />
+    <Content Include="Design\img2\115x80\24.jpg" />
+    <Content Include="Design\img2\115x80\25.jpg" />
+    <Content Include="Design\img2\115x80\26.jpg" />
+    <Content Include="Design\img2\115x80\27.jpg" />
+    <Content Include="Design\img2\115x80\28.jpg" />
+    <Content Include="Design\img2\115x80\29.jpg" />
+    <Content Include="Design\img2\115x80\3.jpg" />
+    <Content Include="Design\img2\115x80\30.jpg" />
+    <Content Include="Design\img2\115x80\31.jpg" />
+    <Content Include="Design\img2\115x80\32.jpg" />
+    <Content Include="Design\img2\115x80\33.jpg" />
+    <Content Include="Design\img2\115x80\34.jpg" />
+    <Content Include="Design\img2\115x80\4.jpg" />
+    <Content Include="Design\img2\115x80\40.jpg" />
+    <Content Include="Design\img2\115x80\41.jpg" />
+    <Content Include="Design\img2\115x80\43.jpg" />
+    <Content Include="Design\img2\115x80\5.jpg" />
+    <Content Include="Design\img2\115x80\6.jpg" />
+    <Content Include="Design\img2\115x80\7.jpg" />
+    <Content Include="Design\img2\115x80\8.jpg" />
+    <Content Include="Design\img2\115x80\9.jpg" />
+    <Content Include="Design\img2\500x332\0.jpg" />
+    <Content Include="Design\img2\500x332\00.jpg" />
+    <Content Include="Design\img2\500x332\1.jpg" />
+    <Content Include="Design\img2\500x332\10.jpg" />
+    <Content Include="Design\img2\500x332\11.jpg" />
+    <Content Include="Design\img2\500x332\12.jpg" />
+    <Content Include="Design\img2\500x332\14.jpg" />
+    <Content Include="Design\img2\500x332\15.jpg" />
+    <Content Include="Design\img2\500x332\16.jpg" />
+    <Content Include="Design\img2\500x332\17.jpg" />
+    <Content Include="Design\img2\500x332\18.jpg" />
+    <Content Include="Design\img2\500x332\19.jpg" />
+    <Content Include="Design\img2\500x332\2.jpg" />
+    <Content Include="Design\img2\500x332\20.jpg" />
+    <Content Include="Design\img2\500x332\21.jpg" />
+    <Content Include="Design\img2\500x332\22.jpg" />
+    <Content Include="Design\img2\500x332\23.jpg" />
+    <Content Include="Design\img2\500x332\24.jpg" />
+    <Content Include="Design\img2\500x332\25.jpg" />
+    <Content Include="Design\img2\500x332\26.jpg" />
+    <Content Include="Design\img2\500x332\27.jpg" />
+    <Content Include="Design\img2\500x332\28.jpg" />
+    <Content Include="Design\img2\500x332\29.jpg" />
+    <Content Include="Design\img2\500x332\3.jpg" />
+    <Content Include="Design\img2\500x332\30.jpg" />
+    <Content Include="Design\img2\500x332\31.jpg" />
+    <Content Include="Design\img2\500x332\32.jpg" />
+    <Content Include="Design\img2\500x332\33.jpg" />
+    <Content Include="Design\img2\500x332\34.jpg" />
+    <Content Include="Design\img2\500x332\4.jpg" />
+    <Content Include="Design\img2\500x332\40.jpg" />
+    <Content Include="Design\img2\500x332\41.jpg" />
+    <Content Include="Design\img2\500x332\43.jpg" />
+    <Content Include="Design\img2\500x332\5.jpg" />
+    <Content Include="Design\img2\500x332\6.jpg" />
+    <Content Include="Design\img2\500x332\7.jpg" />
+    <Content Include="Design\img2\500x332\8.jpg" />
+    <Content Include="Design\img2\500x332\9.jpg" />
+    <Content Include="Design\img2\ceo2.jpg" />
+    <Content Include="Design\img2\Slider\1.jpg" />
+    <Content Include="Design\img2\Slider\10.jpg" />
+    <Content Include="Design\img2\Slider\11.jpg" />
+    <Content Include="Design\img2\Slider\12.jpg" />
+    <Content Include="Design\img2\Slider\13.jpg" />
+    <Content Include="Design\img2\Slider\14.jpg" />
+    <Content Include="Design\img2\Slider\15.jpg" />
+    <Content Include="Design\img2\Slider\16.jpg" />
+    <Content Include="Design\img2\Slider\17.jpg" />
+    <Content Include="Design\img2\Slider\18.jpg" />
+    <Content Include="Design\img2\Slider\19.jpg" />
+    <Content Include="Design\img2\Slider\2.jpg" />
+    <Content Include="Design\img2\Slider\20.jpg" />
+    <Content Include="Design\img2\Slider\21.jpg" />
+    <Content Include="Design\img2\Slider\22.jpg" />
+    <Content Include="Design\img2\Slider\23.jpg" />
+    <Content Include="Design\img2\Slider\24.jpg" />
+    <Content Include="Design\img2\Slider\25.jpg" />
+    <Content Include="Design\img2\Slider\26.jpg" />
+    <Content Include="Design\img2\Slider\27.jpg" />
+    <Content Include="Design\img2\Slider\28.jpg" />
+    <Content Include="Design\img2\Slider\29.jpg" />
+    <Content Include="Design\img2\Slider\3.jpg" />
+    <Content Include="Design\img2\Slider\30.jpg" />
+    <Content Include="Design\img2\Slider\31.jpg" />
+    <Content Include="Design\img2\Slider\32.jpg" />
+    <Content Include="Design\img2\Slider\33.jpg" />
+    <Content Include="Design\img2\Slider\34.jpg" />
+    <Content Include="Design\img2\Slider\35.jpg" />
+    <Content Include="Design\img2\Slider\36.jpg" />
+    <Content Include="Design\img2\Slider\37.jpg" />
+    <Content Include="Design\img2\Slider\38.jpg" />
+    <Content Include="Design\img2\Slider\39.jpg" />
+    <Content Include="Design\img2\Slider\4.jpg" />
+    <Content Include="Design\img2\Slider\40.jpg" />
+    <Content Include="Design\img2\Slider\41.jpg" />
+    <Content Include="Design\img2\Slider\42.jpg" />
+    <Content Include="Design\img2\Slider\43.jpg" />
+    <Content Include="Design\img2\Slider\44.jpg" />
+    <Content Include="Design\img2\Slider\45.jpg" />
+    <Content Include="Design\img2\Slider\46.jpg" />
+    <Content Include="Design\img2\Slider\47.jpg" />
+    <Content Include="Design\img2\Slider\48.jpg" />
+    <Content Include="Design\img2\Slider\49.jpg" />
+    <Content Include="Design\img2\Slider\5.jpg" />
+    <Content Include="Design\img2\Slider\50.jpg" />
+    <Content Include="Design\img2\Slider\51.jpg" />
+    <Content Include="Design\img2\Slider\6.jpg" />
+    <Content Include="Design\img2\Slider\7.jpg" />
+    <Content Include="Design\img2\Slider\8.jpg" />
+    <Content Include="Design\img2\Slider\9.jpg" />
+    <Content Include="Design\img\bgfooter.jpg" />
+    <Content Include="Design\img\carousel_arrows.png" />
+    <Content Include="Design\img\demo\1.jpg" />
+    <Content Include="Design\img\demo\3.jpg" />
+    <Content Include="Design\img\demo\7.jpg" />
+    <Content Include="Design\img\demo\bg.jpg" />
+    <Content Include="Design\img\demo\desktop2.png" />
+    <Content Include="Design\img\demo\desktop3.png" />
+    <Content Include="Design\img\demo\projectdetail1.jpg" />
+    <Content Include="Design\img\demo\projectdetail2.jpg" />
+    <Content Include="Design\img\demo\projectdetail3.jpg" />
+    <Content Include="Design\img\demo\showcase1.jpg" />
+    <Content Include="Design\img\demo\showcase2.jpg" />
+    <Content Include="Design\img\demo\showcase3.jpg" />
+    <Content Include="Design\img\demo\showcase4.jpg" />
+    <Content Include="Design\img\demo\slide1-1.png" />
+    <Content Include="Design\img\demo\slide1-2.png" />
+    <Content Include="Design\img\demo\slide1-3.png" />
+    <Content Include="Design\img\demo\slide1.jpg" />
+    <Content Include="Design\img\demo\slide2.jpg" />
+    <Content Include="Design\img\demo\slide3.jpg" />
+    <Content Include="Design\img\demo\team1.jpg" />
+    <Content Include="Design\img\demo\team2.jpg" />
+    <Content Include="Design\img\demo\team3.jpg" />
+    <Content Include="Design\img\favicon.ico" />
+    <Content Include="Design\img\foot.png" />
+    <Content Include="Design\img\head.png" />
+    <Content Include="Design\img\logo.png" />
+    <Content Include="Design\img\map.png" />
+    <Content Include="Design\img\minus.png" />
+    <Content Include="Design\img\plus.png" />
+    <Content Include="Design\img\plust.png" />
+    <Content Include="Design\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Design\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Design\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Design\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Design\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Design\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Design\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Design\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Design\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Design\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Design\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Design\img\sha-down.png" />
+    <Content Include="Design\img\sha-up.png" />
+    <Content Include="Design\img\shp.png" />
+    <Content Include="Design\img\up-arrow.png" />
+    <Content Include="Design\index.ar.html" />
+    <Content Include="Design\index.html" />
+    <Content Include="Design\js\bootstrap.js" />
+    <Content Include="Design\js\common.js" />
+    <Content Include="Design\js\html5shiv.js" />
+    <Content Include="Design\js\jquery.js" />
+    <Content Include="Design\js\plugins.js" />
+    <Content Include="Design\js\respond.min.js" />
+    <Content Include="Design\logo.0.png" />
+    <Content Include="Design\logo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Design\css\bootstrap-rtl.css.map" />
+    <Content Include="Design\css\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="Design\css\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="Design\css\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="Design\css\fonts\OpenSans-Bold-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-Bold-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-BoldItalic-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-BoldItalic-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-ExtraBold-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-ExtraBold-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-ExtraBoldItalic-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-ExtraBoldItalic-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-Italic-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-Italic-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-Light-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-Light-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-LightItalic-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-LightItalic-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-Semibold-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-Semibold-webfont.ttf" />
+    <Content Include="Design\css\fonts\OpenSans-SemiboldItalic-webfont.eot" />
+    <Content Include="Design\css\fonts\OpenSans-SemiboldItalic-webfont.ttf" />
+    <Content Include="Design\css\fonts\Pacifico.woff" />
+    <Content Include="Design\css\fonts\Raleway-Bold.woff" />
+    <Content Include="Design\css\fonts\Raleway-Medium.woff" />
+    <Content Include="Design\css\fonts\Raleway.woff" />
+    <Content Include="Design\css\fonts\Roboto-Bold.woff" />
+    <Content Include="Design\css\fonts\Roboto-Regular.woff" />
+    <Content Include="Design\fonts\ge_hili_book-webfont.eot" />
+    <Content Include="Design\fonts\ge_hili_book-webfont.ttf" />
+    <Content Include="Design\fonts\ge_hili_book-webfont.woff" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Design\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Design\fonts\helveticaneueltpro-hvcn_0-webfont.eot" />
+    <Content Include="Design\fonts\helveticaneueltpro-hvcn_0-webfont.ttf" />
+    <Content Include="Design\fonts\helveticaneueltpro-hvcn_0-webfont.woff" />
+    <Content Include="Design\img2\500x332\PHOTOS.psd" />
+    <Content Include="Design\img\favicon.ico.x" />
+    <Content Include="Design\logo.psd" />
+    <Content Include="Test.html" />
+    <Content Include="_assets\css\bootstrap-rtl.css" />
+    <Content Include="_assets\css\bootstrap-rtl.min.css" />
+    <Content Include="_assets\css\bootstrap.css" />
+    <Content Include="_assets\css\ie8.css" />
+    <Content Include="_assets\css\layout-semiboxed.css" />
+    <Content Include="_assets\css\responsive.css" />
+    <Content Include="_assets\css\skin-green.css" />
+    <Content Include="_assets\css\style.ar.css" />
+    <Content Include="_assets\css\style.css" />
+    <Content Include="_assets\demo\css\colorpicker.css" />
+    <Content Include="_assets\demo\css\style-switcher.css" />
+    <Content Include="_assets\demo\images\colorpicker\button-icon.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_background.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_hex.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_indic.gif" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_overlay.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_select.gif" />
+    <Content Include="_assets\demo\images\colorpicker\colorpicker_submit.png" />
+    <Content Include="_assets\demo\images\colorpicker\select2.png" />
+    <Content Include="_assets\demo\images\logowowthemes.png" />
+    <Content Include="_assets\demo\images\themestyles.png" />
+    <Content Include="_assets\demo\js\colorpicker.js" />
+    <Content Include="_assets\demo\js\jquery.cookie.js" />
+    <Content Include="_assets\demo\js\styleswitch.js" />
+    <Content Include="_assets\demo\js\switcher.js" />
+    <Content Include="_assets\fonts\fonts.css" />
+    <Content Include="_assets\img2\115x80\0.jpg" />
+    <Content Include="_assets\img2\115x80\00.jpg" />
+    <Content Include="_assets\img2\115x80\1.jpg" />
+    <Content Include="_assets\img2\115x80\10.jpg" />
+    <Content Include="_assets\img2\115x80\11.jpg" />
+    <Content Include="_assets\img2\115x80\12.jpg" />
+    <Content Include="_assets\img2\115x80\14.jpg" />
+    <Content Include="_assets\img2\115x80\15.jpg" />
+    <Content Include="_assets\img2\115x80\16.jpg" />
+    <Content Include="_assets\img2\115x80\17.jpg" />
+    <Content Include="_assets\img2\115x80\18.jpg" />
+    <Content Include="_assets\img2\115x80\19.jpg" />
+    <Content Include="_assets\img2\115x80\2.jpg" />
+    <Content Include="_assets\img2\115x80\20.jpg" />
+    <Content Include="_assets\img2\115x80\21.jpg" />
+    <Content Include="_assets\img2\115x80\22.jpg" />
+    <Content Include="_assets\img2\115x80\23.jpg" />
+    <Content Include="_assets\img2\115x80\24.jpg" />
+    <Content Include="_assets\img2\115x80\25.jpg" />
+    <Content Include="_assets\img2\115x80\26.jpg" />
+    <Content Include="_assets\img2\115x80\27.jpg" />
+    <Content Include="_assets\img2\115x80\28.jpg" />
+    <Content Include="_assets\img2\115x80\29.jpg" />
+    <Content Include="_assets\img2\115x80\3.jpg" />
+    <Content Include="_assets\img2\115x80\30.jpg" />
+    <Content Include="_assets\img2\115x80\31.jpg" />
+    <Content Include="_assets\img2\115x80\32.jpg" />
+    <Content Include="_assets\img2\115x80\33.jpg" />
+    <Content Include="_assets\img2\115x80\34.jpg" />
+    <Content Include="_assets\img2\115x80\4.jpg" />
+    <Content Include="_assets\img2\115x80\40.jpg" />
+    <Content Include="_assets\img2\115x80\41.jpg" />
+    <Content Include="_assets\img2\115x80\43.jpg" />
+    <Content Include="_assets\img2\115x80\5.jpg" />
+    <Content Include="_assets\img2\115x80\6.jpg" />
+    <Content Include="_assets\img2\115x80\7.jpg" />
+    <Content Include="_assets\img2\115x80\8.jpg" />
+    <Content Include="_assets\img2\115x80\9.jpg" />
+    <Content Include="_assets\img2\500x332\0.jpg" />
+    <Content Include="_assets\img2\500x332\00.jpg" />
+    <Content Include="_assets\img2\500x332\1.jpg" />
+    <Content Include="_assets\img2\500x332\10.jpg" />
+    <Content Include="_assets\img2\500x332\11.jpg" />
+    <Content Include="_assets\img2\500x332\12.jpg" />
+    <Content Include="_assets\img2\500x332\14.jpg" />
+    <Content Include="_assets\img2\500x332\15.jpg" />
+    <Content Include="_assets\img2\500x332\16.jpg" />
+    <Content Include="_assets\img2\500x332\17.jpg" />
+    <Content Include="_assets\img2\500x332\18.jpg" />
+    <Content Include="_assets\img2\500x332\19.jpg" />
+    <Content Include="_assets\img2\500x332\2.jpg" />
+    <Content Include="_assets\img2\500x332\20.jpg" />
+    <Content Include="_assets\img2\500x332\21.jpg" />
+    <Content Include="_assets\img2\500x332\22.jpg" />
+    <Content Include="_assets\img2\500x332\23.jpg" />
+    <Content Include="_assets\img2\500x332\24.jpg" />
+    <Content Include="_assets\img2\500x332\25.jpg" />
+    <Content Include="_assets\img2\500x332\26.jpg" />
+    <Content Include="_assets\img2\500x332\27.jpg" />
+    <Content Include="_assets\img2\500x332\28.jpg" />
+    <Content Include="_assets\img2\500x332\29.jpg" />
+    <Content Include="_assets\img2\500x332\3.jpg" />
+    <Content Include="_assets\img2\500x332\30.jpg" />
+    <Content Include="_assets\img2\500x332\31.jpg" />
+    <Content Include="_assets\img2\500x332\32.jpg" />
+    <Content Include="_assets\img2\500x332\33.jpg" />
+    <Content Include="_assets\img2\500x332\34.jpg" />
+    <Content Include="_assets\img2\500x332\4.jpg" />
+    <Content Include="_assets\img2\500x332\40.jpg" />
+    <Content Include="_assets\img2\500x332\41.jpg" />
+    <Content Include="_assets\img2\500x332\43.jpg" />
+    <Content Include="_assets\img2\500x332\5.jpg" />
+    <Content Include="_assets\img2\500x332\6.jpg" />
+    <Content Include="_assets\img2\500x332\7.jpg" />
+    <Content Include="_assets\img2\500x332\8.jpg" />
+    <Content Include="_assets\img2\500x332\9.jpg" />
+    <Content Include="_assets\img2\ceo2.jpg" />
+    <Content Include="_assets\img2\Slider\1.jpg" />
+    <Content Include="_assets\img2\Slider\10.jpg" />
+    <Content Include="_assets\img2\Slider\11.jpg" />
+    <Content Include="_assets\img2\Slider\12.jpg" />
+    <Content Include="_assets\img2\Slider\13.jpg" />
+    <Content Include="_assets\img2\Slider\14.jpg" />
+    <Content Include="_assets\img2\Slider\15.jpg" />
+    <Content Include="_assets\img2\Slider\16.jpg" />
+    <Content Include="_assets\img2\Slider\17.jpg" />
+    <Content Include="_assets\img2\Slider\18.jpg" />
+    <Content Include="_assets\img2\Slider\19.jpg" />
+    <Content Include="_assets\img2\Slider\2.jpg" />
+    <Content Include="_assets\img2\Slider\20.jpg" />
+    <Content Include="_assets\img2\Slider\21.jpg" />
+    <Content Include="_assets\img2\Slider\22.jpg" />
+    <Content Include="_assets\img2\Slider\23.jpg" />
+    <Content Include="_assets\img2\Slider\24.jpg" />
+    <Content Include="_assets\img2\Slider\25.jpg" />
+    <Content Include="_assets\img2\Slider\26.jpg" />
+    <Content Include="_assets\img2\Slider\27.jpg" />
+    <Content Include="_assets\img2\Slider\28.jpg" />
+    <Content Include="_assets\img2\Slider\29.jpg" />
+    <Content Include="_assets\img2\Slider\3.jpg" />
+    <Content Include="_assets\img2\Slider\30.jpg" />
+    <Content Include="_assets\img2\Slider\31.jpg" />
+    <Content Include="_assets\img2\Slider\32.jpg" />
+    <Content Include="_assets\img2\Slider\33.jpg" />
+    <Content Include="_assets\img2\Slider\34.jpg" />
+    <Content Include="_assets\img2\Slider\35.jpg" />
+    <Content Include="_assets\img2\Slider\36.jpg" />
+    <Content Include="_assets\img2\Slider\37.jpg" />
+    <Content Include="_assets\img2\Slider\38.jpg" />
+    <Content Include="_assets\img2\Slider\39.jpg" />
+    <Content Include="_assets\img2\Slider\4.jpg" />
+    <Content Include="_assets\img2\Slider\40.jpg" />
+    <Content Include="_assets\img2\Slider\41.jpg" />
+    <Content Include="_assets\img2\Slider\42.jpg" />
+    <Content Include="_assets\img2\Slider\43.jpg" />
+    <Content Include="_assets\img2\Slider\44.jpg" />
+    <Content Include="_assets\img2\Slider\45.jpg" />
+    <Content Include="_assets\img2\Slider\46.jpg" />
+    <Content Include="_assets\img2\Slider\47.jpg" />
+    <Content Include="_assets\img2\Slider\48.jpg" />
+    <Content Include="_assets\img2\Slider\49.jpg" />
+    <Content Include="_assets\img2\Slider\5.jpg" />
+    <Content Include="_assets\img2\Slider\50.jpg" />
+    <Content Include="_assets\img2\Slider\51.jpg" />
+    <Content Include="_assets\img2\Slider\6.jpg" />
+    <Content Include="_assets\img2\Slider\7.jpg" />
+    <Content Include="_assets\img2\Slider\8.jpg" />
+    <Content Include="_assets\img2\Slider\9.jpg" />
+    <Content Include="_assets\img\avatar.jpg" />
+    <Content Include="_assets\img\bgfooter.jpg" />
+    <Content Include="_assets\img\carousel_arrows.png" />
+    <Content Include="_assets\img\demo\1.jpg" />
+    <Content Include="_assets\img\demo\3.jpg" />
+    <Content Include="_assets\img\demo\7.jpg" />
+    <Content Include="_assets\img\demo\bg.jpg" />
+    <Content Include="_assets\img\demo\desktop2.png" />
+    <Content Include="_assets\img\demo\desktop3.png" />
+    <Content Include="_assets\img\demo\projectdetail1.jpg" />
+    <Content Include="_assets\img\demo\projectdetail2.jpg" />
+    <Content Include="_assets\img\demo\projectdetail3.jpg" />
+    <Content Include="_assets\img\demo\showcase1.jpg" />
+    <Content Include="_assets\img\demo\showcase2.jpg" />
+    <Content Include="_assets\img\demo\showcase3.jpg" />
+    <Content Include="_assets\img\demo\showcase4.jpg" />
+    <Content Include="_assets\img\demo\slide1-1.png" />
+    <Content Include="_assets\img\demo\slide1-2.png" />
+    <Content Include="_assets\img\demo\slide1-3.png" />
+    <Content Include="_assets\img\demo\slide1.jpg" />
+    <Content Include="_assets\img\demo\slide2.jpg" />
+    <Content Include="_assets\img\demo\slide3.jpg" />
+    <Content Include="_assets\img\demo\team1.jpg" />
+    <Content Include="_assets\img\demo\team2.jpg" />
+    <Content Include="_assets\img\demo\team3.jpg" />
+    <Content Include="_assets\img\favicon.ico" />
+    <Content Include="_assets\img\foot.png" />
+    <Content Include="_assets\img\head.png" />
+    <Content Include="_assets\img\logo.png" />
+    <Content Include="_assets\img\map.png" />
+    <Content Include="_assets\img\minus.png" />
+    <Content Include="_assets\img\plus.png" />
+    <Content Include="_assets\img\plust.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="_assets\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="_assets\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="_assets\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="_assets\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="_assets\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="_assets\img\sha-down.png" />
+    <Content Include="_assets\img\sha-up.png" />
+    <Content Include="_assets\img\shp.png" />
+    <Content Include="_assets\img\up-arrow.png" />
+    <Content Include="_assets\index.ar.html" />
+    <Content Include="_assets\index.html" />
+    <Content Include="_assets\js\bootstrap.js" />
+    <Content Include="_assets\js\common.js" />
+    <Content Include="_assets\js\html5shiv.js" />
+    <Content Include="_assets\js\jquery.js" />
+    <Content Include="_assets\js\plugins.js" />
+    <Content Include="_assets\js\respond.min.js" />
+    <Content Include="_assets\logo.0.png" />
+    <Content Include="_assets\logo.png" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Welcome.cshtml" />
+    <Content Include="Views\Shared\Footer\PageContacts.cshtml" />
+    <Content Include="Views\-\Template.cshtml" />
+    <Content Include="Views\-\Page.cshtml" />
+    <Content Include="Views\Portfoliox\Template.cshtml" />
+    <Content Include="Views\Blog\Blogs.cshtml" />
+    <Content Include="Views\Portfolio-grid\Template.cshtml" />
+    <Content Include="Views\Solutions-Gallery-x\Template.cshtml" />
+    <Content Include="Views\Solutions-slider\Template.cshtml" />
+    <Content Include="Views\PartialViews\Pager.cshtml" />
+    <Content Include="Views\Shared\_LayoutInnerWide.cshtml" />
+    <Content Include="Views\Shared\breadcrumbs.cshtml" />
+    <Content Include="Views\About_Us\index.cshtml" />
+    <Content Include="Views\Blog\index.cshtml" />
+    <Content Include="Views\Shared\_LayoutInnerContacts.cshtml" />
+    <Content Include="Views\Shared\Aside\AboutTab2.cshtml" />
+    <Content Include="Views\Shared\Aside\AboutTab.cshtml" />
+    <Content Include="Views\Shared\Aside\WhyWeAre.cshtml" />
+    <Content Include="Views\Shared\Aside\Contacts.cshtml" />
+    <Content Include="Views\Shared\Aside\RecentBlogEntries.cshtml" />
+    <Content Include="Views\-\ItemsSingle.cshtml" />
+    <Content Include="Views\-\ItemsList.cshtml" />
+    <Content Include="Views\Solutions\Clients.cshtml" />
+    <Content Include="Views\Solutions\index.cshtml" />
+    <Content Include="Views\Solutions\Intro.cshtml" />
+    <Content Include="Views\Solutions\Solutions.cshtml" />
+    <Content Include="Views\Blog\details.cshtml" />
+    <Content Include="Views\Blog\detailsPartialView.cshtml" />
+    <Content Include="Views\Solutions\details.cshtml" />
+    <Content Include="Views\Solutions\detailsPartialView.cshtml" />
+    <Content Include="Views\Portfolio\index.cshtml" />
+    <Content Include="Views\Portfolio\Intro.cshtml" />
+    <Content Include="Views\Portfolio\Portfolio.cshtml" />
+    <Content Include="Views\Shared\_LayoutInnerWithSideBar.cshtml" />
+    <Content Include="Views\contact_us\index.cshtml" />
+    <Content Include="Views\contact_us\Intro.cshtml" />
+    <Content Include="Views\contact_us\contact_us.cshtml" />
+    <Content Include="Views\Shared\PageDetails.cshtml" />
+    <Content Include="Views\Shared\Footer\RecentBlogEntries.cshtml" />
+    <Content Include="Views\Solutions\ItemPhotos.cshtml" />
+    <Content Include="Views\Solutions\SolutionsNavigation.cshtml" />
+    <Content Include="Views - bk\-\ItemsList.cshtml" />
+    <Content Include="Views - bk\-\ItemsSingle.cshtml" />
+    <Content Include="Views - bk\-\Page.cshtml" />
+    <Content Include="Views - bk\-\Template.cshtml" />
+    <Content Include="Views - bk\_ViewStart.cshtml" />
+    <Content Include="Views - bk\About_Us\Clients.cshtml" />
+    <Content Include="Views - bk\About_Us\Featured.cshtml" />
+    <Content Include="Views - bk\About_Us\index.cshtml" />
+    <Content Include="Views - bk\About_Us\Intro.cshtml" />
+    <Content Include="Views - bk\About_Us\Slogan.cshtml" />
+    <Content Include="Views - bk\About_Us\TeamWork.cshtml" />
+    <Content Include="Views - bk\About_Us\Welcome-Static.cshtml" />
+    <Content Include="Views - bk\About_Us\Welcome.cshtml" />
+    <Content Include="Views - bk\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views - bk\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views - bk\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views - bk\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views - bk\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views - bk\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views - bk\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views - bk\Account\ForgotPassword.cshtml" />
+    <Content Include="Views - bk\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views - bk\Account\Login.cshtml" />
+    <Content Include="Views - bk\Account\Register.cshtml" />
+    <Content Include="Views - bk\Account\ResetPassword.cshtml" />
+    <Content Include="Views - bk\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views - bk\Account\SendCode.cshtml" />
+    <Content Include="Views - bk\Account\VerifyCode.cshtml" />
+    <Content Include="Views - bk\Blog\Blogs.cshtml" />
+    <Content Include="Views - bk\Blog\details.cshtml" />
+    <Content Include="Views - bk\Blog\detailsPartialView.cshtml" />
+    <Content Include="Views - bk\Blog\index.cshtml" />
+    <Content Include="Views - bk\contact_us\contact_us.cshtml" />
+    <Content Include="Views - bk\contact_us\index.cshtml" />
+    <Content Include="Views - bk\contact_us\Intro.cshtml" />
+    <Content Include="Views - bk\Home\Clients.cshtml" />
+    <Content Include="Views - bk\Home\Featured.cshtml" />
+    <Content Include="Views - bk\Home\HomeBody.cshtml" />
+    <Content Include="Views - bk\Home\Index.cshtml" />
+    <Content Include="Views - bk\Home\LatestProjcts.cshtml" />
+    <Content Include="Views - bk\Home\Sliders\HomeSlider1.cshtml" />
+    <Content Include="Views - bk\Home\Sliders\HomeSlider2.cshtml" />
+    <Content Include="Views - bk\Home\Solutions.cshtml" />
+    <Content Include="Views - bk\Home\welcome.cshtml" />
+    <Content Include="Views - bk\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views - bk\Manage\ChangePassword.cshtml" />
+    <Content Include="Views - bk\Manage\Index.cshtml" />
+    <Content Include="Views - bk\Manage\ManageLogins.cshtml" />
+    <Content Include="Views - bk\Manage\SetPassword.cshtml" />
+    <Content Include="Views - bk\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views - bk\Portfolio\index.cshtml" />
+    <Content Include="Views - bk\Portfolio\Intro.cshtml" />
+    <Content Include="Views - bk\Portfolio\Portfolio.cshtml" />
+    <Content Include="Views - bk\Portfolio-grid\Template.cshtml" />
+    <Content Include="Views - bk\Portfoliox\Template.cshtml" />
+    <Content Include="Views - bk\Services\Clients.cshtml" />
+    <Content Include="Views - bk\Services\index.cshtml" />
+    <Content Include="Views - bk\Services\Intro.cshtml" />
+    <Content Include="Views - bk\Services\Services.cshtml" />
+    <Content Include="Views - bk\Shared\_Footer.cshtml" />
+    <Content Include="Views - bk\Shared\_Footer.old.cshtml" />
+    <Content Include="Views - bk\Shared\_Header.cshtml" />
+    <Content Include="Views - bk\Shared\_Layout-bk.cshtml" />
+    <Content Include="Views - bk\Shared\_Layout.cshtml" />
+    <Content Include="Views - bk\Shared\_LayoutInnerContacts.cshtml" />
+    <Content Include="Views - bk\Shared\_LayoutInnerWide.cshtml" />
+    <Content Include="Views - bk\Shared\_LayoutInnerWithSideBar.cshtml" />
+    <Content Include="Views - bk\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views - bk\Shared\_Welcome.cshtml" />
+    <Content Include="Views - bk\Shared\Aside\AboutTab.cshtml" />
+    <Content Include="Views - bk\Shared\Aside\AboutTab2.cshtml" />
+    <Content Include="Views - bk\Shared\Aside\Contacts.cshtml" />
+    <Content Include="Views - bk\Shared\Aside\RecentBlogEntries.cshtml" />
+    <Content Include="Views - bk\Shared\Aside\WhyWeAre.cshtml" />
+    <Content Include="Views - bk\Shared\breadcrumbs.cshtml" />
+    <Content Include="Views - bk\Shared\Error.cshtml" />
+    <Content Include="Views - bk\Shared\Footer\PageContacts.cshtml" />
+    <Content Include="Views - bk\Shared\Footer\RecentBlogEntries.cshtml" />
+    <Content Include="Views - bk\Shared\Lockout.cshtml" />
+    <Content Include="Views - bk\Shared\PageDetails.cshtml" />
+    <Content Include="Views - bk\Shared\Pager.cshtml" />
+    <Content Include="Views - bk\Solutions\Clients.cshtml" />
+    <Content Include="Views - bk\Solutions\details.cshtml" />
+    <Content Include="Views - bk\Solutions\detailsPartialView.cshtml" />
+    <Content Include="Views - bk\Solutions\index.cshtml" />
+    <Content Include="Views - bk\Solutions\Intro.cshtml" />
+    <Content Include="Views - bk\Solutions\ItemPhotos.cshtml" />
+    <Content Include="Views - bk\Solutions\Solutions.cshtml" />
+    <Content Include="Views - bk\Solutions\SolutionsNavigation.cshtml" />
+    <Content Include="Views - bk\Solutions-Gallery-x\Template.cshtml" />
+    <Content Include="Views - bk\Solutions-slider\Template.cshtml" />
+    <Content Include="Views - bk\Web.config" />
+    <Content Include="_assets\css\bootstrap-rtl.css.map" />
+    <Content Include="_assets\css\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="_assets\css\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="_assets\css\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="_assets\css\fonts\OpenSans-Bold-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-Bold-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-BoldItalic-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-BoldItalic-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-ExtraBold-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-ExtraBold-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-ExtraBoldItalic-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-ExtraBoldItalic-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-Italic-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-Italic-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-Light-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-Light-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-LightItalic-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-LightItalic-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-Semibold-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-Semibold-webfont.ttf" />
+    <Content Include="_assets\css\fonts\OpenSans-SemiboldItalic-webfont.eot" />
+    <Content Include="_assets\css\fonts\OpenSans-SemiboldItalic-webfont.ttf" />
+    <Content Include="_assets\css\fonts\Pacifico.woff" />
+    <Content Include="_assets\css\fonts\Raleway-Bold.woff" />
+    <Content Include="_assets\css\fonts\Raleway-Medium.woff" />
+    <Content Include="_assets\css\fonts\Raleway.woff" />
+    <Content Include="_assets\css\fonts\Roboto-Bold.woff" />
+    <Content Include="_assets\css\fonts\Roboto-Regular.woff" />
+    <Content Include="_assets\fonts\ge_hili_book-webfont.eot" />
+    <Content Include="_assets\fonts\ge_hili_book-webfont.ttf" />
+    <Content Include="_assets\fonts\ge_hili_book-webfont.woff" />
+    <Content Include="_assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_assets\fonts\helveticaneueltpro-hvcn_0-webfont.eot" />
+    <Content Include="_assets\fonts\helveticaneueltpro-hvcn_0-webfont.ttf" />
+    <Content Include="_assets\fonts\helveticaneueltpro-hvcn_0-webfont.woff" />
+    <Content Include="_assets\img2\500x332\PHOTOS.psd" />
+    <Content Include="_assets\img\favicon.ico.x" />
+    <Content Include="_assets\logo.psd" />
+    <Content Include="Views\Shared\_Layout.en.cshtml" />
+    <Content Include="Views\Home\_carousel.cshtml" />
+    <Content Include="Views\Home\_welcome.cshtml" />
+    <Content Include="Views\Services\index.cshtml" />
+    <Content Include="Views\Services\details.cshtml" />
+    <Content Include="Views\Services\detailsPartialView.cshtml" />
+    <Content Include="Views\Offers\details.cshtml" />
+    <Content Include="Views\Offers\detailsPartialView.cshtml" />
+    <Content Include="Views\Offers\index.cshtml" />
+    <Content Include="Views\Offers\list.cshtml" />
+    <Content Include="Views\Offers\Latest.cshtml" />
+    <Content Include="Views\Portfolio\list.cshtml" />
+    <Content Include="Views\Shared\Partials\ServicesSubmenu.cshtml" />
+    <Content Include="Views\About_Us\list.cshtml" />
+    <Content Include="Views\Home\xxxxx.cshtml" />
+    <Content Include="Views\Home\LatestOffers.cshtml" />
+    <Content Include="Views\Home\TopServices.cshtml" />
+    <Content Include="Views\Home\2.cshtml" />
+    <Content Include="Views\Shared\Partials\smallContacts.cshtml" />
+    <Content Include="Views\contact_us\smallContacts.cshtml" />
+    <Content Include="Views\Services\List.cshtml" />
+    <Content Include="Views\Services\List - Copy.cshtml" />
+    <Content Include="Views\Services\List - Copy - Copy.cshtml" />
+    <Content Include="Views\Services\Latest.cshtml" />
+    <Content Include="Views\PartialViews\ItemGallery.cshtml" />
+    <Content Include="Views\Shared\Partials\ClientsWords.cshtml" />
+    <Content Include="Views\Shared\_Layout.bk.cshtml" />
+    <Content Include="Views\Shared\Partials\Submenu.cshtml" />
+    <Content Include="Views\Shared\Partials\MazaratSubmenu.cshtml" />
+    <Content Include="Views\Shared\Partials\ManasekSubmenu.cshtml" />
+    <Content Include="Views\Articles\details.cshtml" />
+    <Content Include="Views\Articles\detailsPartialView.cshtml" />
+    <Content Include="Views\Articles\index.cshtml" />
+    <Content Include="Views\Articles\Latest.cshtml" />
+    <Content Include="Views\Articles\CategoriesList.cshtml" />
+    <Content Include="Views\Articles\Items.cshtml" />
+    <Content Include="Web.server.config" />
+    <Content Include="Views\Blog\Items.cshtml" />
+    <Content Include="Views\FAQ\index.cshtml" />
+    <Content Include="Views\FAQ\list.cshtml" />
+    <Content Include="Views\Supervisors\details.cshtml" />
+    <Content Include="Views\Supervisors\detailsPartialView.cshtml" />
+    <Content Include="Views\Supervisors\index.cshtml" />
+    <Content Include="Views\Supervisors\Latest.cshtml" />
+    <Content Include="Views\Supervisors\list.cshtml" />
+    <Content Include="Views\Videos\details.cshtml" />
+    <Content Include="Views\Videos\detailsPartialView.cshtml" />
+    <Content Include="Views\Videos\index.cshtml" />
+    <Content Include="Views\Videos\Latest.cshtml" />
+    <Content Include="Views\Videos\list.cshtml" />
+    <Content Include="Views\Hotels\details.cshtml" />
+    <Content Include="Views\Hotels\detailsPartialView.cshtml" />
+    <Content Include="Views\Hotels\index.cshtml" />
+    <Content Include="Views\Hotels\Latest.cshtml" />
+    <Content Include="Views\Hotels\list.cshtml" />
+    <Content Include="Views\OurTrips\details.cshtml" />
+    <Content Include="Views\OurTrips\detailsPartialView.cshtml" />
+    <Content Include="Views\OurTrips\index.cshtml" />
+    <Content Include="Views\OurTrips\Latest.cshtml" />
+    <Content Include="Views\OurTrips\list.cshtml" />
+    <Content Include="Views\Hotels\Photos.cshtml" />
+    <Content Include="Views\OurTrips\Photos.cshtml" />
+    <Content Include="Views\OurTrips\ItemGallery.cshtml" />
+    <Content Include="Views\Hotels\ItemGallery.cshtml" />
+    <Content Include="Views\Services\ItemGallery.cshtml" />
+    <None Include="Web.server.Debug.config">
+      <DependentUpon>Web.server.config</DependentUpon>
+    </None>
+    <None Include="Web.server.Release.config">
+      <DependentUpon>Web.server.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views - bk\Module\" />
+    <Folder Include="Views\Module\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppService\AppService.csproj">
+      <Project>{caa8def3-5d01-48b0-a4ae-7156cb2f4fb9}</Project>
+      <Name>AppService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DCCMSNameSpace\DCCMSNameSpace.csproj">
+      <Project>{767a8b46-b96a-44f5-96e3-ed5549c2a7de}</Project>
+      <Name>DCCMSNameSpace</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Admin\AdmininstrationData.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AdmininstrationData.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\AdmininstrationData.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AdmininstrationData.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\AdminText.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AdminText.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\AdminText.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AdminText.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\ItemsFiles.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ItemsFiles.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\ItemsFiles.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ItemsFiles.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\MailListAdmin.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MailListAdmin.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\MailListAdmin.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MailListAdmin.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\SmsAdmin.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SmsAdmin.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\SmsAdmin.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SmsAdmin.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\SocialLinks.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SocialLinks.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\SocialLinks.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SocialLinks.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\VisitorsCounter.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VisitorsCounter.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\VisitorsCounter.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VisitorsCounter.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\Zecurity.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Zecurity.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Admin\Zecurity.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Zecurity.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Advertisments\Advertisments.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Advertisments.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Advertisments\Advertisments.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Advertisments.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Calendar\Calendar.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Calendar.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Calendar\Calendar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Calendar.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Calendar\CalendarText.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>CalendarText.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Calendar\CalendarText.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>CalendarText.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Cities\Cities.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Cities.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Cities\Cities.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Cities.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Files\GlobalTexts.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalTexts.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ItemsComments\Comments.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Comments.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ItemsComments\Comments.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Comments.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ItemsOrders\ItemsOrders.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ItemsOrders.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ItemsOrders\ItemsOrders.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ItemsOrders.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\ar\Branches.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Branches.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\ar\Items.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Items.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\ar\Products.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Products.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\en\Branches.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Branches.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\en\Items.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Items.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Items\en\Products.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Products.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Languages\Lang.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Lang.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Languages\Lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Lang.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\MailList\MailList.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MailList.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\MailList\MailList.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MailList.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Membership\MemberShip.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MemberShip.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Membership\MemberShip.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MemberShip.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\ar\Career.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Career.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\ar\Consulting_Services.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Consulting_Services.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\ar\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\en\Career.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Career.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\en\Consulting_Services.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Consulting_Services.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Messages\en\Messages.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SiteDepartments\SiteDepartments.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SiteDepartments.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SiteDepartments\SiteDepartments.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SiteDepartments.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Sitelanguages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Sitelanguages.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SMS\SMS.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SMS.ar.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SMS\SMS.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SMS.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Special\SiteText.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SiteText.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Special\SiteText.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SiteText.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\SubSites\SubSites.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SubSites.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SubSites\SubSites.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SubSites.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SystemCountries\SystemCountries.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SystemCountries.ar.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SystemCountries\SystemCountries.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SystemCountries.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\TellAfriend\TellAfriend.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>TellAfriend.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\TellAfriend\TellAfriend.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>TellAfriend.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UsersData\NmakanMem.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>NmakanMem.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UsersData\NmakanMem.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>NmakanMem.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UsersData\Profile\UserProfile.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UserProfile.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UsersData\UsersData.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UsersData.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UsersData\UsersData.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UsersData.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UserTexts\User.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UserTexts\User.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Voting\Vote.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Vote.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Voting\Vote.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Vote.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\_MasterAdmin\DefaultModules\DefaultModules.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DefaultModules.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\_MasterAdmin\DefaultModules\DefaultModules.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DefaultModules.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\_MasterAdmin\Modules.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Modules.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\_MasterAdmin\Modules.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Modules.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Items\ar\TeamWork.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+    </Content>
+    <Content Include="App_GlobalResources\Items\en\TeamWork.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24138</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4445/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

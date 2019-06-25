@@ -1,0 +1,12 @@
+mail1@domain.com
+mail2@domain.com
+mail3@domain.com
+mail4@domain.com
+mail5@domain.com
+mail6@domain.com
+mail7@domain.com
+mail8@domain.com
+mail9@domain.com
+mail10@domain.com
+
+

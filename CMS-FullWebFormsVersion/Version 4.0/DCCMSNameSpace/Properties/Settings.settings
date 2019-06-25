@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DCCMSNameSpace.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DCCMSNameSpace_net_digitalchains_cntry_IpCountryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cntry.digitalchains.net/IpCountryService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,17 @@
+﻿@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetLatestData(22, "TopTitlesPhotosShortDescription", 4);
+    int index = 0;
+}
+@foreach (AppService.FrontItemsModel item in ItemsList)
+{
+    <div class="textItem">
+                                    <div class="avatar">
+                                        <img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="avatar">
+                                    </div>
+                                    " @item.ShortDescription<span style="font-family:arial;">"</span><br /><b> @item.Title </b>
+
+                                </div>
+    
+    
+}
+

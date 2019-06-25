@@ -1,0 +1,18 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    int index = 0;
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData(52, "AllTitlesDescription");
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    <div class="@(index++ ==0?"active":"")">
+        <h4>@item.Title</h4>
+        <p>
+          @item.Description.Replace("\n","<br>")       
+        </p>
+    </div>
+}

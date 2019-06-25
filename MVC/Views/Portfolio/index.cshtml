@@ -1,0 +1,47 @@
+﻿@{
+}
+@section CustomeHeader{
+    <section class="pageheader-default text-center">
+        <div class="semitransparentbg">
+            <h1 class="animated fadeInLeftBig notransition">@Resources.SiteText.Gallery</h1>
+            <p class="animated fadeInRightBig  notransition container page-description">
+                @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 24)
+            </p>
+            <br>
+            <br>
+        </div>
+    </section>
+}
+
+@*@Html.Partial("~/Views/Portfolio/Portfolio.cshtml")*@
+
+<!-- PORTFOLIO THREE COLUMNS
+================================================== -->
+<section class="container">
+    <!-- MASONRY ITEMS START
+    ================================================== -->
+    <!-- Filtering Menu
+    ================================================== -->
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div id="filter" class="animated fadeInDown">
+                <ul>
+                    <li><a href="" data-filter="*" class="selected"><i class="icon icon-reorder"></i> @Resources.SiteText.PortfolioAllItems</a></li>
+                    @Html.Partial("~/Views/Portfolio/list.cshtml")
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END filtering menu -->
+    <div id="content">
+        <!-- box 1 -->
+        @Html.Partial("~/Views/Portfolio/Portfolio.cshtml")
+        <!-- MASONRY ITEMS END -->
+    </div>
+</section>
+<!--CALL TO ACTION PANEL
+================================================== -->
+
+<!-- /. end call to action-->
+
+

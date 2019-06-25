@@ -1,0 +1,35 @@
+﻿@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Solutions, "Services");
+}
+
+<div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
+    <div class="headline">
+        <h2 class="pull-left">Our Solutions</h2>
+        <div class="owl-navigation">
+            <div class="customNavigation">
+                <a class="ch-viewall" href="/solutions/all/">View all</a>
+                <a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a>
+                <a class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div><!--/navigation-->
+    </div>
+    <div class="owl-slider-v2">
+@foreach (AppService.FrontItemsModel item in ItemsList)
+{
+
+    <div class="item">
+        <a href="@SiteUrlsManager.GetSinglesPageLink("solutions", item.ItemID.ToString())">
+            <em class="overflow-hidden">
+                <img class="img-responsive" src="@item.PhotoPathOriginal" alt="">
+            </em>
+            <span>
+                <strong>@item.Title</strong>
+                <i>@item.ShortDescription</i>
+            </span>
+        </a>
+    </div>
+}
+        
+        
+    </div>
+</div>

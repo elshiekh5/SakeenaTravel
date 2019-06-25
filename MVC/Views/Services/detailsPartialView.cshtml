@@ -1,0 +1,25 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+
+<div class="text-center">
+    <h2>@Model.Title</h2>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            <div class="text-center">
+                <img src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + Model.PhotoPathOriginal)" class="img-responsive img-thumbnail aligncenter" alt="">
+            </div>
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            @Html.Raw(Model.Description)
+        </p>
+        
+    </div>
+</div>

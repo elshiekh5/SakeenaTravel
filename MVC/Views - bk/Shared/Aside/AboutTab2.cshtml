@@ -1,0 +1,10 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    public ItemsEntity WhyUs { get; set; }
+    if (WhyUs == null)
+        {
+            WhyUs = ItemsFactory.GetObject(3, SiteSettings.GetCurrentLanguage(), UsersTypes.User, SitesHandler.GetOwnerIDAsGuid());
+        }
+    
+}

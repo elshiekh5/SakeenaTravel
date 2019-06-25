@@ -1,0 +1,58 @@
+﻿<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 md-margin-bottom-40">
+                <!-- About -->
+                <div class="headline"><h2>About</h2></div>
+               <P>We believe in coming up with original ideas and turning them into
+digital work that is both innovative and measurable. Digital solutions that make you curious.</P>
+                <!-- End About -->
+                <!-- Monthly Newsletter -->
+                @*<div class="headline"><h2>Monthly Newsletter</h2></div>
+                <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+                <form class="footer-subsribe">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Email Address">
+                        <span class="input-group-btn">
+                            <button class="btn-u" type="button">Subscribe</button>
+                        </span>
+                    </div>
+                </form>*@
+                <!-- End Monthly Newsletter -->
+            </div><!--/col-md-4-->
+
+            <div class="col-md-4 md-margin-bottom-40">
+                <!-- Recent Blogs -->
+                @Html.Partial("Footer/RecentBlogEntries")
+                <!-- End Recent Blogs -->
+            </div><!--/col-md-4-->
+            <div class="col-md-4">
+                <!-- Contact Us -->
+                @Html.Partial("Footer/PageContacts")
+                <!-- End Contact Us -->
+               
+                <!-- End Social Links -->
+            </div><!--/col-md-4-->
+        </div>
+    </div>
+</div><!--/footer-->
+<!--=== End Footer ===-->
+<!--=== Copyright ===-->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    2014 &copy; Unify. ALL Rights Reserved.
+                    <a target="_blank" href="/">Digital Tags</a> 
+                </p>
+            </div>
+            <div class="col-md-6">
+                <a href="/">
+                    <img class="pull-right" id="logo-footer" src="~/_Assets/img/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div><!--/copyright-->
+<!--=== End Copyright ===-->

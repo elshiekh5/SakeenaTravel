@@ -1,0 +1,31 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    int index = -1;
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData(19, "Header");
+
+}
+<section class="carousel carousel-fade slide home-slider" id="c-slide" data-ride="carousel" data-interval="4500" data-pause="false">
+    <ol class="carousel-indicators hidden">
+        <li data-target="#c-slide" data-slide-to="0" class="active"></li>
+        <li data-target="#c-slide" data-slide-to="1" class=""></li>
+        <li data-target="#c-slide" data-slide-to="2" class=""></li>
+        <li data-target="#c-slide" data-slide-to="3" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+        @foreach (var item in ItemsList)
+        {
+             <div class="item @((++index==0)?"active":"")" style="background: url(@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.Photo2Path));">
+            <div class="container">
+
+            </div>
+        </div>
+        }
+       
+    </div>
+    <!-- /.carousel-inner -->
+    <a class="left carousel-control animated fadeInLeft" href="#c-slide" data-slide="prev"><i class="icon-angle-left"></i></a>
+    <a class="right carousel-control animated fadeInRight" href="#c-slide" data-slide="next"><i class="icon-angle-right"></i></a>
+</section>

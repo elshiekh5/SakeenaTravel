@@ -1,0 +1,56 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    int index = -1;
+    string additionalClass = "col-md-offset-2";
+    string animationClass = "col-md-offset-2";
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Services, "Services");
+    int lastIndex =ItemsList.Count -1;
+    int rowsCount = (ItemsList.Count / 2);
+    if ((ItemsList.Count % 2) > 0)
+    {
+        rowsCount += 1;
+    }
+        
+}
+
+    @for (int i = 0; i < rowsCount; i++)
+    {
+        
+        <div class="row topspace35">
+    @if (++index < ItemsList.Count)
+{
+    FrontItemsModel item = ItemsList[index];
+    <div class="col-md-5 @Resources.SiteText.PullClass col-md-offset-2 animated fadeInLeftNow notransition">
+        <div class="boxcontainer">
+            <div class="imgholder">
+                <img class="img-rounded" src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" alt="">
+            </div>
+            <h1><a href="/services/page/@item.ItemID/">@item.Title</a></h1>
+            <p>
+                <a href="/services/page/@item.ItemID/"><button class="btn btn-default btn-danger" style="border-radius:5px;">@Resources.SiteText.ViewDetails</button></a>
+            </p>
+        </div>
+    </div>
+}
+    @if (++index < ItemsList.Count)
+    {
+        FrontItemsModel item = ItemsList[index];
+            <div class="col-md-5  animated fadeInRightNow notransition">
+            <div class="boxcontainer">
+                <div class="imgholder">
+                    <img class="img-rounded" src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" alt="">
+                </div>
+                <h1><a href="/services/page/@item.ItemID/">@item.Title</a></h1>
+                <p>
+                    <a href="/services/page/@item.ItemID/"><button class="btn btn-default btn-danger" style="border-radius:5px;">@Resources.SiteText.ViewDetails</button></a>
+                </p>
+            </div>
+        </div>
+    }
+    </div>
+        
+    }
+

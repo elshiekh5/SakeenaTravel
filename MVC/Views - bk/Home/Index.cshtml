@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.Partial("Sliders/HomeSlider2")
+<div class="spotLoght" style="background-color: #FCFCFC;
+border-color: #eee;
+box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @*<span>Unify is a clean and fully responsive incredible Template.</span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                    <h3>In <span class="id-color">Our Web Studio </span> Your <span class="id-color">Pretty And Professional Website</span> Is Our Mission</h3>*@
+                @*<h3>We just love building <span class="id-color">Websites </span> to Enhance your  <span class="id-color">Business Image</span></h3>*@
+                <h3>Welcome to <span class="id-color">Digital Tags </span>Web Studio</h3>
+                <p>We are a creative agency Cairo based with many years of production experience and continuous Development, we specialize on creating awesome websites, mobile apps and digital content</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Content Part -->
+<div class="container content">
+    @Html.Partial("Featured")
+</div>
+
+<div class="spotLoght" style="background-color: #FCFCFC;
+border-color: #eee;
+box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15); border-top:solid 1px #eee;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @*<span>Unify is a clean and fully responsive incredible Template.</span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                    <h3>In <span class="id-color">Our Web Studio </span> Your <span class="id-color">Pretty And Professional Website</span> Is Our Mission</h3>*@
+                @*<h3>We just love building <span class="id-color">Websites </span> to Enhance your  <span class="id-color">Business Image</span></h3>*@
+                @Html.Partial("PageDetails", 7793)
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container content">
+
+    <!-- Info Blokcs -->
+    <div class="row margin-bottom-30">
+        <!-- Welcome Block -->
+        <div class="col-md-8 md-margin-bottom-40">
+            @*@Html.Partial("PageDetails", 1)*@
+            @Html.Partial("welcome")
+        </div><!--/col-md-8-->
+        <!-- Latest Shots -->
+        <div class="col-md-4">
+            @Html.Partial("LatestProjcts")
+        </div><!--/col-md-4-->
+    </div>
+
+    </div>
+<div class="spotLoght" style="background-color: #FCFCFC;
+border-color: #eee;
+box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15); border-top:solid 1px #eee;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                
+                <h3>Let us drawing your <span class="id-color">bussiness' image</span> we are <span class="id-color">proffesionals</span> </h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container content">
+
+    <!-- End Info Blokcs -->
+    <!-- Recent Works -->
+    @Html.Partial("Solutions")
+
+    <!-- Our Clients -->
+    @Html.Partial("Clients")<!--/flexslider-->
+    <!-- //End Our Clients -->
+
+
+</div><!--/container-->
+<!-- End Content Part -->
+<!--=== Purchase Block ===-->
+<div class="spotLoght2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @*<h3>In <span class="id-color">Our Web Studio </span> Your <span class="id-color">Pretty And Professional Website</span> Is Our Mission</h3>*@
+                @Html.Partial("PageDetails", 7794)
+            </div>
+
+        </div>
+    </div>
+</div><!--/row-->
+@*@section styles {
+    <!-- ------------------------------THis is the  bugin files------------------------------ -->
+<link rel="stylesheet" href="~/_Assets/plugins/revolution-slider/examples/rs-plugin/css/settings.css">
+<!-- ------------------------------------------------------------------------------------ -->
+}
+@section Scripts {
+<script type="text/javascript" src="~/_Assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="~/_Assets/plugins/revolution-slider/examples/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="~/_Assets/plugins/revolution-slider/examples/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+
+<!-- JS Page Level -->
+<script type="text/javascript" src="~/_Assets/js/app.js"></script>
+<script type="text/javascript" src="~/_Assets/js/pages/index.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init();
+        App.initSliders();
+        Index.initRevolutionSlider();
+        Index.initParallaxSlider();
+        App.initBxSlider();
+        OwlCarousel.initOwlCarousel();
+    });
+</script>
+}*@
+
+@section styles {
+    <link rel="stylesheet" href="~/_Assets/plugins/flexslider/flexslider.css">
+    <link rel="stylesheet" href="~/_Assets/plugins/parallax-slider/css/parallax-slider.css">
+    <link rel="stylesheet" href="~/_Assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+}
+@section Scripts {
+    <script type="text/javascript" src="~/_Assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="~/_Assets/plugins/parallax-slider/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/_Assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+
+    <script type="text/javascript" src="~/_Assets/plugins/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="~/_Assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="~/_Assets/js/app.js"></script>
+    <script type="text/javascript" src="~/_Assets/js/plugins/owl-carousel.js"></script>
+    <script type="text/javascript" src="~/_Assets/js/pages/index.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            App.initSliders();
+            Index.initParallaxSlider();
+            App.initBxSlider();
+            OwlCarousel.initOwlCarousel();
+        });
+    </script>
+}

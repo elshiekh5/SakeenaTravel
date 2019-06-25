@@ -1,0 +1,50 @@
+﻿@{
+   
+}
+
+@section CustomeHeader{
+    <section class="pageheader-default text-center">
+    <div class="semitransparentbg">
+        <h1 class="animated fadeInLeftBig notransition">@Resources.SiteText.Services</h1>
+        <p class="animated fadeInRightBig  notransition container page-description">
+            @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 21)
+        </p>
+        <br>
+        <br>
+    </div>
+</section>
+}
+<!-- INTRO NOTE
+       ================================================== -->
+<section class="intro-note topspace10">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+               @Html.Raw(Resources.SiteText.SiteSlogan)
+                <p>
+                    @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 11)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.intro-note end-->
+<!-- SERVICE BOXES
+================================================== -->
+
+<section class="topspace30 grayarea" style="">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            @Html.Partial("~/Views/Services/List.cshtml")
+        </div>
+        
+    </div>
+</section>
+<!-- /.service-box end-->
+<!-- Welcome aria
+================================================== -->
+
+
+@section BottomScripts{
+
+}

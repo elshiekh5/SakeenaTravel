@@ -1,0 +1,26 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+      List<NavigationLink> links = NavigationManager.Instance.Links;
+      
+  }  
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">@AppService.NavigationManager.Instance.TopHeader</h1>
+        <ul class="pull-right breadcrumb">
+            @foreach (NavigationLink l in links)
+            {
+            if (!l.LastTitle)
+            {
+               @Html.Raw(string.Format("<li><a href=\"{0}\">{1}</a></li>",l.Href,l.Title));
+            }
+            else
+            {
+                @Html.Raw(string.Format("<li class=\"active\">{0}</li>", l.Title));
+            }
+        }
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->

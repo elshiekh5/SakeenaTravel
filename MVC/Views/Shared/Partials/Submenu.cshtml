@@ -1,0 +1,14 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@model int
+@{
+
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData(Model, "AllTitles");
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    <li><a href="/services/page/@item.ItemID/">@item.Title</a></li>
+}

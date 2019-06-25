@@ -1,0 +1,32 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetLatestData(15, "TopTitlesPhotos", 4);
+
+}
+<!-- Posts -->
+<div class="posts margin-bottom-40">
+    <div class="headline headline-md">
+        <h2>Recent Posts</h2>
+    </div>
+    @foreach (AppService.FrontItemsModel item in ItemsList)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                <a href="@SiteUrlsManager.GetSinglesPageLink("blog",item.ItemID.ToString())">
+                    <img src="@ThumbnailsManager.GetThumb(@item.PhotoPathOriginal , 150,160,100)" alt="@item.Title" />
+                </a>
+            </dt>
+            <dd>
+                <p><a href="@SiteUrlsManager.GetSinglesPageLink("blog",item.ItemID.ToString())">@item.Title</a></p>
+            </dd>
+        </dl>
+    }
+</div>
+<!--/posts-->
+<!-- End Posts -->
+
+
+
+
+

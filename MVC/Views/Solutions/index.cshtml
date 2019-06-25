@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInnerWide.cshtml";
+}
+     <!--=== Content Part ===-->
+<div class="container content">
+    <div class="row margin-bottom-20">
+        <div class="col-md-12">
+            <p>We can get a solutions for every business branch, trust in us we have a greate experience and grate portfolio</p>
+        </div>
+    </div>
+
+    @Html.Partial("~/Views/Solutions/Solutions.cshtml")
+
+    <!-- Our Clients -->
+    @Html.Partial("~/Views/Solutions/Clients.cshtml")
+    <!--/flexslider-->
+
+</div>
+<!--/container-->
+
+<!--=== End Content Part ===-->
+
+@section styles{
+    <link rel="stylesheet" href="~/_Assets/plugins/flexslider/flexslider.css" type="text/css" media="screen" />
+}
+@section Scripts{
+ <!-- JS Implementing Plugins -->
+<script type="text/javascript" src="~/_Assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="~/_Assets/js/app.js"></script>
+<script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            App.initSliders();
+        });
+</script>
+}

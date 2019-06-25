@@ -1,0 +1,14 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    FrontItemsModel currentItem = Model;
+    if (Model == null)
+    {
+        int itemID = (int)SitePages.ServicesIntro;
+        currentItem = FrontItemsController.GetItemObject(itemID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+@Html.Raw(currentItem.Description)
+

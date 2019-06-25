@@ -1,0 +1,107 @@
+﻿body {
+	text-align:center;
+	margin: 0;
+	BACKGROUND-REPEAT: repeat-x;
+	background-image: url('images/loginbg.gif');
+	background-color:#242424;
+	direction: ltr;
+}
+.Warpper {
+	position: relative;
+	margin: 0 auto;
+	width: 980px;
+	padding-bottom:50px;
+	background-image:url('images/Main/login-bg-photo.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	float: none;
+	clear: both;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#242424;
+}
+ .login_title{
+	margin: 0 auto;
+	width:300px;
+	height:42px;
+	background-image:url('images/Main/login-title.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	padding-top:150px;
+}
+#loginbox{
+	margin: 0 auto;
+	margin-top:10px;
+	width:255px;
+	height:200px;
+	background-image:url('images/boxbg.gif');
+	background-repeat:no-repeat;
+	padding-left:10px;
+	padding-right:10px;
+}
+#loginbox #welcome{
+	float:left;
+	margin-top:50px;
+	margin-bottom:12px;
+	width:255px;
+	text-align:justify;
+}
+
+#loginbox #row{
+	float:left;
+	margin-top:0px;
+	width:255px;
+	font-weight:bold;
+	color:#00446a;
+	padding-top:3px;
+}
+#loginbox .text{
+	float:left;
+	margin-top:0px;
+	width:90px;
+	font-weight:bold;
+	color:#00446a;
+	text-align:right;
+	vertical-align:middle;
+}
+#loginbox .control{
+	float:left;
+	margin-top:0px;
+	width:165px;
+	font-weight:bold;
+	color:#00446a;
+	padding-left:5px;
+}
+#loginbox .input{
+	width:140px;
+	padding:1px 5px 1px 5px;
+	height:18px;
+	border-style:none;
+	background-image:url('images/inputbg.gif');
+	background-repeat:no-repeat;
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:normal;
+}
+#loginbox #rem
+{float:left;padding-left:90px;}
+#loginbox #button
+{float:left;}
+#loginbox .submit
+{float:left;width:50px;margin-left:49px;height:20px;background-image:url('images/loginbut.gif');background-repeat:no-repeat;}
+
+#loginbox #error
+{float:left;width:255px;padding-top:5px;color:Red;text-align:center;}
+.f1
+{ font-family:Tahoma; font-weight:normal; font-size:11px; color:#242424;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    FrontItemsModel currentItem = Model;
+    if (Model == null)
+    {
+        int itemID = (int)SitePages.Welcome;
+        currentItem = FrontItemsController.GetItemObject(itemID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+<div class="col-md-6 md-margin-bottom-40">
+    @Html.Raw(currentItem.Description)
+</div>
+
+<div class="col-md-6 md-margin-bottom-40">
+    <div class="responsive-video">
+        <iframe src="http://player.vimeo.com/video/@currentItem.YoutubeCode" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</div>
+

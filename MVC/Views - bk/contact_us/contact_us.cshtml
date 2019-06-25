@@ -1,0 +1,83 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSendMessage").click(function (e) {
+            //debugger;
+            var message = {};
+            message.Name = $("#Name").val();
+            message.Email = $("#Email").val();
+            message.Message = $("#Message").val();
+            //
+            $("#LoadingAlert").show();
+            $.ajax({
+                type: 'POST',
+                url: '/home/contactus',
+                data: "{message:" + JSON.stringify(message) + "}",
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (res) {
+                    $("#LoadingAlert").hide();
+                    $("#ResultAlert").show();
+                    $("#ResultAlertText").text(res.Message);
+
+                    //debugger;
+                    //-----------------
+                    //Clear form
+                    $("#Name").val("");
+                    $("#Email").val("");
+                    $("#Message").val("");
+                    //-----------------
+                },
+                error: function (err) {
+                    $("#LoadingAlert").hide();
+                    $("#ResultAlert").show();
+                    $("#ResultAlertText").text(err);
+                    //debugger;
+                    alert(err);
+                    console.log(err);
+                }
+            });
+            e.preventDefault();
+
+        });
+
+
+    });
+</script>
+<div id="ResultAlert" class="alert compose_alert alert-warning" style="display: none;">
+    <span id="ResultAlertText"></span>
+</div>
+<div id="LoadingAlert" class="spinner" style="display: none;">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<form id="contactUS">
+    <label>Name</label>
+    <div class="row margin-bottom-20">
+        <div class="col-md-7 col-md-offset-0">
+            <input id="Name" type="text" class="form-control">
+        </div>
+    </div>
+
+    <label>Email <span class="color-red">*</span></label>
+    <div class="row margin-bottom-20">
+        <div class="col-md-7 col-md-offset-0">
+            <input id="Email" type="text" class="form-control">
+        </div>
+    </div>
+
+    <label>Message</label>
+    <div class="row margin-bottom-20">
+        <div class="col-md-11 col-md-offset-0">
+            <textarea id="Message" rows="8" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <p>
+        <button id="btnSendMessage" type="submit" class="btn-u">Send Message</button>
+    </p>
+</form>

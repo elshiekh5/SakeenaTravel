@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeFile="Admin.master.cs" Inherits="App_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="AdminMenu.ascx" TagName="AdminMenu" TagPrefix="uc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title><%= Resources.AdminText.ControlPanel%></title>
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <%--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">--%>
+    <link rel="stylesheet" href="/Content/fontawesome/css/font-awesome.css">
+
+    <script src="/Scripts/ddaccordion.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+
+    <%--
+    <script src="/App/Resources/uniform/jquery.uniform.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/App/Resources/uniform/css/uniform.default.css" type="text/css" media="screen" charset="utf-8" />
+    --%>
+
+    <script type="text/javascript">elsMenuBuild();</script>
+
+    <script type="text/javascript" src="/Scripts/textarea.js"></script>
+
+    <script type="text/javascript" src="/Scripts/NoIEActivate.js"></script>
+
+    <script type="text/javascript" src="/scripts/highslide/highslide/highslide.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/scripts/highslide/highslide/highslide.css" />
+
+    <script type="text/javascript">
+         hs.graphicsDir = '/scripts/highslide/highslide/graphics/';
+         hs.align = 'center';
+         hs.transitions = ['expand', 'crossfade'];
+         hs.outlineType = 'rounded-white';
+         hs.wrapperClassName = 'draggable-header';
+         hs.fadeInOut = true;
+         hs.enableKeyListener = false;
+         hs.minimumWidth = 0;
+	   
+    </script>
+
+    <script type="text/javascript">
+     var ar = 1;
+     var en = 2;
+     var currentLang = 1;
+     //function CheckVlidation(_value, args,lang)
+     function CheckVlidation(_value, args, lang) {
+         if (currentLang == lang) {
+             if (_value != null && _value.length > 0) {
+                 args.IsValid = true;
+
+             }
+             else {
+                 args.IsValid = false;
+             }
+         }
+         else {
+             args.IsValid = true;
+         }
+         //alert("currentLang:="+currentLang+"   lang:="+lang+"  _value :="+_value+"   args.IsValid:="+args.IsValid);
+
+     }
+     //----------------------------------------------
+    
+    </script>
+
+    <%-- <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $("input, textarea, select, button").uniform();
+      });
+    </script> --%>
+    <link id="cssAdmin" runat="server" href="/Content/AdminDesign/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="warpper">
+            <div id="header">
+            </div>
+            <div class="headerHoler" runat="server" id="divHeaderHoler"  >
+                <div class="upicons">
+                    <asp:ImageButton CssClass="logout-but" ImageUrl="/Content/images/spacer.gif"
+                        runat="server" ID="btnlogout" OnClick="btnlogout_Click" />
+                    <%--<a target="_blank" href="/Design/Rabeta/Files/how to use admin rabeta.pdf">
+                        <img border="0" class="main-How" src="/Content/images/spacer.gif" /></a>--%>
+                    <a href="/default.aspx">
+                        <img border="0" class="main-but" src="/Content/images/spacer.gif" /></a>
+                </div>
+                <div id="menu">
+                    <div>
+                        <div id="userInfo">
+                            <div><%= Resources.AdminText.Welcome%><span class="UserName">
+                                    <%= Page.User.Identity.Name %></span></div>
+                            <%--<spa n class="userPremission">لإدارة الموقع</span>--%></div>
+                        <ul id="menuItems">
+                            <li class="menu_item"><a class="nav_item" href="/default.aspx"><%= Resources.AdminText.SiteHome%></a></li>
+                            <li class="menu_item"><a class="nav_item" href="/admincp/"><%= Resources.AdminText.Administration%></a></li>
+                            <li class="menu_item"><a class="nav_item" href="/AdminCP/Profile.aspx"><%= Resources.AdminText.Password%></a></li>
+                            <%--<li class="menu_item"><a class="nav_item" href="#">News</a></li>
+					<li class="menu_item"><a class="nav_item" href="#">Contact</a></li>--%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="body">
+                <div id="nav">
+                    <uc1:AdminMenu ID="AdminMenu1" runat="server" />
+                </div>
+                <div id="content">
+                    <div class="ContentHead">
+                        <asp:ContentPlaceHolder ID="Head" runat="server">
+                            <asp:Label ID="lblTitle" runat="server" Text=""></asp:Label></asp:ContentPlaceHolder>
+                    </div>
+                    <div class="ContentData">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer">
+                All Rights Reserved to Site Administration Rights 2013</div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

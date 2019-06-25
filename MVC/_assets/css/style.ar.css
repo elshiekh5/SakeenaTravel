@@ -1,0 +1,110 @@
+body {
+    font-family:tahoma, Helvetica, sans-serif;
+    direction:rtl;
+font-size: 14px;
+/*font-family: tahoma;
+font-size: 14px;*/
+}
+
+.footer h1 {
+	text-align:right;
+    font-family: 'gehili';
+
+}
+.carousel, .semiboxshadow  {
+     direction:ltr;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: 'gehili';
+}
+.navbar-nav > li > a, .dropdown-menu>li>a {
+    font-family: 'gehili';
+    font-size: 15px;
+}
+.fontpacifico {
+    font-family: 'gehili';
+}
+.bigtext {
+    font-family: 'gehili';
+}
+.boxcontainer h1 a {
+    font-family: 'gehili';
+font-size: 18px;
+font-weight: 300;
+}
+.copyright  {
+    font-family: 'gehili';
+
+}
+.boxcontainer button, .boxcontainer p {
+    font-family: 'gehili';
+}
+#welcome p {
+/* color: #2a2a2a; */
+/* font-family: Arial, Helvetica, sans-serif; */
+/* font-size: 15px; */
+/* font-weight: bold; */
+line-height: 24px;
+/* font-family: 'gehili'; */
+}
+#welcome h2 {
+    margin-bottom:20px;
+}
+.footermenu li:after {
+content: '|';
+color: #fff;
+display: inline-block;
+margin-right: 7px;
+}
+.footermenu li:before {
+content: '';
+display: none;
+margin-left: 0px;
+}
+.intro-note p {
+font-weight: 300;
+line-height: 22px;
+font-size: 14px;
+}
+.footerbrand {
+    font-family: 'gehili';
+}
+#accordion div h4 {
+	padding:15px 70px 15px 0px;
+}
+#accordion div h4:before {
+	right:-1px;
+}
+.footermenu li:first-child:after {
+      content: '';
+  color: #fff;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.sidebar .categories>li a:before {
+	font-family:'FontAwesome';
+	content:"\f100";
+	margin-left:5px;
+}
+.floatright {
+    float:right;
+}
+.navbar-nav > li > a, .dropdown-menu>li>a {
+    /*float:right;*/
+    text-align:right;
+}
+.boxcontainer.offer h1 a {
+    font-family: tahoma,Helvetica,sans-serif;
+    font-size: 12px;
+}
+.boxcontainer.offer p {
+    font-family: tahoma,Helvetica,sans-serif;
+    font-size: 1.1em;
+}
+
+
+
+.addthis-smartlayers, div#at4-follow, div#at4-share, div#at4-thankyou, div#at4-whatsnext {
+    direction: ltr;
+}

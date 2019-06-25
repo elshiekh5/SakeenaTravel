@@ -1,0 +1,92 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 10;
+    int totalItemsCount = 0;
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleDataPageByPage((int)SiteModulesMap.Offers, "OffersPaging", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+}
+
+<div class="row">
+@foreach (FrontItemsModel item in ItemsList)
+{
+    @*<div class="col-md-3">
+        <div class="boxcontainer">
+            <img src="/_assets/img2/500x332/8.jpg" alt="">
+            <div class="roll">
+                <div class="wrapcaption">
+                    <a href="#"><i class="icon-link captionicons"></i></a>
+                    <a data-gal="prettyPhoto[gallery1]" href="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" title="Maldives"><i class="icon-zoom-in captionicons"></i></a>
+                </div>
+            </div>
+            <h1><a href="#">@item.Title</a></h1>
+            <p>
+                @item.ShortDescription
+            </p>
+        </div>
+    </div>*@
+    
+    <div class="col-md-4 topspace35 animated fadeInLeftNow notransition">
+        <div class="boxcontainer">
+            <div class="imgholder">
+                <img class="img-rounded" src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" alt="">
+            </div>
+            <h1><a href="#">@item.Title</a></h1>
+            <p>
+                @item.ShortDescription
+            </p>
+            <p>
+                <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)"><button class="btn btn-default btn-danger" style="border-radius:5px;">View details</button></a>
+            </p>
+        </div>
+    </div>
+    
+}
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            @Html.Partial("~/Views/PartialViews/Pager.cshtml", pager)
+        </div>
+    </div>
+    </div>
+
+
+
+@**@
+
+
+
+@*<div class="gallery-page">
+    <div class="row margin-bottom-20">
+
+        @foreach (FrontItemsModel item in ItemsList)
+        {
+
+            <div class="col-md-3 col-sm-6">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="" href="@item.PhotoPathOriginal">
+                    <span class="overlay-zoom">
+                        <img alt="" src="@ThumbnailsManager.GetThumb(item.PhotoPathOriginal, 270,270,100)" class="img-responsive">
+                        <span class="zoom-icon"></span>
+                    </span>
+                    &nbsp;
+                </a>
+            </div>
+        }
+    </div>
+    
+</div>*@

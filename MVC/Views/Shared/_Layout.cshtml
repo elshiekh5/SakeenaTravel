@@ -1,0 +1,406 @@
+﻿@using DCCMSNameSpace;
+@{
+    // ViewBag.Title = "Home Page";
+    this.Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@Resources.SiteText.SiteName</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    @Styles.Render("~/bundles/Styles")
+    @*<link href="/_assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/_assets/css/style.css" rel="stylesheet">
+    <link href="/_assets/css/style.ar.css" rel="stylesheet">
+    <!-- Responsive -->
+    <link href="/_assets/css/responsive.css" rel="stylesheet">
+    <!-- Choose Layout -->
+    <link href="/_assets/css/layout-semiboxed.css" rel="stylesheet">
+    <link href="/_assets/fonts/fonts.css" rel="stylesheet" type="text/css">*@
+    <!-- Favicon -->
+    @*<link rel="shortcut icon" href="/_assets/img/favicon.ico">*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <!-- IE -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+    <!--[if lte IE 8]>
+        <link href="css/ie8.css" rel="stylesheet">
+         <![endif]-->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56fb6f6195f9ea90"></script>
+
+</head>
+<body class="off">
+    <!-- /.wrapbox start-->
+    <div class="wrapbox">
+        <!-- TOP AREA
+        ================================================== -->
+        <section class="toparea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 top-text pull-left animated fadeInLeft text-left" style="margin-right: -15px;">
+                        <i class="icon-phone-sign"></i> @Resources.SiteText.Tel <span>01005688882</span> <span class="separator"></span><i class="icon-envelope"></i> @Resources.SiteText.Email  <a href="mailto:alsakinatravel@yahoo.com">alsakinatravel@yahoo.com</a>
+                    </div>
+                    <div class="col-md-6 text-right animated fadeInRight">
+                        <div class="social-icons">
+                            <a class="icon icon-facebook" href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Facebook]"></a>
+                            @*<a class="icon icon-twitter" href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Twitter]"></a>*@
+                            <a class="icon icon-youtube" href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_YouTube]"></a>
+                            @*<a class="icon icon-skype" href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Facebook]"></a>*@
+                            <a class="icon icon-google-plus" href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_GooglePlus]"></a>
+                            @*<a class="icon changLang" href="/home/language/@Resources.SiteText.OtherLanguageId">@Resources.SiteText.Languages</a>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.toparea end-->
+        <!-- NAV
+        ================================================== -->
+        <nav class="navbar navbar-fixed-top wowmenu" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand logo-nav bigtext fontpacifico" style="line-height: 36px;font-style: italic;color: #444;" href="/">@Resources.SiteText.SiteName</a>
+                </div>
+                <ul id="nav" class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="/blog/all/" class="dropdown-toggle" data-toggle="dropdown">خدمة العملاء <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/message/contact_us/">@Resources.SiteText.ContactUS</a></li>
+                            <li><a href="/faq/all/">@Resources.SiteText.FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/videos/all/">@Resources.SiteText.Videos</a></li>
+                    <li><a href="/portfolio/all">@Resources.SiteText.Gallery</a></li>
+
+                    <li class="dropdown">
+                        <a href="/blog/all/" class="dropdown-toggle" data-toggle="dropdown">@Resources.SiteText.OurTrips <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/ourtrips/all/">@Resources.SiteText.OurTrips</a></li>
+                            <li><a href="/supervisors/all/">@Resources.SiteText.Supervisors</a></li>
+                            <li><a href="/hotels/all/">@Resources.SiteText.Hotels</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/blog/all/" class="dropdown-toggle" data-toggle="dropdown">مناسك ومزارات <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            @*@Html.Partial("~/Views/Shared/Partials/ManasekSubmenu.cshtml")*@
+                            <li><a href="/Articles/page/7858/">مناسك الحج</a></li>
+                            <li><a href="/Articles/page/7865/">مناسك العمرة</a></li>
+                            @Html.Partial("~/Views/Shared/Partials/MazaratSubmenu.cshtml")
+                        </ul>
+                    </li>
+
+                    
+                    <li><a href="/Offers/all/">@Resources.SiteText.Offers</a></li>
+                    <li class="dropdown">
+                        <a href="/services/all/" class="dropdown-toggle" data-toggle="dropdown">@Resources.SiteText.Services <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/services/all">@Resources.SiteText.AllServices</a></li>
+                            @Html.Partial("~/Views/Shared/Partials/ServicesSubmenu.cshtml")
+                        </ul>
+                    </li>
+                    <li><a href="/about_us/all">@Resources.SiteText.About</a></li>
+                    <li class="active"><a href="/">@Resources.SiteText.Home</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav end-->
+        <!-- CAROUSEL
+        ================================================== -->
+        @RenderSection("CustomeHeader", required: false)
+        <!-- /.carousel end-->
+        <!-- /.wrapsemibox start-->
+        <div class="wrapsemibox">
+            <div class="semiboxshadow text-center">
+                <img src="/_assets/img/shp.png" class="img-responsive" alt="">
+            </div>
+            <div class="els-Logo" style=" margin: 0 auto; position: relative; width: 207px; margin-top: -100px;">
+                <a class="" href="/" style="">
+                    <img class="img-circle" src="~/_assets/logo.png" alt="logo" style="
+    /* -webkit-box-shadow: 0px 6px 6px 0px rgba(50, 50, 50, 0.5); */  -moz-box-shadow: 0px -16px 16px 0px rgba(50, 50, 50, 0.75);  box-shadow: 0px -16px 16px 0px rgba(50, 50, 50, 0.75);
+">
+                </a>
+            </div>
+            <!-- INTRO NOTE
+            ================================================== -->
+            @RenderBody()
+        </div>
+        <!-- /.wrapsemibox end-->
+        <!-- BEGIN FOOTER
+        ================================================== -->
+        <section>
+            <div class="footer">
+                <div class="container animated fadeInUpNow notransition">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h1 class="footerbrand">@Resources.SiteText.SiteName</h1>
+                            @Html.Partial("~/Views/PartialViews/PageHtmlBrief.cshtml", 13)
+                            <!--<p>
+                             Made with &nbsp;<i class="icon-heart"></i>&nbsp; by DigitalTags.net.
+                        </p>-->
+                        </div>
+                        <div class="col-md-3">
+                            <h1 class="title"><span class="colortext"></span> <span class="font100">@Resources.SiteText.ContactsData</span></h1>
+                            <div class="footermap">
+                                @Html.Partial("~/Views/Shared/Partials/smallContacts.cshtml")
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h1 class="title"><span class="colortext"></span><span class="font100">@Resources.SiteText.ClientsVoice</span></h1>
+                            <div id="quotes">
+                                
+                                @Html.Partial("~/Views/Shared/Partials/ClientsWords.cshtml")
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h1 class="title"><span class="colortext"></span><span class="font100">@Resources.SiteText.ContactFormLeaveYourMessage</span></h1>
+                            <div class="done">
+                                <div class="alert alert-success">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                   @Resources.SiteText.ContactFormSuccessSent
+                                </div>
+                            </div>
+                           
+                                <div class="form" id="smallContactForm">
+                                    <div id="contentAlert" class="alert" style="display:none;">
+                                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                        <span id="contactResult"></span>
+                                    </div>
+                                    <input class="col-md-6" type="text" id="name"  name="name" placeholder="@Resources.SiteText.ContactFormName">
+                                    <input class="col-md-6" type="text" id="email" name="email" placeholder="@Resources.SiteText.ContactFormEmail">
+                                    <textarea class="col-md-12" id="message" name="message" rows="4" placeholder="@Resources.SiteText.ContactFormMessage"></textarea>
+                                    <input type="submit" id="smallMessagesubmit" class="btn" value="@Resources.SiteText.ContactFormSend">
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="back-top">
+                <a href="#top"><span></span></a>
+            </p>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="pull-left">
+                              @Html.Raw(Resources.SiteText.CopyRight)
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="footermenu pull-right">
+                                <li><a href="/message/contact_us/">@Resources.SiteText.ContactUS</a></li>
+                                <li><a href="/portfolio/all">@Resources.SiteText.Gallery</a></li>
+                                <li><a href="/Offers/all/">@Resources.SiteText.Offers</a></li>
+                                <li><a href="/services/all">@Resources.SiteText.Services</a></li>
+                                <li><a href="/about_us/all">@Resources.SiteText.About</a></li>
+                                <li><a href="/">@Resources.SiteText.Home</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /footer section end-->
+    </div>
+    <!-- /.wrapbox ends-->
+    <!-- SCRIPTS, placed at the end of the document so the pages load faster
+    ================================================== -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/siteScripts")
+    @RenderSection("BottomScripts", required: false)
+    <script>
+        /* ---------------------------------------------------------------------- */
+        /*	Carousel
+        /* ---------------------------------------------------------------------- */
+
+        $(window).load(function () {
+            $('#carousel-projects').carouFredSel({
+                responsive: true,
+                items: {
+                    width: 200,
+                    height: 295,
+                    visible: {
+                        min: 1,
+                        max: 4
+                    }
+                },
+                width: '200px',
+                height: '295px',
+                auto: true,
+                circular: true,
+                infinite: false,
+                prev: {
+                    button: "#car_prev",
+                    key: "left",
+                },
+                next: {
+                    button: "#car_next",
+                    key: "right",
+                },
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                },
+                scroll: {
+                    easing: "",
+                    duration: 1200
+                }
+            });
+        });
+    </script>
+    <script>
+        //CALL TESTIMONIAL ROTATOR
+        $(function () {
+            /*
+            - how to call the plugin:
+            $( selector ).cbpQTRotator( [options] );
+            - options:
+            {
+                // default transition speed (ms)
+                speed : 700,
+                // default transition easing
+                easing : 'ease',
+                // rotator interval (ms)
+                interval : 8000
+            }
+            - destroy:
+            $( selector ).cbpQTRotator( 'destroy' );
+            */
+            $('#cbp-qtrotator').cbpQTRotator();
+        });
+    </script>
+    <script>
+        //CALL PRETTY PHOTO
+        $(document).ready(function () {
+            $("a[data-gal^='prettyPhoto']").prettyPhoto({ social_tools: '', animation_speed: 'normal', theme: 'dark_rounded' });
+        });
+    </script>
+    <script>
+        //MASONRY
+        $(document).ready(function () {
+            var $container = $('#content');
+            $container.imagesLoaded(function () {
+                $container.isotope({
+                    filter: '*',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear',
+                        queue: false,
+                    }
+                });
+            });
+            $('#filter a').click(function (event) {
+                $('a.selected').removeClass('selected');
+                var $this = $(this);
+                $this.addClass('selected');
+                var selector = $this.attr('data-filter');
+                $container.isotope({
+                    filter: selector
+                });
+                return false;
+            });
+        });
+    </script>
+    <script>
+        //ROLL ON HOVER
+        $(function () {
+            $(".roll").css("opacity", "0");
+            $(".roll").hover(function () {
+                $(this).stop().animate({
+                    opacity: .8
+                }, "slow");
+            },
+            function () {
+                $(this).stop().animate({
+                    opacity: 0
+                }, "slow");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function SendContactsMessage(formContainerSelector , e)
+        {
+            debugger;
+            var contactUsMsg = {};
+            var Container = $(formContainerSelector);
+            contactUsMsg.Name = Container.find("#name").val();
+            contactUsMsg.Email = Container.find("#email").val();
+            contactUsMsg.Message = Container.find("#message").val();
+            //
+            //Container.find("#LoadingAlert").show();
+            $.ajax({
+                type: 'POST',
+                url: '/home/contactus',
+                data: "{message:" + JSON.stringify(contactUsMsg) + "}",
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (res) {
+                    debugger;
+                    debugger;
+                    debugger;
+                    // $("#LoadingAlert").hide();
+                    Container.find("#contentAlert").addClass("alert-success");
+                    Container.find("#contentAlert").show();
+                    Container.find("#contactResult").text(res.Message);
+
+                    //debugger;
+                    //-----------------
+                    //Clear form
+                    Container.find("#name").val("");
+                    Container.find("#email").val("");
+                    Container.find("#message").val("");
+                    //-----------------
+                },
+                error: function (err) {
+                    debugger;
+                    //Container.find("#LoadingAlert").hide();
+                    Container.find("#contentAlert").addClass("alert-danger");
+                    Container.find("#contentAlert").show();
+                    Container.find("#contactResult").text(err);
+                    //debugger;
+                    //alert(err);
+                    console.log(err);
+                }
+            });
+            e.preventDefault();
+
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //debugger;
+            $("#smallMessagesubmit").click(function (e) {
+                //debugger;
+                SendContactsMessage("#smallContactForm", e);
+            });
+
+
+        });
+    </script>
+    <!--BEGIN DEMO PANEL
+    ================================================== -->
+    <!--END DEMO PANEL
+    ================================================== -->
+</body>
+</html>

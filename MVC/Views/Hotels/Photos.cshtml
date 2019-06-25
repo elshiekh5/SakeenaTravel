@@ -1,0 +1,28 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@model AppService.FrontItemsModel
+@{
+   List<ItemsFilesEntity> ItemsList = ItemsFilesFactory.GetAll(Model.ItemID,ItemFileTypes.Photo);
+}
+
+
+@foreach (ItemsFilesEntity item in ItemsList)
+{
+    <div class="col-md-4 topspace35 animated fadeInLeftNow notransition">
+        <div class="boxcontainer">
+            <img src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoOiginalPath)" alt="">
+            <div class="roll">
+                <div class="wrapcaption">
+                    <a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
+                    <a data-gal="prettyPhoto[gallery1]" href="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoOiginalPath)" rel="prettyPhoto"><i class=" icon-zoom-in captionicons"></i></a>
+                </div>
+            </div>
+            <h1><a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">@item.Title</a></h1>
+        </div>
+       
+    </div>
+    
+    
+}
+

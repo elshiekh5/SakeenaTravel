@@ -1,0 +1,34 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    int pageID = 5;
+    FrontItemsModel currentItem = null;
+    if (pageID > 0) { 
+        currentItem= FrontItemsController.GetItemObject(pageID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+<h1 class="smalltitle">
+    <span>@Resources.SiteText.ContactsData</span>
+</h1>
+<p>
+   @currentItem.ShortDescription
+</p>
+<h4 class="font100">@Resources.SiteText.ContactsTheOffice</h4>
+<ul class="unstyled">
+    <li><span style="margin-right:5px;"><i class="icon-map-marker"></i></span> @Resources.SiteText.ContactsAddress @currentItem.Address</li>
+    <li><span style="margin-right:3px;"><i class="icon-phone"></i></span> @Resources.SiteText.ContactsTel @currentItem.Tels</li>
+    <li><span style="margin-right:2px;"><i class="icon-envelope"></i></span> @Resources.SiteText.ContactsEmail <a href="mailto:@currentItem.Email">@currentItem.Email</a></li>
+</ul>
+
+<p>
+</p>
+
+<ul class="social-icons list-soc">
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Facebook]"><i class="icon-facebook"></i></a></li>
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Twitter]"><i class="icon-twitter"></i></a></li>
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_YouTube]"><i class="icon-youtube"></i></a></li>
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_GooglePlus]"><i class="icon-google-plus"></i></a></li>
+    @*<li><a href="#"><i class="icon-skype"></i></a></li>*@
+</ul>
+

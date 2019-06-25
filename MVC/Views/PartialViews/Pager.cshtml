@@ -1,0 +1,32 @@
+﻿@model MVC.Models.PagerModel
+@{
+    
+    Model.PreparePager();
+}
+
+<ul class="pagination">
+
+    @if (Model.PreviousIndex > 0)
+    {
+        <li><a href="@Model.LinkToPrevious">السابق</a></li>
+    }
+    @for (int i = Model._StartPage; i <= Model._EndPage; i++)
+    {
+        if(i== Model.CurrentPage)
+        {
+            <li class="active"><a href="@string.Format(Model.LinkPattern,i)">@i</a></li>
+        }
+        else{
+
+            <li><a href="@string.Format(Model.LinkPattern, i)">@i</a></li>
+        }
+    }
+    
+@if (Model.NextIndex > 0 && Model.NextIndex <= Model._EndPage)
+{
+        <li><a href="@Model.LinkToNext">التالي</a></li>
+    }
+
+</ul>
+
+

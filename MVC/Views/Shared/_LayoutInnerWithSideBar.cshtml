@@ -1,0 +1,108 @@
+﻿@using DCCMSNameSpace;
+@{
+    ItemsModulesOptions currentModule= null;
+    if (ViewData["CurrentItemsModule"] != null)
+    { 
+        currentModule = (ItemsModulesOptions)ViewData["CurrentItemsModule"];
+    }
+    
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @*@Styles.Render("~/Content/css")*@
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="~/_Assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/_Assets/css/style.css">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="~/_Assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="~/_Assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
+
+    <link rel="stylesheet" href="~/_Assets/css/custom.css">
+    <script type="text/javascript" src="~/_Assets/plugins/jquery-1.10.2.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @Html.Partial("_Header")
+        @Html.Partial("breadcrumbs")
+
+        <!--=== Content Part ===-->
+        <div class="container content">
+            <div class="row blog-page">
+                <!-- Left Sidebar -->
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+                <!-- End Left Sidebar -->
+                <!-- Right Sidebar -->
+                <div class="col-md-3 magazine-page">
+                    @*@Html.Partial("Aside/AboutTab")*@
+                    @*@Html.Partial("Aside/WhyWeAre")*@
+                    @*@Html.Partial("Aside/Contacts")*@
+                    @RenderSection("Aside", required: false)
+                    @*@if (currentModule != null && currentModule.Identifire == "Solutions")
+                    {
+                       Html.Raw();
+                    }*@
+                    
+                    @*@Html.Partial("PageDetails", 3)
+                    @Html.Partial("PageDetails", 5)
+                    @Html.Partial("Aside/RecentBlogEntries")*@
+                </div>
+                <!-- End Right Sidebar -->
+            </div><!--/row-->
+        </div>
+        <!--/container-->	
+
+        @Html.Partial("_Footer")
+
+
+    </div><!--/wrapper-->
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="~/_Assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/_Assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="~/_Assets/plugins/back-to-top.js"></script>
+    @RenderSection("scripts", required: false)
+
+
+    <!--[if lt IE 9]>
+        <script src="~/_Assets/plugins/respond.js"></script>
+        <script src="~/_Assets/plugins/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29166220-1']);
+        _gaq.push(['_setDomainName', 'htmlstream.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+</body>
+</html>

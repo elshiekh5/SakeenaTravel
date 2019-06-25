@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EMail" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="EmailAttatchFile1" xml:space="preserve">
+    <value>ملف مرفق1</value>
+  </data>
+  <data name="EmailAttatchFile2" xml:space="preserve">
+    <value>ملف مرفق2</value>
+  </data>
+  <data name="EmailAttatchFile3" xml:space="preserve">
+    <value>ملف مرفق3</value>
+  </data>
+  <data name="EmailAttatchFileAvialableExtebtions" xml:space="preserve">
+    <value>مسموح فقط بملفات ذات امتداد "pdf  doc  docx  txt  png  jpg  gif "</value>
+  </data>
+  <data name="EMailBody" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="EmailSubject" xml:space="preserve">
+    <value>عنوان الرسالة</value>
+  </data>
+  <data name="EMail_Invaild" xml:space="preserve">
+    <value>بريد إلكتروني خاطئ</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>لا يوجد ملف</value>
+  </data>
+  <data name="FileNotSupportedFile" xml:space="preserve">
+    <value>عفوا الملف غير صحيح</value>
+  </data>
+  <data name="ImportMails_File" xml:space="preserve">
+    <value>الملف</value>
+  </data>
+  <data name="ImportMails_FileValidation" xml:space="preserve">
+    <value>غير مسموح سوى بملف txt</value>
+  </data>
+  <data name="ImportMails_GroupName" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="ImportMails_Note" xml:space="preserve">
+    <value>ملحوظة: الملف لابد ان يكون كل سجل في سطر منفصل بدون أي فواصل بهذا الشكل</value>
+  </data>
+  <data name="ImportSuccessfulyCount" xml:space="preserve">
+    <value>تم إضافة عدد ({0}) بنجاح</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="MailListUsers" xml:space="preserve">
+    <value>المستخدمين</value>
+  </data>
+  <data name="NotImportAlradyExistCount" xml:space="preserve">
+    <value>عدد الإميلات الموجودة بالفعل - {0}</value>
+  </data>
+  <data name="NotImportFailiarCount" xml:space="preserve">
+    <value>عدد الإميلات التي فشلت عملية إضافتها - {0}</value>
+  </data>
+  <data name="NotImportNotMailsCount" xml:space="preserve">
+    <value>عدد الإميلات الخاطئة - {0}</value>
+  </data>
+  <data name="Result_ChoesOneGroupAtLeast" xml:space="preserve">
+    <value>لابد من إختيار مجموعة واحدة على الأقل</value>
+  </data>
+  <data name="Result_ChoesOneUserAtLeast" xml:space="preserve">
+    <value>لابد من إختيار مشترك واحد على الأقل</value>
+  </data>
+  <data name="Result_SendingDone" xml:space="preserve">
+    <value>تم الارسال بنجاح</value>
+  </data>
+  <data name="MailListTitle" xml:space="preserve">
+    <value>القائمة البريدية</value>
+  </data>
+  <data name="Page_AddGroup" xml:space="preserve">
+    <value>إضافة مجموعة</value>
+  </data>
+  <data name="Page_AddUser" xml:space="preserve">
+    <value>إضافة مشترك</value>
+  </data>
+  <data name="Page_AllGroups" xml:space="preserve">
+    <value>المجموعات البريدية</value>
+  </data>
+  <data name="Page_AllUsers" xml:space="preserve">
+    <value>عرض المشتركين</value>
+  </data>
+  <data name="Page_Archive" xml:space="preserve">
+    <value>أرشيف الرسائل</value>
+  </data>
+  <data name="Page_ImportFromExcellFile" xml:space="preserve">
+    <value>إستيراد من إكسل</value>
+  </data>
+  <data name="Page_ImportFromTxtFile" xml:space="preserve">
+    <value>إستيراد من ملف</value>
+  </data>
+  <data name="Page_SendToAllMailList" xml:space="preserve">
+    <value>إرسال للقائمة البريدية</value>
+  </data>
+  <data name="Page_SendToGroup" xml:space="preserve">
+    <value>إرسال لمجموعة</value>
+  </data>
+  <data name="Page_SendToMultiGroup" xml:space="preserve">
+    <value>إرسال لأكثر من مجموعة</value>
+  </data>
+  <data name="Page_SendToMultiUsersInGroup" xml:space="preserve">
+    <value>إرسال لاكثر من بريد في مجموعة</value>
+  </data>
+  <data name="Page_SendToUser" xml:space="preserve">
+    <value>إرسال لمستخدم</value>
+  </data>
+  <data name="Email_Active" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="Email_SendingDate" xml:space="preserve">
+    <value>تاريخ الإرسال</value>
+  </data>
+  <data name="Email_SendingTo" xml:space="preserve">
+    <value>المرسل إلية</value>
+  </data>
+  <data name="Result_InvalidMail" xml:space="preserve">
+    <value>بريد إلكتروني خاطئ</value>
+  </data>
+  <data name="SearchByEmail" xml:space="preserve">
+    <value>بحث بالبريد الإلكتروني</value>
+  </data>
+  <data name="Page_ExportToExcellFile" xml:space="preserve">
+    <value>تصدير الإميلات</value>
+  </data>
+  <data name="FileSample" xml:space="preserve">
+    <value>مثال</value>
+  </data>
+</root>

@@ -1,0 +1,20 @@
+﻿/*
+@font-face {
+    font-family: 'helv_lt';
+    src: url('/_assets/fonts/helveticaneueltpro-hvcn_0-webfont.eot');
+    src: url('/_assets/fonts/helveticaneueltpro-hvcn_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/_assets/fonts/helveticaneueltpro-hvcn_0-webfont.woff') format('woff'),
+         url('/_assets/fonts/helveticaneueltpro-hvcn_0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'gehili';
+    src: url('/_assets/fonts/ge_hili_book-webfont.eot');
+    src: url('/_assets/fonts/ge_hili_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/_assets/fonts/ge_hili_book-webfont.woff') format('woff'),
+         url('/_assets/fonts/ge_hili_book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

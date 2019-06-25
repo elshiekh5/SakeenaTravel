@@ -1,0 +1,53 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+
+<div class="blog margin-bottom-40">
+    <h2><a href="blog_item_option1.html">@Model.Title</a></h2>
+    <div class="blog-post-tags">
+        <ul class="list-unstyled list-inline blog-info">
+            @*<li><i class="fa fa-calendar"></i> @Model.Date_Added.ToLongDateString()</li>
+            <li><i class="fa fa-pencil"></i> @Model.AuthorName</li>*@
+            @*<li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>*@
+        </ul>
+        @*<ul class="list-unstyled list-inline blog-tags">
+            <li>
+                <i class="fa fa-tags"></i>
+                <a href="#">Technology</a>
+                <a href="#">Education</a>
+                <a href="#">Internet</a>
+                <a href="#">Media</a>
+            </li>
+        </ul>*@
+    </div>
+    <br />
+    <div class="blog-img">
+        <img class="img-responsive img-rounded" src="@Model.Photo2Path" alt="">
+    </div>
+    @*@Html.Raw(Model.Description)*@
+    <br />
+    <p>
+        We have a lot of experience in this field and we keep enhancing our knowlege, develop our skills to still updated with the lateset technologies .
+        and we search more and more to give our clients alwayes a special services that can make them special as them are  
+    </p>
+    <p>
+        <b> We work with our clients to</b><br />
+        <ol>
+            <li>Present their organization in the best image</li>
+            <li> keep their clients alwayes on toutch with all updates</li>
+            <li>give them the a special position between their Competitors</li>
+            <li>
+                make their website interactive with all users to say all thing our clients need to say about<br />
+                (Their History , latest news, offers, solutions, possibilities, tools and extra .....)
+            </li>
+            <li> enhance the communication with their clients</li>
+        </ol>
+    </p>
+    <blockquote class="hero">
+        <p>Let our professional team drawing your new image to showing all the world how great you are </p>
+    </blockquote>
+
+    <p>
+        We are proud to present a list of some special clients
+    </p>
+</div>

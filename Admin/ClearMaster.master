@@ -1,0 +1,2 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClearMaster.master.cs" Inherits="ClearMaster" %>
+

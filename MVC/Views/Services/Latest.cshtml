@@ -1,0 +1,15 @@
+﻿@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Services, "AllTitles");
+    int index = 0;
+}
+
+    <div class="wowwidget">
+        <h4>@Resources.SiteText.LatestOffers</h4>
+        <ul class="categories">
+            @foreach (AppService.FrontItemsModel item in ItemsList)
+            {
+                <li><a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">@item.Title</a></li>
+        }
+        </ul>
+    </div>
+

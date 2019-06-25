@@ -1,0 +1,30 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    int pageID = 5;
+    FrontItemsModel currentItem = null;
+    if (pageID > 0) { 
+        currentItem= FrontItemsController.GetItemObject(pageID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+<p>
+    @*<strong>@Resources.SiteText.ContactsAddress </strong>*@ @currentItem.Address
+</p>
+<p>
+    <strong>@Resources.SiteText.ContactsTel </strong> + @currentItem.Tels
+</p>
+<p>
+    <strong>@Resources.SiteText.ContactsFax </strong> + @currentItem.Fax
+</p>
+<p>
+    <strong>@Resources.SiteText.ContactsEmail </strong> @currentItem.Email
+</p>
+<ul class="social-icons list-soc">
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Facebook]"><i class="icon-facebook"></i></a></li>
+    @*<li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_Twitter]"><i class="icon-twitter"></i></a></li>*@
+    <li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_YouTube]"><i class="icon-youtube"></i></a></li>
+    @*<li><a href="@SiteSettings.AllSiteSettings[SiteSettingItems.OtherLinks_GooglePlus]"><i class="icon-google-plus"></i></a></li>*@
+    @*<li><a href="#"><i class="icon-skype"></i></a></li>*@
+</ul>
+

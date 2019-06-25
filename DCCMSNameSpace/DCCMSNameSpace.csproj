@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{767A8B46-B96A-44F5-96E3-ED5549C2A7DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DCCMSNameSpace</RootNamespace>
+    <AssemblyName>DCCMSNameSpace</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CuteEditor, Version=6.6.0.0, Culture=neutral, PublicKeyToken=3858aa6802b1223a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\CMS\Super-CMS\www\Bin\CuteEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CuteEditor.ImageEditor, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2bb6cdd4237de7bf">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\CMS\Super-CMS\www\Bin\CuteEditor.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.2.2106.29420, Culture=neutral, PublicKeyToken=4f86767c9b519a06">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\CMS\Super-CMS\www\Bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="MoversFW, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\CMS\Super-CMS\www\Bin\MoversFW.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerControl1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\CMS\Super-CMS\www\Bin\ServerControl1.dll</HintPath>
+    </Reference>
+    <Reference Include="SmsWebService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SmsWebService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\App_Code\Ads\AdsTypes.cs" />
+    <Compile Include="App_Code\App_Code\Ads\Advertisments\AdvertismentsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Ads\Advertisments\AdvertismentsFactory.cs" />
+    <Compile Include="App_Code\App_Code\Ads\Advertisments\AdvertismentsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Ads\AdvPlaces\AdvPlacesEntity.cs" />
+    <Compile Include="App_Code\App_Code\Ads\AdvPlaces\AdvPlacesFactory.cs" />
+    <Compile Include="App_Code\App_Code\Ads\AdvPlaces\AdvPlacesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Calendar.cs" />
+    <Compile Include="App_Code\App_Code\Cities\CitiesEntity.cs" />
+    <Compile Include="App_Code\App_Code\Cities\CitiesFactory.cs" />
+    <Compile Include="App_Code\App_Code\Cities\CitiesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Components\DateFormat.cs" />
+    <Compile Include="App_Code\App_Code\Components\Dimensions.cs" />
+    <Compile Include="App_Code\App_Code\Components\DynamicResource.cs" />
+    <Compile Include="App_Code\App_Code\Components\Encryption.cs" />
+    <Compile Include="App_Code\App_Code\Components\GalleryThumbs.cs" />
+    <Compile Include="App_Code\App_Code\Components\General.cs" />
+    <Compile Include="App_Code\App_Code\Components\MD5Hashing.cs" />
+    <Compile Include="App_Code\App_Code\Components\Photos\Photos.cs" />
+    <Compile Include="App_Code\App_Code\Components\Photos\PhotosEntity.cs" />
+    <Compile Include="App_Code\App_Code\Components\Photos\PhotosFactory.cs" />
+    <Compile Include="App_Code\App_Code\Components\Photos\Thumb.cs" />
+    <Compile Include="App_Code\App_Code\Components\Photos\Thumbs.cs" />
+    <Compile Include="App_Code\App_Code\Components\Support\Country\CountryEntity.cs" />
+    <Compile Include="App_Code\App_Code\Components\Support\Country\CountryFactory.cs" />
+    <Compile Include="App_Code\App_Code\Components\Support\Country\CountrySqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Controls\AdminAddEditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Controls\AdminDefaultPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Controls\DateConditions.cs" />
+    <Compile Include="App_Code\App_Code\Controls\DynamicMasterPageSite.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Controls\OurDropDownList.cs" />
+    <Compile Include="App_Code\App_Code\Controls\OurLists.cs" />
+    <Compile Include="App_Code\App_Code\Controls\PagerManager.cs" />
+    <Compile Include="App_Code\App_Code\Controls\PagesTypes.cs" />
+    <Compile Include="App_Code\App_Code\Controls\PathLinksClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Controls\PlayersBuilder.cs" />
+    <Compile Include="App_Code\App_Code\Culture.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DcContext.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DCDirectoryManager.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DCMetaBuilder.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DCModuleHandler.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DCServer.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\DCValidation.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\ReWrittenUrl.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\SiteDesign.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\SiteUrls.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\SubSites\SitesHandler.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\SubSites\SubSiteHandler.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\SubSites\SubSiteTypes.cs" />
+    <Compile Include="App_Code\App_Code\App_Core\UrlRewriterHandler.cs" />
+    <Compile Include="App_Code\App_Code\Design\AdvertistFileLoader.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\DesignController.cs" />
+    <Compile Include="App_Code\App_Code\Design\EftcasaUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemCategories\Categories.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemCategories\CategoriesXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemFiles\ItemFiles_GetLast.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemFiles\ItemFiles_GetLastXml.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemsOrders\CartItems.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemsOrders\CustomerData.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\ItemsOrders\ItemsOrders_CategoryItems.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetAllBaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetAllBaseXml.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetAll.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetLast.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetLastIn2Lists.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetLastXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetMain.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetMainIn2Lists.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Items\Items_GetMainXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Login.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\LoginLogOutControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\LogOut.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\MailListSubsribe.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Messages\Messages_GetAllBaseControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Messages\Messages_GetAllBaseXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Messages\Messages_GetLastControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Messages\Messages_GetLastXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Messages_GetLast.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\PageData.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Page_YouTube.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\SearchSmallControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\SmsListSubscribtion.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\SubSites_ItemsGetLast.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\UsersData\UsersData_GetAllBaseControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\UsersData\UsersData_GetAllBaseXml.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\VisitorsCount.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\VisitorsSpecific.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\VoteControl.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\VoteResult.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Voting.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\Xml\XmlControlsBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Design\_SiteModulesMenu.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Enums\ExecuteCommandStatus.cs" />
+    <Compile Include="App_Code\App_Code\Enums\Gender.cs" />
+    <Compile Include="App_Code\App_Code\Enums\Languages.cs" />
+    <Compile Include="App_Code\App_Code\Enums\PhotoTypes.cs" />
+    <Compile Include="App_Code\App_Code\Enums\ViewerTypes.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailArchive\MailListAchiveFactory.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailArchive\MailListAchiveSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListEmailsEntity2.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListEmails\MailListEmailsEntity.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListEmails\MailListEmailsFactory.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListEmails\MailListEmailsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListGroups\MailListGroupsEntity.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListGroups\MailListGroupsFactory.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListGroups\MailListGroupsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListUsers\MailListUsersEntity.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListUsers\MailListUsersFactory.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailListUsers\MailListUsersSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\MailList\Mails\EmailJob.cs" />
+    <Compile Include="App_Code\App_Code\MailList\MailToTypes.cs" />
+    <Compile Include="App_Code\App_Code\MemberShip\OurRoles.cs" />
+    <Compile Include="App_Code\App_Code\MemberShip\RoleInfo.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemCategories\CategoriesType.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemCategories\ItemCategoriesDetailsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemCategories\ItemCategoriesEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemCategories\ItemCategoriesFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemCategories\ItemCategoriesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsComments\ItemsCommentsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsComments\ItemsCommentsFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsComments\ItemsCommentsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersDetailsFactor.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersDetailsModel.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersDetailsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersFactor.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersModel.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ItemsOrders\ItemsOrdersSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\DCValidationManager.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\DetailsTypes.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsDetailsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsFiles\ItemFileTypes.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsFiles\ItemsFilesEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsFiles\ItemsFilesFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsFiles\ItemsFilesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\ItemsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Items\MLanguagesDetailsControls.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\App_Code\Modules\Items\SPOperation.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Messages\MessagesEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Messages\MessagesFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Messages\MessagesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\OurSerializer.cs" />
+    <Compile Include="App_Code\App_Code\Modules\ParentsOfSiteDepartments.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Profiles\DCProfileEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Profiles\ItemsSampleProfile.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Profiles\ProfieProperity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Profiles\ProfileBuilder.cs" />
+    <Compile Include="App_Code\App_Code\Modules\Profiles\UsersDataProfile.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\SiteDeparmentsDetailsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\SiteDeparmentsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\SiteDeparmentsFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\SiteDeparmentsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\SiteDepartmentsType.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SiteDeparments\_SiteDeparmentsOptions.cs" />
+    <Compile Include="App_Code\App_Code\Modules\SqlDataProvider.cs" />
+    <Compile Include="App_Code\App_Code\Modules\UsersData\UsersDataEntity.cs" />
+    <Compile Include="App_Code\App_Code\Modules\UsersData\UsersDataFactory.cs" />
+    <Compile Include="App_Code\App_Code\Modules\UsersData\UsersDataSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\New\DCContext.cs" />
+    <Compile Include="App_Code\App_Code\PathHandler.cs" />
+    <Compile Include="App_Code\App_Code\ShoppingCart.cs" />
+    <Compile Include="App_Code\App_Code\SiteModulesMap.cs" />
+    <Compile Include="App_Code\App_Code\SiteOtherValues\SiteOtherValuesEntity.cs" />
+    <Compile Include="App_Code\App_Code\SiteOtherValues\SiteOtherValuesFactory.cs" />
+    <Compile Include="App_Code\App_Code\SiteOtherValues\SiteOtherValuesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SiteOtherValues\_SiteOtherValuesItems.cs" />
+    <Compile Include="App_Code\App_Code\SiteSettings\SiteSettingsEntity.cs" />
+    <Compile Include="App_Code\App_Code\SiteSettings\SiteSettingsFactory.cs" />
+    <Compile Include="App_Code\App_Code\SiteSettings\SiteSettingsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SiteSettings\_SiteSettingItems.cs" />
+    <Compile Include="App_Code\App_Code\SiteStatistics\SiteStatisticsEntity.cs" />
+    <Compile Include="App_Code\App_Code\SiteStatistics\SiteStatisticsFactory.cs" />
+    <Compile Include="App_Code\App_Code\SiteStatistics\SiteStatisticsSqlProvider.cs" />
+    <Compile Include="App_Code\App_Code\SMS\NewEncryption.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SendSMS.cs" />
+    <Compile Include="App_Code\App_Code\SMS\Shared.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMS.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSArchive\SMSArchiveEntity.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSArchive\SMSArchiveFactory.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSArchive\SMSArchiveSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSConfig.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSCredit\SMSCreditEntity.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSCredit\SMSCreditFactory.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSCredit\SMSCreditSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSGroups\SMSGroupsEntity.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSGroups\SMSGroupsFactory.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSGroups\SMSGroupsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSNumbers\SMSNumbersEntity.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSNumbers\SMSNumbersFactory.cs" />
+    <Compile Include="App_Code\App_Code\SMS\SMSNumbers\SMSNumbersSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\SystemCountries\SystemCountriesEntity.cs" />
+    <Compile Include="App_Code\App_Code\SystemCountries\SystemCountriesFactory.cs" />
+    <Compile Include="App_Code\App_Code\SystemCountries\SystemCountriesSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\TestingData\TestingDataFactor.cs" />
+    <Compile Include="App_Code\App_Code\TreeControls\ParentChildDropDownList.cs" />
+    <Compile Include="App_Code\App_Code\TreeControls\ParentChildTree.cs" />
+    <Compile Include="App_Code\App_Code\Utilities\ThumbnailsManager.cs" />
+    <Compile Include="App_Code\App_Code\ValidationExpressionBuilder.cs" />
+    <Compile Include="App_Code\App_Code\VisitorCounter\VisitorCouterSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\VisitorCouter\VisitorCouter.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteAnswers\VoteAnswersEntity.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteAnswers\VoteAnswersFactory.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteAnswers\VoteAnswersSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteQuestions\VoteQuestionsEntity.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteQuestions\VoteQuestionsFactory.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteQuestions\VoteQuestionsSqlDataPrvider.cs" />
+    <Compile Include="App_Code\App_Code\Voting\VoteStatus.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\HttpModules\ZecuriyModule.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\Zecurity\Group.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\Zecurity\Module.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\Zecurity\Permission.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\Zecurity\User.cs" />
+    <Compile Include="App_Code\App_Code\Zecuirity Doo7\Zecurity\ZecurityManager.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\CitiesOptions.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\ResourcesFilesManager.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteConfigurationManager.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteModules\SiteItemsModules.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteModules\SiteMessagesModules.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteModules\SiteModules.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteModules\SitePagesManager.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteTextsManager.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteUrls.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\SiteModules\SiteUsersDataModules.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\_MasterModules\_ItemsModulesOptions.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\_MasterModules\_MasterModule.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\_MasterModules\_MessagesModuleOptions.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\_MasterModules\_SitePageOptions.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\_MasterModules\_UsersDataOptions.cs" />
+    <Compile Include="App_Code\App_Code\_MasterAdmin\__Enums.cs" />
+    <Compile Include="App_Code\App_Code\_________\DCAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\net.digitalchains.cntry\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="App_Code\App_Code\App_Core\SiteUrls.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\net.digitalchains.cntry\IpCountryService.wsdl" />
+    <None Include="Web References\net.digitalchains.cntry\IpEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\net.digitalchains.cntry\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://cntry.digitalchains.net/IpCountryService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\net.digitalchains.cntry\</RelPath>
+      <UpdateFromURL>http://cntry.digitalchains.net/IpCountryService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DCCMSNameSpace_net_digitalchains_cntry_IpCountryService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\net.digitalchains.cntry\IpCountryService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

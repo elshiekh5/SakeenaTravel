@@ -1,0 +1,46 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    int index = 0;
+    string additionalClass = "col-md-offset-2";
+    string animationClass = "col-md-offset-2";
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData( (int)SiteModulesMap.Services, "AllTitles");
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    if(index % 2 == 0)
+    {
+         additionalClass="col-md-offset-2";
+         animationClass="fadeInLeftNow";
+    }
+    else{
+     
+         additionalClass="";
+         animationClass="fadeInRightNow";
+     }
+
+    if(index % 2 == 0)
+    {
+        <div class="row topspace35">
+    }
+
+            <div class="col-md-5 @additionalClass animated @animationClass notransition">
+                <div class="boxcontainer">
+                    <div class="imgholder">
+                        <img class="img-rounded" src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" alt="">
+                    </div>
+                    <h1><a href="services/page/@item.ItemID/">@item.Title</a></h1>
+                    <p>
+                        <a href="services/page/@item.ItemID/"><button class="btn btn-default btn-danger" style="border-radius:5px;">@Resources.SiteText.ViewDetails</button></a>
+                    </p>
+                </div>
+            </div>
+    if(index % 2 >0)
+    {
+        </div>
+    }
+    index++;
+}

@@ -1,0 +1,22 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    FrontItemsModel currentItem = Model;
+    if (Model == null)
+    {
+        int itemID = (int)SitePages.AboutUsSlogan;
+        currentItem = FrontItemsController.GetItemObject(itemID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+<div class="spotLoght">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @Html.Raw(currentItem.Description)
+            </div>
+
+        </div>
+    </div>
+</div>

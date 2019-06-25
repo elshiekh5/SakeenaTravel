@@ -1,0 +1,64 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+
+    List<AppService.FrontCategoriesModel> categoriesList;
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    categoriesList = AppService.FrontCategoriesController.GetModuleData(13, "AllCategoriesTitles");
+
+}
+
+<div class="row">
+@foreach (FrontCategoriesModel category in categoriesList)
+{
+    
+    <div class="col-md-6 topspace35 animated fadeInLeftNow notransition">
+        <div class="boxcontainer">
+            <div class="imgholder">
+                <img class="img-rounded" src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + category.Photo)" alt="">
+            </div>
+            <h1><a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule, category.CategoryID)">@category.Title</a></h1>
+            <p>
+                @category.ShortDescription
+            </p>
+            <p>
+                <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule, category.CategoryID)"><button class="btn btn-default btn-danger" style="border-radius:5px;">@Resources.SiteText.ViewDetails</button></a>
+            </p>
+        </div>
+    </div>
+    
+}
+</div>
+
+
+
+
+@**@
+
+
+
+@*<div class="gallery-page">
+    <div class="row margin-bottom-20">
+
+        @foreach (FrontCategoriesModel item in categoriesList)
+        {
+
+            <div class="col-md-3 col-sm-6">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="" href="@item.PhotoPathOriginal">
+                    <span class="overlay-zoom">
+                        <img alt="" src="@ThumbnailsManager.GetThumb(item.PhotoPathOriginal, 270,270,100)" class="img-responsive">
+                        <span class="zoom-icon"></span>
+                    </span>
+                    &nbsp;
+                </a>
+            </div>
+        }
+    </div>
+    
+</div>*@

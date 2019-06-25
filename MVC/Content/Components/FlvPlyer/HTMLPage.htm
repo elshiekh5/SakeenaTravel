@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+ <script type="text/javascript" src="swfobject.js"></script>
+                        <div id="player"></div>
+                        <span id="lblPlayer"><script type='text/javascript'>
+                            var so = new SWFObject('mediaplayer.swf','mpl','560','190','8');
+                            so.addParam('allowscriptaccess','always');
+                            so.addParam('allowfullscreen','true');
+                            so.addVariable('height','190');
+                            so.addVariable('width','560');
+                            so.addVariable('file','video.flv');
+                            so.addVariable('image','preview.jpg');
+                            so.addVariable('backcolor','0x3D91CA');
+                            so.addVariable('frontcolor','0xFFFFFF');
+                            so.addVariable('logo','download.png');
+                            so.addVariable('link','http://www.digitalchains.com');
+                            so.addVariable('linktarget','_blank');
+                            so.addVariable('showstop','true');
+                            so.write('player');
+                         </script></span>
+</body>
+</html>

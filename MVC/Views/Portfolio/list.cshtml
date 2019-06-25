@@ -1,0 +1,13 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+    List<AppService.FrontItemsModel> ItemsList;
+    ItemsList = AppService.FrontItemsController.GetModuleData( (int)SiteModulesMap.PhotoGallery, "AllTitles");
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    <li><a href="" data-filter=".cat@(item.ItemID)"><i class="icon icon-th-large"></i> @item.Title</a></li>
+}

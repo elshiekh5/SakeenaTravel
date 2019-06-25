@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="cntry.digitalchains.net" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="cntry.digitalchains.net" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="cntry.digitalchains.net">
+      <s:element name="GetIpInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIpInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIpInfoResult" type="tns:IpEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IpEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IpAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartSegment" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndSegment" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGISTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSIGNED" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRY_AR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlInfo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUrlInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUrlInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUrlInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetIpInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIpInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetIpInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIpInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUrlInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUrlInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUrlInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUrlInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IpCountryServiceSoap">
+    <wsdl:operation name="GetIpInfo">
+      <wsdl:input message="tns:GetIpInfoSoapIn" />
+      <wsdl:output message="tns:GetIpInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlInfo">
+      <wsdl:input message="tns:GetUrlInfoSoapIn" />
+      <wsdl:output message="tns:GetUrlInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IpCountryServiceSoap" type="tns:IpCountryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIpInfo">
+      <soap:operation soapAction="cntry.digitalchains.net/GetIpInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlInfo">
+      <soap:operation soapAction="cntry.digitalchains.net/GetUrlInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IpCountryServiceSoap12" type="tns:IpCountryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIpInfo">
+      <soap12:operation soapAction="cntry.digitalchains.net/GetIpInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlInfo">
+      <soap12:operation soapAction="cntry.digitalchains.net/GetUrlInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IpCountryService">
+    <wsdl:port name="IpCountryServiceSoap" binding="tns:IpCountryServiceSoap">
+      <soap:address location="http://cntry.digitalchains.net/IpCountryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IpCountryServiceSoap12" binding="tns:IpCountryServiceSoap12">
+      <soap12:address location="http://cntry.digitalchains.net/IpCountryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

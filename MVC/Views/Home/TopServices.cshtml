@@ -1,0 +1,19 @@
+﻿@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetLatestData((int)SiteModulesMap.Services, "TopTitlesPhotosShortDescription", 4);
+    int index = 0;
+}
+@foreach (AppService.FrontItemsModel item in ItemsList)
+{
+    <div class="col-md-3 animated @( index++ < 2 ? "fadeInLeftNow" :"fadeInRightNow") notransition">
+                        <div class="boxcontainer">
+                            <div class="imgholder">
+                                <img class="img-rounded" src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" alt="">
+                            </div>
+                            <h1><a href="/services/page/@item.ItemID">@item.Title</a></h1>
+                            <p>
+                                <a href="/services/page/@item.ItemID"><button class="btn btn-default btn-danger" style="border-radius:5px;">@Resources.SiteText.ViewDetails</button></a>
+</p>
+                        </div>
+                    </div>
+}
+

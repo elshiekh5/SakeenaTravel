@@ -1,0 +1,24 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Clients, "Services");
+
+}
+
+
+<div id="clients-flexslider" class="flexslider home clients">
+    <div class="headline"><h2>Our Clients</h2></div>
+    <ul class="slides">
+        @foreach (AppService.FrontItemsModel item in ItemsList)
+        {
+            <li>
+                <a href="#">
+                    <img src='@item.PhotoPathOriginal' alt="" />
+                    <img src='@item.Photo2Path' class="color-img" alt="" />
+                </a>
+            </li>
+        }
+
+
+    </ul>
+</div>

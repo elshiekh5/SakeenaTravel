@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Security>
+  <Groups>
+    <Group ID="5ec96666-c25e-441d-a8fe-5a190489e8d2" Name="Admins">
+      <Permissions>
+        <Permission ID="da7dd7ff-1f5c-4ef7-bf33-7453ee1adf4f" Path="/AdminCP/Items/SitePages/" Add="True" Edit="True" Delete="True" Trusted="False" Name="المحتوى الثابت" />
+      </Permissions>
+      <Users />
+    </Group>
+  </Groups>
+  <Modules>
+    <Module ID="1" Name="المحتوى الثابت" Path="/AdminCP/Items/SitePages/" />
+    <!--<Module ID="11" Name="من نحن " Path="/AdminCP/Items/About_Us/" />-->
+    <Module ID="12" Name="أخبارنا" Path="/AdminCP/Items/News/" />
+    <!--<Module ID="101" Name="عيادات المشفى" Path="/AdminCP/Items/PhotoGallery/" />
+    <Module ID="16" Name="خدماتنا" Path="/AdminCP/Items/Services/" />
+    <Module ID="17" Name="الفريق الطبي" Path="/AdminCP/Items/TeamWork/" />-->
+    <Module ID="501" Name="تواصل معنا" Path="/AdminCP/Messages/Contact_Us/" />
+    <!--<Module ID="504" Name="حجز فحص طبي" Path="/AdminCP/Messages/Booking/" />
+    <Module ID="604" Name="حسابات الأطباء" Path="/AdminCP/UsersData/Doctors/" />
+    <Module ID="1001" Name="روابط المشاركة" Path="/AdminCP/ShareLinks/" />
+    <Module ID="1007" Name="بريد الإشراف" Path="/AdminCP/AdminData/" />-->
+  </Modules>
+</Security>

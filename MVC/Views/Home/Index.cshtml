@@ -1,0 +1,80 @@
+﻿@{
+   // ViewBag.Title = "Home Page";
+}
+@section CustomeHeader{
+@Html.Partial("~/Views/Home/_carousel.cshtml")
+       }
+
+            <!-- INTRO NOTE
+            ================================================== -->
+            <section class="intro-note topspace10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            @Html.Raw(Resources.SiteText.SiteSlogan)
+                            @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 11)
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.intro-note end-->
+            <!-- SERVICE BOXES
+            ================================================== -->
+
+            <section class="topspace30 grayarea" style="">
+                <div class="row">
+                    @Html.Partial("TopServices")
+                </div>
+            </section>
+            <!-- /.service-box end-->
+            <!-- Welcome aria
+            ================================================== -->
+            @Html.Partial("_welcome")
+            <!-- /.recent-work end-->
+            <!-- FEATURES
+            ================================================== -->
+            <!-- /.home-features end-->
+            <!-- Latest trips
+            ================================================== -->
+            <section class="grayarea recent-projects-home topspace30 animated fadeInUpNow notransition">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="small text-center topspace0">@Resources.SiteText.LatestOffers</h1>
+                        <p class="animated fadeInRightNow notransition text-center topspace20">
+                           @Html.Partial("~/Views/PartialViews/PageHtmlBrief.cshtml", 23)
+                        </p>
+                        <div class="text-center smalltitle">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="list_carousel text-center">
+                                <div class="carousel_nav">
+                                    <a class="prev" id="car_prev" href="#"><span>prev</span></a>
+                                    <a class="next" id="car_next" href="#"><span>next</span></a>
+                                </div>
+                                <div class="clearfix">
+                                </div>
+                                <ul id="carousel-projects">
+                                    @Html.Partial("~/Views/Home/LatestOffers.cshtml")
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.recent-projects-home end-->
+            <!-- BEGIN CALL TO ACTION PANEL
+            ================================================== -->
+            <section class="container animated fadeInDownNow notransition topspace40">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.Partial("~/Views/PartialViews/PageHtmlBrief.cshtml", 12)
+                    </div>
+                </div>
+            </section>
+            <!-- /. end call to action-->
+
+
+
+
+    

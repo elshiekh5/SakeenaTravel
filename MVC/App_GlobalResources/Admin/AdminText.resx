@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Create" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="AddingOperationDone" xml:space="preserve">
+    <value>تمت عملية الإضافة بنجاح</value>
+  </data>
+  <data name="AddingOperationFaild" xml:space="preserve">
+    <value>فشلت عملية الإضافة</value>
+  </data>
+  <data name="UpdatingOperationFaild" xml:space="preserve">
+    <value>فشلت عملية التعديل</value>
+  </data>
+  <data name="DeleteActivation" xml:space="preserve">
+    <value>هل أنت متأكد من إتمام عملية الحذف ؟</value>
+  </data>
+  <data name="DeletingOprationDone" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="DeletingOprationFaild" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+  </data>
+  <data name="NotSuportedFileExtention" xml:space="preserve">
+    <value>يمكن فقط رفع هذة الإمتدادات للملف </value>
+  </data>
+  <data name="UploadedFileGreaterThanMaxLength" xml:space="preserve">
+    <value>أقصى مساحة مسموحة للملف </value>
+  </data>
+  <data name="DownLoadExistFile" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>اللوجو</value>
+  </data>
+  <data name="NoPhoto" xml:space="preserve">
+    <value>لا توجد صورة</value>
+  </data>
+  <data name="NoLogo" xml:space="preserve">
+    <value>لا يوجد لوجو</value>
+  </data>
+  <data name="InvalidPhotoFile" xml:space="preserve">
+    <value>الملف المرفوع ليس صورة</value>
+  </data>
+  <data name="InvalidLogoFile" xml:space="preserve">
+    <value>الوجو المرفوع ليس صورة</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>ميل خاطئ</value>
+  </data>
+  <data name="InvalidNumericalData" xml:space="preserve">
+    <value>أدخل قيمة رقمية</value>
+  </data>
+  <data name="ThereIsNoData" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>إختر</value>
+  </data>
+  <data name="PagerNext" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="PagerPrevious" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="PagerFrist" xml:space="preserve">
+    <value>الأول</value>
+  </data>
+  <data name="PagerLast" xml:space="preserve">
+    <value>الأخير</value>
+  </data>
+  <data name="PagerPageNO" xml:space="preserve">
+    <value> صفحة </value>
+  </data>
+  <data name="PagerFrom" xml:space="preserve">
+    <value> من </value>
+  </data>
+  <data name="AdminCPanelTitle" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="AdminCss" xml:space="preserve">
+    <value>/Content/AdminDesign/Ar/css/admin.css</value>
+  </data>
+  <data name="AdminPagerCss" xml:space="preserve">
+    <value>/Content/AdminDesign/Styles/Pager.css</value>
+  </data>
+  <data name="Dir" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>جميع الحقوق محفوظة</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="SiteHomePage" xml:space="preserve">
+    <value>رئيسية الموقع</value>
+  </data>
+  <data name="EditorDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="Align" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="OtherLang" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="OtherLangLink" xml:space="preserve">
+    <value>/AdminCP/LangSpecification.aspx?LangID=2</value>
+  </data>
+  <data name="XAlign" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
+  <data name="SendingOperationFaild" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية الإرسال حاول مرة أخرى</value>
+  </data>
+  <data name="Thanks" xml:space="preserve">
+    <value>شكرأ</value>
+  </data>
+  <data name="UpdatingsOperationDone" xml:space="preserve">
+    <value>تمت عملية التعديل</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="CreateThenFinish" xml:space="preserve">
+    <value>إضافة/إنهاء</value>
+  </data>
+  <data name="CreateThenNew" xml:space="preserve">
+    <value>إضافة/جديد</value>
+  </data>
+  <data name="DuplicateItem" xml:space="preserve">
+    <value>سجل مكرر</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="AdminMenuCss" xml:space="preserve">
+    <value>/Content/AdminDesign/Ar/css/Menu.css</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="FalseImage" xml:space="preserve">
+    <value>/Content/images/Boolean/False.gif</value>
+  </data>
+  <data name="IsSeen" xml:space="preserve">
+    <value>حالة المراجعة</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="TrueImage" xml:space="preserve">
+    <value>/Content/images/Boolean/True.gif</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotSuportedAudioExtention" xml:space="preserve">
+    <value>يمكن فقط رفع هذة الإمتدادات لملف الصوت </value>
+  </data>
+  <data name="NotSuportedVideoExtention" xml:space="preserve">
+    <value>يمكن فقط رفع هذة الإمتدادات لملف الفيديو </value>
+  </data>
+  <data name="UploadedAudioGreaterThanMaxLength" xml:space="preserve">
+    <value>أقصى مساحة مسموحة لملف الصوت </value>
+  </data>
+  <data name="UploadedVideoGreaterThanMaxLength" xml:space="preserve">
+    <value>أقصى مساحة مسموحة لملف الفيديو </value>
+  </data>
+  <data name="SavingDataFaild" xml:space="preserve">
+    <value>فشلت عملية الحفظ</value>
+  </data>
+  <data name="SavingDataSuccessfuly" xml:space="preserve">
+    <value>تمت عملية الحفظ</value>
+  </data>
+  <data name="AdminMessage_NewUserAccountCreationBody" xml:space="preserve">
+    <value>&lt;div style='direction: rtl;'&gt;
+        &lt;center&gt;
+            قام مدير الموقع بإنشاء حساب خاص بكم
+            &lt;br /&gt;
+            &lt;b&gt;بيانات حسابك&lt;/b&gt;
+            &lt;br /&gt;
+        &lt;/center&gt;
+        &lt;b&gt;اسم المستخدم:&lt;/b&gt; {0}
+        &lt;br /&gt;
+        &lt;b&gt;كلمة المرور:&lt;/b&gt; {1}
+    &lt;/div&gt;</value>
+  </data>
+  <data name="AdminMessage_NewUserAccountCreationSubject" xml:space="preserve">
+    <value>بيانات حسابك</value>
+  </data>
+  <data name="AdminMessage_NewUserAccountCreationBody2" xml:space="preserve">
+    <value>&lt;div style='direction: rtl;'&gt;
+        &lt;center&gt;
+            قام مدير الموقع بإنشاء حساب خاص بكم
+            &lt;br /&gt;
+            &lt;b&gt;بيانات حسابك&lt;/b&gt;
+            &lt;br /&gt;
+        &lt;/center&gt;
+       {0}
+    &lt;/div&gt;</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>إرسال إميلات</value>
+  </data>
+  <data name="SendSms" xml:space="preserve">
+    <value>إرسال رسائل قصيرة</value>
+  </data>
+  <data name="AdminLoginCss" xml:space="preserve">
+    <value>/Content/AdminDesign/Ar/css/adminLogin.css</value>
+  </data>
+  <data name="AdminHomeNote" xml:space="preserve">
+    <value>الصفحة الرئيسية للوحة التحكم بالموقع</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغير كلمة المرور</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>إدارة الموقع</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>مرحباً بك</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="SiteHome" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="LoginBox_Note" xml:space="preserve">
+    <value>يرجي ادخــال معلومات الدخول الخاصة بادارة الموقع</value>
+  </data>
+  <data name="LoginBox_Password" xml:space="preserve">
+    <value>كلمة المرور :</value>
+  </data>
+  <data name="LoginBox_UserName" xml:space="preserve">
+    <value>اسم المستخدم :</value>
+  </data>
+  <data name="ModuleAdmin_AdvModules" xml:space="preserve">
+    <value>الإعلانات</value>
+  </data>
+  <data name="ModuleAdmin_SecurityAddGroup" xml:space="preserve">
+    <value>إضافة مجموعة</value>
+  </data>
+  <data name="ModuleAdmin_SecurityAddUser" xml:space="preserve">
+    <value>إضافة مستخدم</value>
+  </data>
+  <data name="ModuleAdmin_SecurityAllGroups" xml:space="preserve">
+    <value>عرض المجموعات</value>
+  </data>
+  <data name="ModuleAdmin_SecurityAllUsers" xml:space="preserve">
+    <value>عرض المستخدمين</value>
+  </data>
+  <data name="ModuleAdmin_SecurityModule" xml:space="preserve">
+    <value>أمن النظام</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="StaticContents" xml:space="preserve">
+    <value>المحتوى الثابت</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="LanguageDetails1" xml:space="preserve">
+    <value>بيانات اللغة العربية</value>
+  </data>
+  <data name="LanguageDetails2" xml:space="preserve">
+    <value>بيانات اللغة الإنجليزية</value>
+  </data>
+  <data name="AdminGrid_ActivationStatus" xml:space="preserve">
+    <value>التفعيل</value>
+  </data>
+  <data name="AdminGrid_ActiveComments" xml:space="preserve">
+    <value>التعليقات المفعلة</value>
+  </data>
+  <data name="AdminGrid_DateAdded" xml:space="preserve">
+    <value>تاريخ الاضافة</value>
+  </data>
+  <data name="AdminGrid_InActiveComments" xml:space="preserve">
+    <value>التعليقات غير المفعلة</value>
+  </data>
+  <data name="AdminGrid_ReplyStatus" xml:space="preserve">
+    <value>الرد</value>
+  </data>
+  <data name="AdminGrid_ReviewStatus" xml:space="preserve">
+    <value>المراجعة</value>
+  </data>
+  <data name="AdminGrid_View" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="AdminGrid_AddedBy" xml:space="preserve">
+    <value>أضيف بواسطة</value>
+  </data>
+  <data name="AdminGrid_Photos" xml:space="preserve">
+    <value>الصور</value>
+  </data>
+  <data name="ClickToEnlage" xml:space="preserve">
+    <value>إضغط لتكبير الصورة</value>
+  </data>
+  <data name="Login_LastVisit" xml:space="preserve">
+    <value>اخر زيارة</value>
+  </data>
+  <data name="ExportData" xml:space="preserve">
+    <value>تصدير البيانات</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="ActivationStatus" xml:space="preserve">
+    <value>حالة التفعيل</value>
+  </data>
+  <data name="SendingOperationDone" xml:space="preserve">
+    <value>تمت عملية الإرسال</value>
+  </data>
+  <data name="GoogleMapShow" xml:space="preserve">
+    <value>عرض الخريطة</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>تاريخ خاطئ</value>
+  </data>
+  <data name="ActivationCanceled" xml:space="preserve">
+    <value>تم إلغاء التفعيل</value>
+  </data>
+  <data name="ActivationDone" xml:space="preserve">
+    <value>تم التفعيل</value>
+  </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>رابط خاطئ</value>
+  </data>
+  <data name="InvalidEnteredValue" xml:space="preserve">
+    <value>خطأ في القيمة المدخلة</value>
+  </data>
+  <data name="Date_Day" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="Date_Georgian" xml:space="preserve">
+    <value>م</value>
+  </data>
+  <data name="Date_Hour" xml:space="preserve">
+    <value>الساعة</value>
+  </data>
+  <data name="Date_Islamic" xml:space="preserve">
+    <value>هــ</value>
+  </data>
+  <data name="Date_Minute" xml:space="preserve">
+    <value>الدقيقة</value>
+  </data>
+  <data name="Date_Month" xml:space="preserve">
+    <value>الشهر</value>
+  </data>
+  <data name="Date_Second" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="Date_Year" xml:space="preserve">
+    <value>السنة</value>
+  </data>
+</root>

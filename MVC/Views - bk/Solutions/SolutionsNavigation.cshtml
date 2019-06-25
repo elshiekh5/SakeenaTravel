@@ -1,0 +1,20 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    int index = 0;
+    int rowsCountOpened = 0;
+    int rowsCountClosed = 0;
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Solutions, "Services");
+    string active = "";
+}
+
+<ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
+@foreach (AppService.FrontItemsModel item in ItemsList)
+{
+    if (ViewBag.ActiveID != null && ViewBag.ActiveID == item.ItemID) { active = "active"; }
+    else { active = ""; }
+    <li class="list-group-item @active">
+        <a href="/Solutions/page/@item.ItemID"><i class="glyphicon glyphicon-chevron-right"></i> @item.Title</a>
+    </li>
+}
+</ul>

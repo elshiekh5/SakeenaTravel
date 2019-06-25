@@ -1,0 +1,58 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    int pageID = 1;
+    FrontItemsModel currentItem = null;
+    if (pageID > 0)
+    {
+        currentItem = FrontItemsController.GetItemObject(pageID, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+
+
+
+<section class="animated  fadeInDownNow notransition topspace30 fadeInDown" style="">
+    <div class="row">
+        <h1 class="text-center smalltitle">
+            <span style="color: #0A314D;">@Resources.SiteText.WelcomeBoxTitle</span>
+        </h1>
+        <div class="col-md-3 animated fadeInLeftNow ">
+            <div class="thumbnail  box effect2">
+                <!--<img src="/_assets/img//_assets/demo/team1.jpg" alt="">-->
+                <img class="img-circle" src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + currentItem.PhotoPathOriginal)" alt="">
+                <div class="caption">
+                    <h4>@currentItem.AuthorName</h4>
+                    <span class="primarycol">- @currentItem.Address -</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 animated fadeInRightNow">
+
+            <h2>@currentItem.Title</h2>
+            @*@Html.Raw(currentItem.Description.Replace("\n","<br>"))*@
+            @Html.Raw(currentItem.Description)
+            <div class="row topspace30">
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/01.jpg" alt="">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/5.jpg" alt="">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/28.jpg" alt="">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/29.jpg" alt="">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/11.jpg" alt="">
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="/_assets/img2/115x80/32.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,47 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+
+
+
+<div id="ResultAlert" class="alert compose_alert alert-warning" style="display: none;">
+    <span id="ResultAlertText"></span>
+</div>
+<div id="LoadingAlert" class="spinner" style="display: none;">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+
+<!-- CONTACT
+================================================== -->
+<iframe class="gmap" style="width:100%;height:370px;border: 0;margin-top:10px;z-index: 11;position: relative;" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hollywood+Studios+International,+Wilshire+Boulevard+%23600,+Beverly+Hills,+CA,+Statele+Unite+ale+Americii&amp;aq=1&amp;oq=hol&amp;sll=34.105212,-118.348942&amp;sspn=0.000481,0.00066&amp;t=h&amp;ie=UTF8&amp;hq=hollywood+studios+international&amp;hnear=Wilshire+Blvd,+Beverly+Hills,+California&amp;ll=34.06732,-118.402606&amp;spn=0.006295,0.02076&amp;iwloc=lyrftr:h,14426514857686667153,34.067073,-118.402753&amp;output=embed"></iframe>
+<section class="container">
+
+    <div class="row">
+        <div id="BigContactForm" class="col-md-8 animated fadeInLeft notransition">
+                <div id="contentAlert" class="alert" style="display:none;">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                   <span id="contactResult"> There was a problem with your network connection.</span>
+                </div>
+
+            <h1 class="smalltitle">
+                <span>@Resources.SiteText.ContactsFormCaption</span>
+            </h1>
+            <input name="name" size="30" type="text" id="name" class="col-md-6 leftradius" placeholder="@Resources.SiteText.ContactFormName">
+            <input name="email" size="30" type="text" id="email" class="col-md-6 rightradius" placeholder="@Resources.SiteText.ContactFormEmail">
+                <textarea id="message" name="message" class="col-md-12 allradius" placeholder="@Resources.SiteText.ContactFormMessage" rows="9"></textarea>
+                <br />
+                <input value="@Resources.SiteText.ContactFormSend" type="submit" id="btnSendMessage" class="btn btn-default btn-md">
+        </div>
+        <div class="col-md-4 animated fadeInRight notransition">
+          @Html.Partial("~/Views/contact_us/smallContacts.cshtml")
+            
+        </div>
+    </div>
+</section>
+<!--CALL TO ACTION PANEL
+================================================== -->
+
+<!-- /. end call to action-->

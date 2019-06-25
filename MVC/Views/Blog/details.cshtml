@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInnerWithSideBar.cshtml";
+}
+
+@Html.Partial("~/Views/Blog/detailsPartialView.cshtml")
+
+
+
+@section styles{
+}
+@section Scripts{
+}
+
+
+@section Aside{
+
+   @Html.Partial("/Views/Shared/Aside/WhyWeAre.cshtml")
+@Html.Partial("/Views/Shared/Aside/Contacts.cshtml")
+}
+
+
+

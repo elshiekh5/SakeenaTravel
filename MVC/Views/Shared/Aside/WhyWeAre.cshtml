@@ -1,0 +1,21 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    FrontItemsModel currentItem = null;
+    if (currentItem == null)
+    {
+        currentItem = FrontItemsController.GetItemObject(3, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+ <!-- Why we are? -->
+<div class="headline"><h2>Why we are?</h2></div>
+<p>@((currentItem != null) ? currentItem.ShortDescription : "")</p>
+
+<ul class="list-unstyled">
+    <li><em class="fa fa-check color-green"></em> Professional Website specialists</li>
+    <li><em class="fa fa-check color-green"></em> Friendly service</li>
+    <li><em class="fa fa-check color-green"></em> Satisfied Customers</li>
+    <li><em class="fa fa-check color-green"></em> Professional Support</li>
+</ul>

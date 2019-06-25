@@ -1,0 +1,187 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Revolution | ThemePunch</title>
+        
+        <link href="selector/styles.css" rel="stylesheet" media="all" />
+	   
+        <script type="text/javascript" src="selector/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="selector/imagepreview2.js"></script>
+        
+        <script type="text/javascript">
+        
+        var theme_list_open = false;
+        
+        $(document).ready(function () {
+        
+        	function fixHeight () {
+        	
+        		var headerHeight = $("#switcher").height();
+        	        	
+        		$("#iframe").attr("height", (($(window).height()) - headerHeight) + 'px');
+        	
+        	}
+        	
+        	$(window).resize(function () {
+               	
+        		fixHeight();
+        	
+        	}).resize();
+        	
+        	$("#theme_select").click( function () {
+        	
+        		if (theme_list_open == true) {
+        	
+	        		$(".center #theme_list ul").hide();
+	        		
+	        		theme_list_open = false;
+        		
+        		} else {
+        		
+	        		$(".center #theme_list  ul").show();         		
+	        		
+	        		theme_list_open = true;
+        		
+        		}
+        		
+        		return false;
+        	
+        	});
+        	
+        	$("#theme_list ul li a").click(function () {
+        	
+        	var theme_data = $(this).attr("rel").split(",");
+        	        	
+        	$("li.purchase a").attr("href", theme_data[1]);
+        	$("li.remove_frame a").attr("href", theme_data[0]);
+        	$("#iframe").attr("src", theme_data[0]);
+        	//$("#favicon").attr("href",theme_data[2]);
+        	$(document).attr('title', theme_data[3]+" | ThemePunch");
+        	
+        	$("#theme_list a#theme_select").text($(this).text());
+        	$("#plugin_list a#plugin_select").text("Select A Plugin");
+        	
+        	$(".center ul li ul").hide();
+        	
+        	theme_list_open = false;
+        	
+        	return false;
+        	
+        	});
+        
+        });
+        
+        </script>
+        
+        <script type="text/javascript">
+        
+        var plugin_list_open = false;
+        
+        $(document).ready(function () {
+        
+        	$("#plugin_select").click( function () {
+        	
+        		if (plugin_list_open == true) {
+        	
+        		$(".center #plugin_list ul").hide();
+        		
+        		plugin_list_open = false;
+        		
+        		} else {
+        		
+        		$(".center #plugin_list ul").show();         		
+        		
+        		plugin_list_open = true;
+        		
+        		}
+        		
+        		return false;
+        	
+        	});
+        	
+        	$("#plugin_list ul li a").click(function () {
+        	
+        	var theme_data = $(this).attr("rel").split(",");
+        	        	
+        	$("li.purchase a").attr("href", theme_data[1]+"?ref=themepunch");
+        	$("li.remove_frame a").attr("href", theme_data[0]);
+        	$("#iframe").attr("src", theme_data[0]);
+        	//$("#favicon").attr("href",theme_data[2]);
+        	$(document).attr('title', theme_data[3]+" | ThemePunch");
+        	
+        	$("#plugin_list a#plugin_select").text($(this).text());
+        	$("#theme_list a#theme_select").text("Select A Theme");
+        	
+        	$(".center ul li ul").hide();
+        	
+        	plugin_list_open = false;
+        	
+        	return false;
+        	
+        	});
+        
+        });
+        
+        </script>
+         <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34978017-1']);
+		  _gaq.push(['_setDomainName', 'themepunch.com']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+</head>
+
+<body>
+
+	<div id="switcher">
+	
+		<div class="center">
+		
+		<ul>
+		
+		<li id="logo"><a href="http://www.themepunch.com"><img src="selector/logo.png" alt="" /></a></li>
+		
+		<li id="theme_list"  style="position:relative;"><a id="theme_select" href="#">Select A Theme</a>
+		
+			<ul>
+			
+				<li><a href="#" rel="http://themetastic.damojothemes.com/,http://themeforest.net/item/themetastic-flat-responsive-wordpress-theme/5231364,http://themetastic.damojothemes.com//wp-content/themes/themetstic/images/favicon.png,ThemeTstic" data-rel="http://1.s3.envato.com/files/62258031/01_largepreview.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">ThemeTstic</span></a></li><li><a href="#" rel="http://plox.damojothemes.com/,http://themeforest.net/item/plox-creative-responsive-wordpress-theme/5115201,http://plox.damojothemes.com//wp-content/themes/plox/images/favicon.png,Plox" data-rel="http://2.s3.envato.com/files/60919188/01_previewlarge.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Plox</span></a></li><li><a href="#" rel="http://stark.damojothemes.com,http://themeforest.net/item/stark-responsive-multipurpose-wordpress-theme/4565745,http://stark.damojothemes.com/wp-content/themes/stark/images/favicon.png,Stark" data-rel="http://0.s3.envato.com/files/54425101/01_screenshot.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Stark</span></a></li><li><a href="#" rel="http://www.themepunch.com/averis_html/,http://themeforest.net/item/averis-responsive-business-html-template/3251544,http://www.themepunch.com/averis_html//wp-content/themes/averis/images/favicon.png,Averis" data-rel="http://1.s3.envato.com/files/37622514/01_previewimage.__large_preview.jpg" class="screenshot"><span class="html">HTML / CSS</span> <span class="themetitle">Averis</span></a></li><li><a href="#" rel="http://www.themepunch.com/escalation/,http://themeforest.net/item/escalation-responsive-allround-wordpress-theme/2826233,http://www.themepunch.com/escalation//wp-content/themes/escalation/images/favicon.png,Escalation" data-rel="http://0.s3.envato.com/files/32536833/01_largepreview.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Escalation</span></a></li><li><a href="#" rel="http://www.themepunch.com/averis/,http://themeforest.net/item/averis-responsive-business-wordpress-theme/2425183,http://www.themepunch.com/averis//wp-content/themes/averis/images/favicon.png,Averis" data-rel="http://3.s3.envato.com/files/28014543/01_previewimage.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Averis</span></a></li><li><a href="#" rel="http://www.themepunch.com/valiano/,http://themeforest.net/item/valiano-responsive-wordpress-theme/1987559,http://www.themepunch.com/valiano//wp-content/themes/valiano/images/favicon.png,Valiano" data-rel="http://2.s3.envato.com/files/23035374/largepreview.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Valiano</span></a></li><li><a href="#" rel="http://www.themepunch.com/config/,http://themeforest.net/item/config-multipurpose-wordpress-theme/1493982,http://www.themepunch.com/config//wp-content/themes/config/images/favicon.png,Config" data-rel="http://3.s3.envato.com/files/17405205/01_largepreview.__large_preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Config</span></a></li>				
+			</ul>
+		
+		</li>	
+		<li id="plugin_list" style="position:relative;"><a id="plugin_select" href="#">Revolution jQuery</a>
+		
+			<ul>
+			
+				<li><a href="#" rel="http://showbizpro.damojothemes.com/,http://codecanyon.net/item/showbiz-pro-responsive-teaser-wordpress-plugin/4720988,http://showbizpro.damojothemes.com//wp-content/themes/showbizpro/images/favicon.png,ShowbizPro" data-rel="http://3.s3.envato.com/files/56273926/01_largepreview_wp.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">ShowbizPro</span></a></li><li><a href="#" rel="http://themepunch.com/codecanyon/showbizpro/index.php,http://codecanyon.net/user/themepunch/portfolio,http://themepunch.com/codecanyon/showbizpro/index.php/wp-content/themes/showbizpro/images/favicon.png,ShowbizPro" data-rel="http://themes.themepunch.com/previews/showbiz.jpeg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">ShowbizPro</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/megafoliopro/,http://codecanyon.net/item/megafolio-pro-responsive-grid-jquery-plugin/3782456,http://www.themepunch.com/codecanyon/megafoliopro//wp-content/themes/mfolio pro/images/favicon.png,Mfolio Pro" data-rel="http://1.s3.envato.com/files/45327243/01_largepreview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">Mfolio Pro</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/revolution_wp/,http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380,http://www.themepunch.com/codecanyon/revolution_wp//wp-content/themes/revolution/images/favicon.png,Revolution" data-rel="http://1.s3.envato.com/files/43458011/01_newpreview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Revolution</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/revolution/,http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848,http://www.themepunch.com/codecanyon/revolution//wp-content/themes/revolution/images/favicon.png,Revolution" data-rel="http://0.s3.envato.com/files/29804575/largepreview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">Revolution</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/showbiz/,http://codecanyon.net/item/showbiz-business-carousel-jquery-plugin/926348,http://www.themepunch.com/codecanyon/showbiz//wp-content/themes/showbiz/images/favicon.png,Showbiz" data-rel="http://1.s3.envato.com/files/10693549/preview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">Showbiz</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/megafolio/,http://codecanyon.net/item/megafolio-gallery-jquery-plugin/980161,http://www.themepunch.com/codecanyon/megafolio//wp-content/themes/megafolio/images/favicon.png,Megafolio" data-rel="http://2.s3.envato.com/files/11339985/largepreview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">Megafolio</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon_wp/kenburner-slider-wp-plugin/,http://codecanyon.net/item/kenburner-slider-wordpress-plugin/2328701,http://www.themepunch.com/codecanyon_wp/kenburner-slider-wp-plugin//wp-content/themes/kenburner/images/favicon.png,KenBurner" data-rel="http://1.s3.envato.com/files/26928852/preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">KenBurner</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/kenburner/,http://codecanyon.net/item/kenburner-slider-jquery-plugin/1249801,http://www.themepunch.com/codecanyon/kenburner//wp-content/themes/kenburner/images/favicon.png,KenBurner" data-rel="http://2.s3.envato.com/files/14814899/preview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">KenBurner</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/kenburner-responsive/,http://codecanyon.net/item/responsive-kenburner-slider-jquery-plugin/1633038,http://www.themepunch.com/codecanyon/kenburner-responsive//wp-content/themes/kb respon./images/favicon.png,KB Respon." data-rel="http://0.s3.envato.com/files/18816158/preview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">KB Respon.</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon_wp/about/,http://codecanyon.net/item/paradigm-slider-wordpress-plugin/2240755,http://www.themepunch.com/codecanyon_wp/about//wp-content/themes/paradigm/images/favicon.png,Paradigm" data-rel="http://0.s3.envato.com/files/25901188/preview.jpg" class="screenshot"><span class="wp">WordPress</span> <span class="themetitle">Paradigm</span></a></li><li><a href="#" rel="http://www.themepunch.com/codecanyon/paradigm/,http://codecanyon.net/item/paradigm-slider-jquery-plugin/829647,http://www.themepunch.com/codecanyon/paradigm//wp-content/themes/paradigm/images/favicon.png,Paradigm" data-rel="http://2.s3.envato.com/files/9559051/largepreview.jpg" class="screenshot"><span class="wp">jQuery</span> <span class="themetitle">Paradigm</span></a></li>				
+			</ul>
+		
+		</li>	
+		
+		<li class="purchase" rel="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848?ref=themepunch"><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848?ref=themepunch"></a></li>		
+		<li class="remove_frame" rel="http://www.themepunch.com/codecanyon/revolution/"><a href="http://www.themepunch.com/codecanyon/revolution/"></a></li>		
+		
+		</div>
+		
+		</ul>
+	
+	</div>
+	
+    <iframe id="iframe" src="http://www.themepunch.com/codecanyon/revolution/" frameborder="0" width="100%"></iframe>
+    
+</body>
+</html>
+
+s

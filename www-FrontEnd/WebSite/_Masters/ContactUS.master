@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ContactUS.master.cs" Inherits="App_Design_masters_InnerContactUSMaster" %>
+<%@ Register src="Controls/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="Controls/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<%@ Register Src="../_SharedControls/SideBarControls/PageContacts.ascx" TagName="PageContacts" TagPrefix="uc7" %>
+<%@ Register src="../_SharedControls/SideBarControls/PageWhyUs.ascx" tagname="PageWhyUs" tagprefix="uc1" %>
+<%@ Register src="../_SharedControls/SideBarControls/BusinessHours.ascx" tagname="BusinessHours" tagprefix="uc5" %>
+<%@ Register Src="../_SharedControls/Clients.ascx" TagName="Clients" TagPrefix="uc5" %>
+<%@ Register Src="Controls/PathLinksControl.ascx" TagName="PathLinksControl" TagPrefix="uc10" %>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<head id="Head1" runat="server">
+    <title>DigitalTags | Welcome...</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/WebSite/_Assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/WebSite/_Assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/WebSite/_Assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/WebSite/_Assets/plugins/font-awesome/css/font-awesome.min.css">
+
+
+
+    <asp:ContentPlaceHolder ID="css" runat="server">
+   
+    </asp:ContentPlaceHolder>
+    
+
+    <!-- CSS Theme -->    
+    <%--<link rel="stylesheet" href="/WebSite/_Assets/css/themes/default.css" id="style_color">--%>
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/WebSite/_Assets/css/custom.css">
+
+
+       
+
+    <link id="cssStyle" runat="server" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/WebSite/_Assets/plugins/jquery-1.10.2.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> --%>
+    </head>
+<body>
+<form id="form1" runat="server">
+<div class="wrapper">
+  
+<uc1:Header ID="Header1" runat="server" />
+    
+<uc10:PathLinksControl ID="Pathes" runat="server" />
+
+    <!--=== Content Part ===-->
+    <div class="container content">     
+        <div class="row margin-bottom-30">
+            <div class="col-md-9 mb-margin-bottom-30">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>   
+            </div><!--/col-md-9-->
+            
+            <div class="col-md-3">
+                <uc7:PageContacts ID="ucPageContacts" runat="server" />
+                <uc1:PageWhyUs ID="PageWhyUs1" runat="server" />
+            </div><!--/col-md-3-->
+        </div><!--/row-->        
+
+        <!-- Our Clients -->
+        <uc5:Clients ID="ucClients" runat="server" />
+        <!-- //End Our Clients -->
+    </div>
+<!--/container-->	
+
+
+
+
+
+
+
+<uc2:Footer ID="Footer2" runat="server" />
+    </div><!--/wrapper-->
+        <!-- JS Global Compulsory -->			
+      
+
+
+<asp:ContentPlaceHolder ID="scripts" runat="server">
+</asp:ContentPlaceHolder>
+
+<!--[if lt IE 9]>
+    <script src="/WebSite/_Assets/plugins/respond.js"></script>
+    <script src="/WebSite/_Assets/plugins/html5shiv.js"></script>    
+<![endif]-->
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29166220-1']);
+            _gaq.push(['_setDomainName', 'htmlstream.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+</script>
+
+
+        </form>
+</body>
+</html> 

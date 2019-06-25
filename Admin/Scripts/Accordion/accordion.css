@@ -1,0 +1,52 @@
+.accordionWrapper{display:inline-block; background-color:#fff; overflow:hidden;}
+.accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0}
+.accordionWrapper div{display:inline; float:left; margin:auto;}
+.accordionWrapper div.title 
+{ text-align:center;
+    cursor:auto; 
+ border: 0px solid #d3d3d3 /*{borderColorDefault}*/;
+background: #C2E1F5; 
+                             font-weight: normal; 
+                             color: #2479AA   ; width:32px; min-height:263px; height:263px  ; margin-right:1px; text-decoration: none; }
+                             
+                             
+                             
+.accordionWrapper div.title a 
+{
+    color: #2479AA ;
+    text-decoration: none;
+}
+  .accordionWrapper div.title a:link , .accordionWrapper div.title a:visited{background: #4AA6E0  ;font-weight: normal/*{fwDefault}*/; color: #D1E3EF/*{fcHover}*/; text-decoration: none;}
+
+.accordionWrapper div.title:hover{ background: #4AA6E0  ;font-weight: normal/*{fwDefault}*/; color: #D1E3EF/*{fcHover}*/; text-decoration: none;}
+
+
+
+
+
+
+.accordionWrapper div.titlev 
+{ text-align:center;
+    cursor:pointer;     border: 0px solid #d3d3d3 /*{borderColorDefault}*/;
+                              background: #C2E1F5; 
+                             font-weight: normal; 
+                             color: #2479AA   ;  height:29px; width:487px  ; margin-bottom:1px; text-decoration: none; }
+
+.accordionWrapper div.titlev a 
+{
+    color: #2479AA ;
+    text-decoration: none;
+}
+
+
+/*background: #4AA6E0*/
+
+  .accordionWrapper div.titlev a:link , .accordionWrapper div.titlev a:visited {   color: #2479AA; text-decoration: none; }
+
+.accordionWrapper div.titlev:hover{ background: #4AA6E0  ; color: #fff/*{fcHover}*/; text-decoration: none;}
+
+
+
+
+
+.accordionWrapper div.content{display:none;}

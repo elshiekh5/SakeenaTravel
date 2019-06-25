@@ -1,0 +1,56 @@
+﻿@{
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetLatestData(26, "TopFeatured",3);
+    int index = 0;
+}<!-- WhyUs Blocks -->
+<div class="row margin-bottom-30">
+    <div class="col-md-3">
+        <div class="service">
+            <i class="glyphicon glyphicon-heart service-icon"></i>
+            <div class="desc">
+                <h4>We work with love</h4>
+                <p>That's why we care about your project as if it was ours.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="service">
+            <i class="glyphicon glyphicon-usd service-icon"></i>
+            <div class="desc">
+                <h4>We fit in your budget</h4>
+                <p>Because we always make the best choices for your business.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="service">
+            <i class="fa fa-cogs service-icon img-rounded service-icon"></i>
+            <div class="desc">
+                <h4>We develop as needed</h4>
+                <p>Because every project deserve custom development.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="service">
+            <i class="glyphicon glyphicon-bell img-rounded service-icon"></i>
+            <div class="desc">
+                <h4>We respect deadlines</h4>
+                <p>Because we schedule all projects, tasks and meetings.</p>
+            </div>
+        </div>
+    </div>
+    @*@foreach (AppService.FrontItemsModel item in ItemsList)
+    {
+    <div class="col-md-4">
+        <div class="service service@(Html.Raw(++index))">
+            <i class="fa @item.MailBox service-icon"></i>
+            <div class="desc">
+                <h4>@item.Title</h4>
+                <p>@item.ShortDescription</p>
+            </div>
+        </div>
+    </div>
+        
+    }*@
+</div>
+<!-- End WhyUs Blokcs -->

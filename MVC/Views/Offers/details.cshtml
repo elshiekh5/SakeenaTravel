@@ -1,0 +1,46 @@
+﻿@{
+   
+}
+
+@section CustomeHeader{
+    <section class="pageheader-default text-center">
+    <div class="semitransparentbg">
+        <h1 class="animated fadeInLeftBig notransition">@Resources.SiteText.Offers</h1>
+        <p class="animated fadeInRightBig  notransition container page-description">
+            @Html.Partial("~/Views/PartialViews/PageBrief.cshtml", 23)
+        </p>
+        <br>
+        <br>
+    </div>
+</section>
+}
+<!-- BLOG
+================================================== -->
+<section class="container animated fadeInDown notransition">
+    <div class="row blogindex">
+        <!-- MAIN -->
+        <div class="col-md-9">
+            @Html.Partial("~/Views/Offers/detailsPartialView.cshtml")
+        </div>
+        <!-- SIDEBAR -->
+        <div class="col-md-3">
+            <aside class="sidebar topspace30">
+                @Html.Partial("~/Views/Offers/latest.cshtml")
+                <div class="widget">
+                    <h4>@Resources.SiteText.About</h4>
+                    @Html.Partial("~/Views/PartialViews/PageHtmlBrief.cshtml", 13)
+                </div>
+            </aside>
+        </div>
+        <!-- end sidebar -->
+    </div>
+</section>
+<!--CALL TO ACTION PANEL
+================================================== -->
+
+<!-- /. end call to action-->
+@Html.Partial("~/Views/PartialViews/ItemGallery.cshtml")
+
+@section BottomScripts{
+
+}

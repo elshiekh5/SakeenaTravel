@@ -1,0 +1,22 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" %>
+  <% 
+    List<AppService.FrontItemsModel> ItemsList = AppService.FrontItemsController.GetModuleData((int)SiteModulesMap.Services, "Services");
+ %>
+<div class="row margin-bottom-20">
+<%
+    foreach (AppService.FrontItemsModel item in ItemsList)
+    {
+        %>
+         <div class="col-md-4 col-sm-6">
+              <div class="servive-block servive-block-default">
+                   <img src="<%= item.PhotoPathOriginal%>" />
+                   <h2 class="heading-md"><%= item.Title%></h2>
+                   <p class="justify"><%= item.ShortDescription%></p>                        
+              </div>
+         </div>
+      
+<%  }
+%>
+    
+ </div>
+    

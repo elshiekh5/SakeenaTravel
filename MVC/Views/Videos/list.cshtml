@@ -1,0 +1,105 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 12;
+    int totalItemsCount = 0;
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleDataPageByPage(53, "YoutubePaging", index, pageSize, out totalItemsCount);
+     PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+    int rowItemsCount = 3;
+    int tempItemIndex= 0;
+    int restItemsCount = 0;
+    bool openedRaw = false;
+    
+}
+
+@foreach (FrontItemsModel item in ItemsList)
+{
+    ++tempItemIndex;
+    if (tempItemIndex % 3 == 1)
+    {
+        @Html.Raw(HttpUtility.HtmlDecode("<div class='row'>"));
+    }
+    
+    if ((tempItemIndex == ItemsList.Count) && (ItemsList.Count % 3 > 0))
+    {
+        <div class="col-md-4 topspace35 floatright hidden-sm hidden-xs">
+        </div>
+    }
+    @*--------------------------------------------------------------------------*@
+    <div class="col-md-4 topspace35 animated fadeInLeftNow notransition floatright">
+        <div class="boxcontainer">
+            <img src="@("http://img.youtube.com/vi/"+item.YoutubeCode+"/hqdefault.jpg")" alt="">
+            <div class="roll">
+                <div class="wrapcaption">
+                    
+                    <a data-gal="prettyPhoto[gallery1]" href="@("http://www.youtube.com/watch?v="+item.YoutubeCode)" rel="prettyPhoto"><i class=" icon-play captionicons"></i></a>
+                </div>
+            </div>
+            <h1><a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">@item.Title</a></h1>
+        </div>
+        
+    </div>
+    @*--------------------------------------------------------------------------*@
+
+    if (tempItemIndex % 3 == 0)
+    {
+
+        @Html.Raw(HttpUtility.HtmlDecode("</div>"));
+        
+        openedRaw = false;
+    }
+}
+@if (openedRaw)
+{
+    //Html.Raw("</div>");
+    @Html.Raw(HttpUtility.HtmlDecode("</div>"));
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            @Html.Partial("~/Views/PartialViews/Pager.cshtml", pager)
+        </div>
+    </div>
+    </div>
+
+
+
+@**@
+
+
+
+@*<div class="gallery-page">
+    <div class="row margin-bottom-20">
+
+        @foreach (FrontItemsModel item in ItemsList)
+        {
+
+            <div class="col-md-3 col-sm-6">
+                <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="" href="@item.PhotoPathOriginal">
+                    <span class="overlay-zoom">
+                        <img alt="" src="@ThumbnailsManager.GetThumb(item.PhotoPathOriginal, 270,270,100)" class="img-responsive">
+                        <span class="zoom-icon"></span>
+                    </span>
+                    &nbsp;
+                </a>
+            </div>
+        }
+    </div>
+    
+</div>*@

@@ -1,0 +1,64 @@
+﻿<asp:ImageButton runat="server" SkinID="ibtnDelete" AlternateText="Deleet" ImageUrl="/Content/AdminDesign/Ar/css/images/delete.gif"></asp:ImageButton>
+<asp:GridView runat="server" 
+    SkinId="GridViewSkin1111"
+    ShowFooter=false
+    AllowPaging=false 
+    AutoGenerateColumns=false
+    Width=100% CellPadding="8" GridLines="Horizontal" 
+    HorizontalAlign=Right  BorderWidth="0px" Font-Size=12px
+    dir=rtl PageSize="10"
+    HeaderStyle-BackColor=maroon 
+                >
+    <HeaderStyle BackColor="#257AB4"  ForeColor="#ffffff" HorizontalAlign=Right Height="30"  />
+    <RowStyle BackColor=WhiteSmoke  />
+    <AlternatingRowStyle BackColor="#89BBDD" ForeColor="#ffffff" />
+ </asp:GridView>
+ <asp:TreeView SkinId="Treee"
+    Font-Names="Arial" 
+    ForeColor="Black"
+    Font-Size="8pt"
+    NodeWrap=true
+	RootNodeStyle-ImageUrl="images/tree/zz4.gif"
+    RootNodeStyle-ForeColor="#024B7E"
+	ParentNodeStyle-ImageUrl="images/tree/zz5.gif"
+	LeafNodeStyle-ImageUrl="images/tree/zx3.gif"
+	ParentNodeStyle-ForeColor="#2F93B7"
+	LeafNodeStyle-ForeColor="gray"
+	NodeStyle-HorizontalPadding="5" 
+	RootNodeStyle-ChildNodesPadding=5px 
+	ParentNodeStyle-ChildNodesPadding="5px" 
+	RootNodeStyle-Height="10px"    
+	SelectedNodeStyle-Font-UnderLine="false" 
+	ShowLines="True" LineImagesFolder="images/TreeLineImages/"
+	runat="server"
+
+  />
+<asp:DataGrid  SkinId="GridViewSkin" runat="server"  AutoGenerateColumns="False" 
+		 BorderStyle="None" BorderWidth="0px" Font-Size=13px Font-Names="Tahoma"
+		CellPadding="2" GridLines="None" PagerStyle-NextPageText="Next" PagerStyle-PrevPageText ="Previous" 
+		PageSize="10" Width="100%" ForeColor="#333333" >
+		<SelectedItemStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+		<AlternatingItemStyle BackColor="#E1F4FF"  />
+		<ItemStyle BackColor="#EFEFEF" Font-Size=11px HorizontalAlign=right VerticalAlign=Middle />
+		<HeaderStyle BackColor="#56AEDE"  ForeColor="White"  HorizontalAlign=Right Height="30"  />
+		<FooterStyle BackColor="#104662" ForeColor="White" />
+	 	<PagerStyle Mode="NumericPages"  ForeColor="White"  BackColor="#104662" HorizontalAlign="Center" VerticalAlign="Middle"></PagerStyle>
+	</asp:DataGrid>
+    <asp:ImageButton runat="server" SkinID="ibtnGridDelete" AlternateText="حذف" ImageUrl="/Content/AdminDesign/global/images/Icons/trashcan-delete.png" Width="20" Height="20"></asp:ImageButton>
+
+
+<asp:HyperLink SkinID="hlEdit" runat="server" ImageUrl="/Content/AdminDesign/global/images/Edit.gif"></asp:HyperLink>
+<asp:ImageButton SkinID="btnDel"  AlternateText="Delete" ImageUrl="/Content/AdminDesign/Ar/css/images/delete.gif" runat="server" />
+<asp:ImageButton SkinID="btnAdd"  AlternateText="Add" ImageUrl="/Content/AdminDesign/Ar/css/images/buttons/add.gif" runat="server" />
+<asp:ImageButton SkinID="btnEdit"  AlternateText="Edit" ImageUrl="/Content/AdminDesign/Ar/css/images/buttons/edit.gif" runat="server" />
+<asp:RequiredFieldValidator runat=server ForeColor="Red"></asp:RequiredFieldValidator>
+<asp:RegularExpressionValidator runat=server ForeColor="Red"></asp:RegularExpressionValidator>
+<asp:CustomValidator runat=server ForeColor="Red"></asp:CustomValidator>
+<asp:Button runat="server" SkinID="btnSave" Text="حفظ" CssClass="Button" ></asp:Button>
+<asp:Button runat="server" SkinID="btnPrepare" Text="تهيئة" CssClass="Button" ></asp:Button>
+<asp:Button runat="server" SkinID="btnExport" Text="تصدير" CssClass="Button" ></asp:Button>
+<asp:Button runat="server" SkinID="btnsend" Text="ارسال" CssClass="Button" ></asp:Button>
+<asp:Button runat="server" SkinID="btnSearch" Text="بحث" CssClass="Button" ></asp:Button>
+<asp:Button runat="server" SkinID="btnExecute" Text="تنفيذ" CssClass="Button" ></asp:Button>
+<asp:ImageButton runat="server" SkinID="ibtnGridVoteOpen" AlternateText="تفعيل" ImageUrl="/Content/AdminDesign/global/images/Icons/unlock.jpg" Width="35" Height="14"></asp:ImageButton>
+<asp:ImageButton runat="server" SkinID="ibtnGridVoteClose" AlternateText="إغلاق" ImageUrl="/Content/AdminDesign/global/images/Icons/lock.jpg" Width="35" Height="14"></asp:ImageButton>

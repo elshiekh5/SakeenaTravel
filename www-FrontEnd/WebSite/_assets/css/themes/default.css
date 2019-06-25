@@ -1,0 +1,554 @@
+/* 
+* Version: 1.4
+* Default Color 	  : #CC003E;
+* Default Hover Color : #5fb611;
+
+
+    /*
+    color schema
+    #72c02c --> #CC003E
+    */
+*/
+
+a:focus, 
+a:hover, 
+a:active {
+	color: #CC003E;
+}
+
+.color-green {
+	color: #CC003E;
+}
+
+a.read-more:hover { 
+	color:#CC003E; 
+}
+
+.linked:hover {
+	color:#CC003E;
+}
+
+/*Header v1
+------------------------------------*/
+/*Navber*/
+.header .navbar-default .navbar-nav > .active > a {
+	color: #CC003E;
+}
+
+/*Navbar Toggle*/
+.navbar-toggle,
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	background: #CC003E;
+}
+
+.navbar-toggle:hover {
+	background: #5fb611 !important;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #5fb611;
+}
+
+/*Responsive Navbar*/
+@media (max-width: 767px) {
+	.header .navbar-default .navbar-nav > li > a:hover {
+		color: #CC003E;
+	}
+
+	.header .navbar-default .navbar-nav > .active > a,
+	.header .navbar-default .navbar-nav > .active > a:hover,
+	.header .navbar-default .navbar-nav > .active > a:focus {
+		background: #CC003E;
+	}
+}
+
+@media (min-width: 767px) {
+	/*Navbar*/
+	.header .navbar-default .navbar-nav > li > a:hover,
+	.header .navbar-default .navbar-nav > .active > a {
+		/*border-bottom: solid 2px #CC003E;*/
+	}
+
+	.header .navbar-default .navbar-nav > .open > a,
+	.header .navbar-default .navbar-nav > .open > a:hover,
+	.header .navbar-default .navbar-nav > .open > a:focus {
+		color: #CC003E;
+	}
+
+	/*Dropdown Menu*/
+	.header .dropdown-menu { 
+		border-top: solid 2px #CC003E; 
+	}	
+}
+
+/*Search Box*/
+.header .navbar .nav > li > .search:hover {
+	color: #CC003E;
+	border-bottom-color: #CC003E;
+}
+
+@media (max-width: 767px) {
+	.header .navbar .nav > li > .search:hover {
+		background: #5fb611;
+	}
+}
+
+/*Header v2
+------------------------------------*/
+/*Topbar*/
+.topbar-v1 .top-v1-data li a:hover i {
+	color: #CC003E;
+
+}
+
+/*Search Box*/
+.header-v1 .navbar .nav > li > .search:hover {
+	background: #CC003E;
+}
+
+/*Responsive Navbar*/
+@media (min-width: 767px) {
+	.header-v1 .navbar-default .navbar-nav > li > a:hover,
+	.header-v1 .navbar-default .navbar-nav > .active > a {
+		color: #fff;
+		background: #CC003E !important;
+	}
+
+	.header-v1 .navbar-default .navbar-nav > .open > a,
+	.header-v1 .navbar-default .navbar-nav > .open > a:hover,
+	.header-v1 .navbar-default .navbar-nav > .open > a:focus {
+		background: #CC003E;		
+	}
+}	
+
+/*Sliders
+------------------------------------*/
+/*Main Parallax Sldier*/
+.da-slide h2 i {
+	background:url(../../plugins/parallax-slider/img/bg-heading.png) repeat;
+}
+
+/*Sequence Parallax Sldier*/
+.sequence-inner {
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#defce7));
+  background: -webkit-linear-gradient(#fff, #defce7);
+  background: -moz-linear-gradient(#fff, #defce7);
+  background: -ms-linear-gradient(#fff, #defce7);
+  background: -o-linear-gradient(#fff, #defce7);
+  background: linear-gradient(#fff, #defce7)
+}
+
+#sequence-theme h2 {
+	background:rgba(114, 192, 44, 0.8);
+}
+
+#sequence-theme .info p {
+	background:rgba(114, 192, 44, 0.8);
+}
+
+/*Buttons
+------------------------------------*/
+.btn-u {
+	background: #CC003E;
+}
+
+.btn-u:hover {
+	background: #5fb611;
+}
+
+/*Service
+------------------------------------*/
+.service .service-icon {
+	color:#CC003E;	
+}
+
+/*Service Blocks*/
+.service-alternative .service:hover { 
+	background:#CC003E;
+} 
+
+/*Thumbnail (Recent Work)
+------------------------------------*/
+.thumbnail-style h3 a:hover {
+	color:#CC003E;
+}
+
+.thumbnail-style a.btn-more {
+	background:#CC003E;
+}
+.thumbnail-style a.btn-more:hover {
+	box-shadow:0 0 0 2px #5fb611;
+}
+
+/*Carousel (Recent Work)*/
+.recent-work a:hover span {
+	border-bottom:solid 2px #CC003E;
+}
+
+.bx-wrapper .bx-prev {
+	background-image: url(../../plugins/bxslider/images/controls.png);
+}
+.bx-wrapper .bx-next {
+	background-image: url(../../plugins/bxslider/images/controls.png);
+}
+
+/*Typography
+------------------------------------*/
+/*Heading*/
+.headline h2, 
+.headline h3, 
+.headline h4 {
+	border-bottom:2px solid #CC003E;
+}
+
+/*Blockquote*/
+blockquote:hover {
+	border-left-color:#CC003E; 
+}
+
+.hero {
+	border-left-color: #CC003E;
+}
+
+/*Carousel
+------------------------------------*/
+.carousel-arrow a.carousel-control:hover {
+	color: #CC003E;
+}
+
+/*Footer
+------------------------------------*/
+.footer a,
+.copyright a,
+.footer a:hover,
+.copyright a:hover {
+	color: #CC003E;
+}
+
+/*Footer Blog*/
+.footer .dl-horizontal a:hover {
+	color:#CC003E !important;
+}
+
+/*Blog Posts
+------------------------------------*/
+.posts .dl-horizontal a:hover { 
+	color:#CC003E; 
+}
+
+.posts .dl-horizontal:hover dt img,
+.posts .dl-horizontal:hover dd a { 
+	color: #CC003E;
+	border-color: #CC003E !important;
+}
+
+/*Post Comment*/
+.post-comment h3, 
+.blog-item .media h3,
+.blog-item .media h4.media-heading span a {
+	color: #CC003E;
+}
+
+/*Tabs
+------------------------------------*/
+/*Tabs v1*/
+.tab-v1 .nav-tabs { 
+	border-bottom: solid 2px #CC003E; 	
+}
+
+.tab-v1 .nav-tabs > .active > a, 
+.tab-v1 .nav-tabs > .active > a:hover, 
+.tab-v1 .nav-tabs > .active > a:focus { 
+	background: #CC003E; 
+}
+
+.tab-v1 .nav-tabs > li > a:hover { 
+	background: #CC003E; 
+}
+
+/*Tabs v2*/
+.tab-v2 .nav-tabs li.active a {
+	border-top: solid 2px #CC003E;
+}
+
+/*Tabs v3*/
+.tab-v3 .nav-pills li a:hover,
+.tab-v3 .nav-pills li.active a {
+	background: #CC003E;
+	border: solid 1px #5fb611;
+}
+
+/*Accardion
+------------------------------------*/
+.acc-home a.active,
+.acc-home a.accordion-toggle:hover { 
+	color:#CC003E; 
+}
+.acc-home .collapse.in { 
+	border-bottom:solid 1px #CC003E; 
+}
+
+/*Testimonials
+------------------------------------*/
+.testimonials .testimonial-info {
+	color: #CC003E;
+}
+
+.testimonials .carousel-arrow i:hover {
+	background: #CC003E;
+}
+
+/*Info Blocks
+------------------------------------*/
+.info-blocks:hover i.icon-info-blocks {
+	color: #CC003E;
+}
+
+/*Breadcrumb
+------------------------------------*/
+.breadcrumb li.active,
+.breadcrumb li a:hover {
+	color:#CC003E;
+}
+
+/*About Page
+------------------------------------*/
+.team .thumbnail-style:hover h3 a {
+	color:#CC003E !important;
+}
+
+/*Social Icons*/
+.team ul.team-socail li i:hover {
+	background: #CC003E;
+}
+
+/*Pricing Page
+------------------------------------*/
+/*Pricing Head*/
+.pricing:hover h4 {
+	color:#55c931;
+}
+
+.pricing-head h3 {
+	background:#55c931;
+	border-bottom:solid 1px #41b91c;
+}
+.pricing-head h4 {
+	color:#999;
+	background:#fbfef2;
+	border-bottom:solid 1px #f5f9e7;
+}
+	
+/*Pricing Content*/
+.pricing-content li {
+	border-bottom:solid 1px #f5f9e7;
+}
+.pricing-content li i {
+	color:#CC003E;
+}
+
+/*Pricing Footer*/
+.pricing-footer a,
+.pricing-footer button {
+	background:#CC003E;
+}
+.pricing-footer a:hover,
+.pricing-footer button:hover {
+	background:#40ba1a;
+}
+
+/*Priceing Active*/
+.price-active h4 {
+	color:#55c931;
+}
+
+.no-space-pricing .price-active .pricing-head h4,
+.no-space-pricing .pricing:hover .pricing-head h4 {
+	color:#55c931;
+}
+
+/*Right Sidebar
+------------------------------------*/
+/*Right Sidebar*/
+.who li i,
+.who li:hover i, 
+.who li:hover a { 
+	color:#CC003E; 
+}
+
+/*Privacy Page
+------------------------------------*/
+.privacy a:hover {
+	color:#CC003E; 
+}
+
+/*Portfolio Page
+------------------------------------*/
+/*Portfolio v1*/
+.view a.info:hover {
+	background: #CC003E;
+}
+
+/*Portfolio v2*/
+.sorting-block .sorting-nav li.active {
+	color: #CC003E;
+	border-bottom: solid 1px #CC003E;
+}
+
+.sorting-block .sorting-grid li a:hover span.sorting-cover {
+	background: #CC003E;
+}
+
+/*Blog Page
+------------------------------------*/
+.blog h3 {
+	color:#CC003E;
+}
+.blog li a:hover {
+	color:#CC003E;
+}
+
+/*Blog Tags*/
+ul.blog-tags a:hover {
+	background: #CC003E;
+}
+
+.blog-post-tags ul.blog-tags a:hover {
+    background: none repeat scroll 0 0 #CC003E;
+}
+
+/*Blog Photos*/
+.blog-photos li img:hover {
+	box-shadow: 0 0 0 2px #CC003E;
+}
+
+/*Blog Latest Tweets*/
+.blog-twitter .blog-twitter-inner:hover {
+	border-color: #CC003E;
+	border-top-color: #CC003E;	
+}
+.blog-twitter .blog-twitter-inner:hover:after {
+	border-top-color: #CC003E;	
+}
+
+.blog-twitter .blog-twitter-inner a {
+	color: #CC003E;
+}
+
+/*Blog Item Page
+------------------------------------*/
+.blog-item h4.media-heading span a {
+	color:#CC003E;
+}
+
+/*Coming Soon Page
+------------------------------------*/
+.coming-soon-border {
+	border-top: solid 3px #CC003E;
+}
+
+/*Search Page
+------------------------------------*/
+.booking-blocks p a {
+	color: #CC003E;
+}
+
+/*Icons Page
+------------------------------------*/
+.icon-page li:hover { 
+	color:#CC003E;
+}
+
+/*Glyphicons*/
+.glyphicons-demo a:hover {
+	color: #CC003E;
+	text-decoration: none;
+}
+
+/*Magazine Page
+------------------------------------*/
+/*Magazine News*/
+.magazine-news .by-author strong {
+	color: #CC003E;
+}
+
+.magazine-news a.read-more {
+	color: #CC003E;
+}
+
+/*Magazine Mini News*/
+.magazine-mini-news .post-author strong {
+	color: #CC003E;
+}
+
+.news-read-more i {
+	background: #CC003E;
+}
+
+/*Sidebar Features*/
+.magazine-page h3 a:hover {
+	color: #CC003E;
+}
+
+/*Page Features
+------------------------------------*/
+/*Tag Boxes v1*/
+.tag-box-v1 {
+	border-top: solid 2px #CC003E;
+}
+
+/*Tag Boxes v2*/
+.tag-box-v2 {
+	border-left: solid 2px #CC003E;
+}
+
+/*Tag Boxes v7*/
+.tag-box-v7 {
+	border-bottom: solid 2px #CC003E;
+}
+
+/*Font Awesome Icon Page Style*/
+.fa-icons li:hover { 
+   color: #CC003E;
+}
+
+.fa-icons li:hover i {
+   background: #CC003E; 
+}
+
+/*GLYPHICONS Icons Page Style*/
+.bs-glyphicons li:hover {
+   color: #CC003E;
+}
+
+/*Navigation
+------------------------------------*/
+/*Pagination*/
+.pagination > .active > a, 
+.pagination > .active > span, 
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+   background-color: #CC003E;
+   border-color: #CC003E;
+}
+
+.pagination li a:hover {
+   background: #5fb611;
+   border-color: #5fb611;   
+}
+
+/*Pager*/
+.pager li > a:hover, 
+.pager li > a:focus {
+   background: #5fb611;
+   border-color: #5fb611;   
+}
+
+/*Registration and Login Page v2
+------------------------------------*/
+.reg-block {
+	border-top: solid 2px #CC003E;
+}

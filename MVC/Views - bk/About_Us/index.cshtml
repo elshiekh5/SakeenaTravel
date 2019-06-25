@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInnerWide.cshtml";
+}
+
+
+
+<div class="container content">
+    <div class="row margin-bottom-40">
+        @Html.Partial("~/Views/About_Us/Welcome-Static.cshtml")
+    </div><!--/row-->
+</div>
+<div class="spotLoght" style="background-color: #FCFCFC;
+border-color: #eee;
+box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15); border-top:solid 1px #eee;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @*<span>Unify is a clean and fully responsive incredible Template.</span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                    <h3>In <span class="id-color">Our Web Studio </span> Your <span class="id-color">Pretty And Professional Website</span> Is Our Mission</h3>*@
+                @*<h3>We just love building <span class="id-color">Websites </span> to Enhance your  <span class="id-color">Business Image</span></h3>*@
+                @Html.Partial("PageDetails", 7795)
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container content">
+    <div class="row margin-bottom-40">
+        @Html.Partial("~/Views/About_Us/Featured.cshtml")
+
+
+    </div><!--/row-->
+</div>
+
+<div class="spotLoght" style="background-color: #FCFCFC;
+border-color: #eee;
+box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15); border-top:solid 1px #eee;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center animated fadeInLeft">
+                @*<span>Unify is a clean and fully responsive incredible Template.</span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                    <h3>In <span class="id-color">Our Web Studio </span> Your <span class="id-color">Pretty And Professional Website</span> Is Our Mission</h3>*@
+                <h3> We Love What we do we take care of <span class="id-color">Your business </span> </h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container content">
+
+    <!-- Meer Our Team -->
+    <div class="headline"><h2>Meet Our Team</h2></div>
+    <p>
+        Our Web Studio is team of creative & talented designers & developers who share one thing in common "We all love what we do ! And we are passionate about all that we do." It is our love and passion that has allowed us to push the limits of our creativity allowing our clients to experience success & build a strong brand.
+    </p>
+    <div class="row team">
+        @Html.Partial("~/Views/About_Us/TeamWork.cshtml")
+    </div>
+    <!--/team-->
+    <!-- End Meer Our Team -->
+    <!-- Our Clients -->
+    @Html.Partial("~/Views/About_Us/Clients.cshtml")<!--/flexslider-->
+    <!-- //End Our Clients -->
+</div>
+
+
+
+
+@section styles{
+    <link rel="stylesheet" href="~/_Assets/plugins/flexslider/flexslider.css" type="text/css" media="screen" />
+}
+@section Scripts{
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="~/_Assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="~/_Assets/js/app.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            App.initSliders();
+        });
+    </script>
+}

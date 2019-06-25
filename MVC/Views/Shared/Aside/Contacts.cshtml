@@ -1,0 +1,20 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    FrontItemsModel currentItem = null;
+    if (currentItem == null)
+    {
+        currentItem = FrontItemsController.GetItemObject(5, SiteSettings.GetCurrentLanguage());
+    }
+
+}
+<!-- Contacts -->
+<div class="headline"><h2>@((currentItem != null) ? currentItem.Title : "")</h2></div>
+<p>@((currentItem != null) ? currentItem.ShortDescription : "")</p>
+<ul class="list-unstyled who margin-bottom-30">
+    <li><a href="#"><i class="fa fa-home"></i>@((currentItem != null) ? currentItem.Address : "")</a></li>
+    <li><a href="#"><i class="fa fa-envelope"></i>@((currentItem != null) ? currentItem.Email : "")</a></li>
+    <li><a href="#"><i class="fa fa-phone"></i>@((currentItem != null) ? currentItem.Mobile : "")</a></li>
+    <li><a href="#"><i class="fa fa-globe"></i>@((currentItem != null) ? currentItem.Url : "")</a></li>
+</ul>
